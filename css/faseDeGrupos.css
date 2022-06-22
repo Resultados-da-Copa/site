@@ -1,0 +1,144 @@
+main {
+    padding: 20px;
+}
+
+section#tabelas th img {
+    width: 30px;
+}
+
+#tabelas {
+    display: flex;
+    flex-direction: column;
+    padding-left: 9px;
+    margin-left: 102px;
+    margin-right: 94px;  
+   
+}
+
+table {
+    margin-left: -320px;
+}
+
+h3 {
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+tbody {
+    text-align: center;
+    background-color: rgb(232, 232, 232);
+}
+
+th.PAIS {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 300px;
+    margin-left: 5px;
+    font-weight: 450;
+    padding-top: 3px;
+    
+}
+
+th.infos {
+    width: 50px;
+    text-align: center;
+    
+}
+
+th.classificacao {
+    text-align: justify;
+    
+}
+
+thead {
+    color: grey;
+    font-size: small;
+}
+
+.GRUPOS {
+    display: flex;
+    justify-content:space-between;
+    text-align: justify;
+    padding-right: 2%;
+    
+
+}
+
+ul.jogos-rodada {
+    background-color: rgb(232, 232, 232);
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+.jogos-rodada li {
+    list-style: none;
+    text-align: center;
+    font-weight: 400;
+}
+
+.jogos-rodada img {
+    width: 30px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.rodada {
+    text-align: center;
+}
+
+h5.data {
+    text-align: center;
+}
+
+p.estadio {
+    font-size: 10px;
+    font-weight: 400;
+}
+#artilheiros h2 {
+    padding-top: 20px;
+   
+
+}
+
+.nomes-gols {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+    padding-left: 0.5%;
+    
+}
+
+.nome-jogador li {
+    text-align: justify;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+
+    list-style: none;
+}
+
+.quantidade-gols li {
+    text-align: justify;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+
+    list-style: none;
+}
+
+ul.posicao {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-top: 12px;
+    width: 10px;
+}
+
+li.classificados {
+    color: #882934;
+}

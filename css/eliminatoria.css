@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+body {
+    font-family: "Open Sans", sans-serif;
+    
+    
+}
+
+section#competicao h1 {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 50px;
+    color: #882934;
+    text-shadow: 0px 12px 20px rgba(124, 124, 124, 0.65);
+    
+}
+
+section#competicao {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffff;
+    box-shadow: 0px 1px 20px rgba(116, 119, 119, 0.65);
+    
+}
+
+section#competicao img {
+    width: 180px;
+    padding: 5px;
+
+}
+
+section#fase {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    color: #ffff;
+    background-color: #882934;
+    box-shadow: 0px 1px 20px rgba(116, 119, 119, 0.65);
+    text-shadow: 2px 6px 6px rgb(53 56 56 / 65%);
+
+}
+
+section#fase .direita {
+    transform:scaleX(-1)
+}
+header.eliminatorias {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    margin: 10px;
+    font-size: large;
+}
+div.confronto-1 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+div.confronto-2 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+}
+
+div.confronto-3 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+div.confronto-4 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+}
+
+div.confronto-5 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+}
+
+div.confronto-6 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+}
+
+div.confronto-7 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+}
+
+div.confronto-8 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+}
+
+#artilheiros {
+    padding-top: 115px;
+}
+
+div.partida {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 80%;
+    border: black;
+    border-style: inset;
+    border-width: thin;
+    background-image: url(https://img.freepik.com/vetores-gratis/fundo-do-torneio-de-futebol-2022-ilustracao-vetorial-padrao-de-futebol-para-site-de-cartao-de-banner_7280-7036.jpg) ;
+    background-repeat:space;
+}
+
+div.info-jogos {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 129px;
+    font-size: smaller;
+}
+
+span.data-jogo {
+    color: #555;
+    letter-spacing: -.3px;
+    text-transform: uppercase;
+}
+
+span.estadio {
+    color: #555;
+    letter-spacing: -.3px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+span.horario {
+    color: #555;
+    letter-spacing: -.3px;
+    text-transform: uppercase;
+}
+
+div.placar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4em;
+    color:#333;
+}
+ div.mandante {
+    width: 50%;
+ }
+
+ div.placar-box {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ div.visitante {
+    width: 50%;
+ }
+
+ span.primeiro-do-grupo {
+    text-align: right;
+    margin: 20px;
+    color: #09a79a;
+    
+ }
+
+img.escudo {
+    height: 30px;
+    width: 30px;
+}
+
+span.segundo-do-grupo {
+    text-align: right;
+    margin: 20px;
+    color: #09a79a;
+    
+ }
+
+ span.valor-visitante {
+    margin-right: 31px;
+ }
+
+ span.valor-mandante {
+    margin-left: 31px;
+ }
