@@ -44,45 +44,170 @@ section#fase {
 section#fase .direita {
     transform:scaleX(-1)
 }
-
-section#mata-mata {
+header.eliminatorias {
     display: flex;
-    padding-top: 48px;
-    
+    justify-content: flex-start;
+    padding: 20px;
+    margin: 10px;
+    font-size: large;
 }
-
-section#mata-mata ul {
-    list-style: none;
-}
-
-ul.lado-A {
-    background-color: rgb(232 232 232);
-    width: 600px;
+div.confronto-1 {
+    display: flex;
+    height: 109px;
     text-align: center;
-    color: grey;
-    
+    align-items: center;
+    justify-content: center;
 }
 
-ul.lado-A li {
-    padding: 5px;
+div.confronto-2 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+}
+
+div.confronto-3 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+div.confronto-4 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+}
+
+div.confronto-5 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+}
+
+div.confronto-6 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+}
+
+div.confronto-7 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+}
+
+div.confronto-8 {
+    display: flex;
+    height: 109px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+}
+
+#artilheiros {
+    padding-top: 115px;
+}
+
+div.partida {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 80%;
     border: black;
+    border-style: inset;
+    border-width: thin;
+    background-image: url(https://img.freepik.com/vetores-gratis/fundo-do-torneio-de-futebol-2022-ilustracao-vetorial-padrao-de-futebol-para-site-de-cartao-de-banner_7280-7036.jpg) ;
+    background-repeat:space;
 }
 
-ul.lado-B {
-    background-color: rgb(232 232 232);
-    width: 600px;
-    text-align: center;
-    color: grey;
+div.info-jogos {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 129px;
+    font-size: smaller;
+}
+
+span.data-jogo {
+    color: #555;
+    letter-spacing: -.3px;
+    text-transform: uppercase;
+}
+
+span.estadio {
+    color: #555;
+    letter-spacing: -.3px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+span.horario {
+    color: #555;
+    letter-spacing: -.3px;
+    text-transform: uppercase;
+}
+
+div.placar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4em;
+    color:#333;
+}
+ div.mandante {
+    width: 50%;
+ }
+
+ div.placar-box {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ div.visitante {
+    width: 50%;
+ }
+
+ span.primeiro-do-grupo {
+    text-align: right;
+    margin: 20px;
+    color: #09a79a;
     
+ }
+
+img.escudo {
+    height: 30px;
+    width: 30px;
 }
 
-ul.lado-B li {
-    padding: 5px;
-}
+span.segundo-do-grupo {
+    text-align: right;
+    margin: 20px;
+    color: #09a79a;
+    
+ }
 
-ul.versus li {
-    padding: 5px;
-}
+ span.valor-visitante {
+    margin-right: 31px;
+ }
 
-
-
+ span.valor-mandante {
+    margin-left: 31px;
+ }
