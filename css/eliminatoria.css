@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+body {
+    font-family: "Open Sans", sans-serif;
+    
+    
+}
+
+section#competicao h1 {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 50px;
+    color: #882934;
+    text-shadow: 0px 12px 20px rgba(124, 124, 124, 0.65);
+    
+}
+
+section#competicao {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffff;
+    box-shadow: 0px 1px 20px rgba(116, 119, 119, 0.65);
+    
+}
+
+section#competicao img {
+    width: 180px;
+    padding: 5px;
+
+}
+
+section#fase {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    color: #ffff;
+    background-color: #882934;
+    box-shadow: 0px 1px 20px rgba(116, 119, 119, 0.65);
+    text-shadow: 2px 6px 6px rgb(53 56 56 / 65%);
+
+}
+
+section#fase .direita {
+    transform:scaleX(-1)
+}
+
+section#mata-mata {
+    display: flex;
+    padding-top: 48px;
+    
+}
+
+section#mata-mata ul {
+    list-style: none;
+}
+
+ul.lado-A {
+    background-color: rgb(232 232 232);
+    width: 600px;
+    text-align: center;
+    color: grey;
+    
+}
+
+ul.lado-A li {
+    padding: 5px;
+    border: black;
+}
+
+ul.lado-B {
+    background-color: rgb(232 232 232);
+    width: 600px;
+    text-align: center;
+    color: grey;
+    
+}
+
+ul.lado-B li {
+    padding: 5px;
+}
+
+ul.versus li {
+    padding: 5px;
+}
+
+
+
