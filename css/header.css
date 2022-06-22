@@ -1,4 +1,4 @@
-* {
+  * {
     margin: 0;
     padding: 0;
   }
@@ -18,13 +18,13 @@
     letter-spacing: 4px;
   }
   
-  nav {
+  nav.header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    background: #1277D9;
+    background: #0b4075;
     height: 10vh;
   }
 
