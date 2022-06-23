@@ -1,0 +1,112 @@
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+div#main-news {
+    background-image: url("../img/match-placeholder.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+
+    min-height: 450px;
+    max-height: 450px;
+    min-width: 44%;
+    max-width: 44%;
+
+}
+
+#news {
+    background-color: bisque;
+    width: 44%;
+    height: 400px;
+    padding: 15px;
+
+}
+
+.short-info a{
+    text-decoration: none;
+    color: black;
+}
+.short-info a h2 {
+    color: gray;
+}
+
+/*matches*/
+
+#matches {
+    background-color: gray;
+    display: flex;
+    margin-top: 42px;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.data-cards {
+    background-color: #8497B4;
+    width: 25vw;
+    padding: 10px;
+    min-height: 180px;
+    max-height: 180px;
+}
+
+#half-data-cards .data-cards {
+    min-height: 55px;
+    max-height: 50px;
+
+}
+
+#matchs-of-the-day {
+    
+}
+
+#matchs-of-the-day a {
+    color: black;
+    text-decoration: none;
+}
+
+
+#player-of-the-match{
+    
+}
+
+#player-statistics{
+}
+
+/*highlights session*/
+
+#highlights div{
+    display: inline-block;
+    justify-content: space-between ;
+}
+
+.highlight-videos{
+    background-color: gray;
+    height: 150px;
+    width: 150px;
+}
+
+.week-highlight-video{
+    background-color: gray;
+    height: 150px;
+    width: 300px;
+}
+
+/*Estatísticas*/
+
+#statistics div{
+    display: inline-block;
+}
+
+.statistic-data{
+    background-color: gray;
+    width: 98px;
+    height: 59px;
+}
