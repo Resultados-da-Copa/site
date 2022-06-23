@@ -18,7 +18,7 @@
     letter-spacing: 4px;
   }
   
-  nav.header {
+  .hdr {
     display: flex;
     justify-content: space-around;
     align-items: center;
