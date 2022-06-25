@@ -3,8 +3,6 @@
        text-transform: uppercase;
     }
     
-    
-    
     div {
        border: none;
        padding: 10px;
@@ -51,5 +49,114 @@
       border: 2px solid #0b4075;
       background-color: rgb(232, 232, 232);
     }
+
+    .strong_stats {
+      margin: 58px;
+      font-size: 18px;
+    }
+
+    .strong_moments {
+      font-size: 20px;
+    }
+
+    .senegal_stats_img {
+      margin: 0 30px;
+    }
+
+    .holanda_stats_img {
+      margin: 0 168px;
+    }
+
+    .span_chutes {
+      margin: 0 32px;
+    }
+
+    .span_chutes_r {
+      margin: 0 120px;
+    }
+
+    .span_chutes_gol {
+      margin: 0 32px;
+    }
+
+    .span_chutes_gol_r {
+      margin: 0 79px;
+    }
+
+    .span_posse {
+      margin: 0 32px;
+    }
     
-    
+    .span_posse_r{
+      margin: 0 68px;
+    }
+
+    .span_passes {
+      margin: 0 32px;
+    }
+
+    .span_passes_r {
+      margin: 0 120px;
+    }
+
+    .span_precisao{
+      margin: 0 32px;
+   } 
+
+   .span_precisao_r{
+      margin: 0 36px;
+   }
+
+    .span_faltas{
+      margin: 0 32px;
+    }
+
+    .span_faltas_r{
+      margin: 0 130px;
+    }
+
+    .span_amarelos{
+      margin: 0 32px;
+    }
+
+    .span_amarelos_r{
+      margin: 0 42px;
+    }
+
+    .span_vermelhos{
+      margin: 0 32px;
+    }
+
+    .span_vermelhos_r{
+      margin: 0 32px;
+    }
+
+    .span_impedimentos{
+      margin: 0 32px;
+    }
+
+    .span_impedimentos_r{
+      margin: 0 78px;
+    }
+
+    .span_escanteios{
+      margin: 0 32px;
+    }
+
+    .span_escanteios_r{
+      margin: 0 92px;
+    }
+
+    .strong_titulares {
+      font-size: 18px; 
+      margin: 78px;
+    }
+
+    .strong_banco {
+      font-size: 18px; 
+       margin: 78px
+    }
+
+    .strong_arb {
+      font-size: 15px;
+    }
