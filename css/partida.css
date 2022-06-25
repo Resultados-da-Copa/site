@@ -160,3 +160,35 @@
     .strong_arb {
       font-size: 15px;
     }
+
+    .table_sen_titulares {
+      margin: 0px;
+    }
+
+    .table_hol_titulares {
+      margin: 0px;
+    }
+
+    .img_sen_titulares {
+      margin: 10px;
+    }
+
+    .img_hol_titulares {
+      margin: 10px;
+    }
+
+    .table_sen_reservas {
+      margin: 0px;
+    }
+
+    .table_hol_reservas {
+      margin: 0px;
+    }
+
+    .img_sen_reservas {
+      margin: 10px;
+    }
+
+    .img_hol_reservas {
+      margin: 10px;
+    }
