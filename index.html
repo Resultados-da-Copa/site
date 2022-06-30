@@ -32,8 +32,11 @@
     <!--***** Main section of website *****-->
     <main>
         <div id="main-news">
-            <img id="main-news-img" src="./img/match-placeholder.jpg" alt="">
+            <div id="main-news-img">
+                <img src="./img/match-placeholder.jpg" alt="">
+            </div>
             <a href="">
+                <div id="main-news-background" ></div>
                 <h1>SELEÇÃO AMERICANA PERDE NOVAMENTE</h1>
             </a>
         </div>
@@ -42,27 +45,27 @@
             <div class="line"></div>
             <div class="short-info">
                 <a href="#">
-                    <h3>Alemanha ganha Partida</h3>
+                    <h3>Alemanha ganha Partida difícil e vira líder do grupo 8</h3>
                 </a>
             </div>
             <div class="short-info">
                 <a href="#">
-                    <h3>Brasil ganha Partida</h3>
+                    <h3>Brasil ganha partida</h3>
                 </a>
             </div>
             <div class="short-info">
                 <a href="#">
-                    <h3>Japão ganha Partida</h3>
+                    <h3>Japão ganha partida</h3>
                 </a>
             </div>
             <div class="short-info">
                 <a href="#">
-                    <h3>Canadá ganha Partida</h3>
+                    <h3>Canadá ganha partida</h3>
                 </a>
             </div>
             <div class="short-info">
                 <a href="#">
-                    <h3>País de Gales ganha Partida</h3>
+                    <h3>País de Gales ganha partida difícil contra Croácia e passa de fase</h3>
                 </a>
             </div>
         </div>
@@ -72,24 +75,39 @@
     <section id="matches">
         
         <!--Card about matchs news-->
-        <div id="matchs-of-the-day">
-            <p>Notícias de partidas do dia</p>
-            <div class="data-cards">
+        <div id="matches-of-the-day">
+            <h2>Partidas do dia</h2>
+            <div id="matches-card">
                 <a href="partida.html">
                     <span class="soccer-selection">Alemanha</span>
                     <span>x</span>
                     <span class="soccer-selection">Bélgica</span>
                 </a>
+                <div class="line"></div>
                 <a href="partida.html">
                     <span class="soccer-selection">Brasil</span>
                     <span>x</span>
                     <span class="soccer-selection">Argentina</span>
                 </a>
+                <div class="line"></div>
                 <a href="partida.html">
                     <span class="soccer-selection">França</span>
                     <span>x</span>
                     <span class="soccer-selection">Japão</span>
                 </a>
+                <div class="line"></div>
+                <a href="partida.html">
+                    <span class="soccer-selection">Canadá</span>
+                    <span>x</span>
+                    <span class="soccer-selection">Inglaterra</span>
+                </a>
+                <div class="line"></div>
+                <a href="partida.html">
+                    <span class="soccer-selection">Canadá</span>
+                    <span>x</span>
+                    <span class="soccer-selection">Inglaterra</span>
+                </a>
+                <div class="line"></div>
                 <a href="partida.html">
                     <span class="soccer-selection">Canadá</span>
                     <span>x</span>
@@ -100,10 +118,9 @@
 
         <!--Card about matchs-->
         <div id="main-clashes">
-            <p>Principais confrontos</p>
-            <div class="data-cards">
+            <h2>Principais confrontos</h2>
+            <div id="clashes-card">
                 <span class="match">
-                    <p>
                         <div class="match-flags">
                             <img src="/img/flag-placeholder.png" alt="country flag">
                         </div>
@@ -111,10 +128,8 @@
                         <div class="match-flags">
                             <img src="/img/flag-placeholder.png" alt="country flag">
                         </div>
-                    </p>
                 </span>
                 <span class="match">
-                    <p>
                         <div class="match-flags">
                             <img src="/img/flag-placeholder.png" alt="country flag">
                         </div>
@@ -122,7 +137,15 @@
                         <div class="match-flags">
                             <img src="/img/flag-placeholder.png" alt="country flag">
                         </div>
-                    </p>
+                </span>
+                <span class="match">
+                        <div class="match-flags">
+                            <img src="/img/flag-placeholder.png" alt="country flag">
+                        </div>
+                        0 x 0
+                        <div class="match-flags">
+                            <img src="/img/flag-placeholder.png" alt="country flag">
+                        </div>
                 </span>
             </div>
         </div>
@@ -130,18 +153,41 @@
         <div id="half-data-cards">
             <!--Card about "player of the match"-->
             <div id="player-of-the-match">
-                <p>Jogador da rodada<p>
-                <div class="data-cards">
-                    <span>Mbappé</span>
+                <h2>Jogador da rodada</h2>
+                <div class="data-card">
+                    <div id="player-profile-pic">
+                        <img src="./img/messi.jpg" alt="">
+                    </div>
+                    <div id="">
+                        <span id="player-first-name">Lionel </span>
+                        <span id="player-last-name">Messi</span>
+                        <div>
+                            <span id="player-country">Argentina</span>
+                        </div>
+                    </div>
                 </div>
             </div>
     
             <!--Card about player statistics-->
-            <div id="player-statistics">
-                <p>Estatísticas</p>
-                <div class="data-cards">
-                    <span>4 gols</span>
-                    <span>2 Assistências</span>
+            <div id="round-statistics">
+                <h2>Estatísticas da rodada</h2>
+                <div class="data-card">
+                    <div class="round-statistics-data">
+                        <p>12</p>
+                        <p>gols</p>
+                    </div>
+                    <div class="round-statistics-data">
+                        <p>7</p>
+                        <p>assistências</p>
+                    </div>
+                    <div class="round-statistics-data">
+                        <p>4</p>
+                        <p>cartões</p>
+                    </div>
+                    <div class="round-statistics-data">
+                        <p>2</p>
+                        <p>pênaltis</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,20 +198,7 @@
         <h2>Vídeos em destaque</h2>
         <div class="highlight-videos-row">
             <a href="https://youtube.com" target="blank">
-                <div class="highlight-videos">
-                </div>
-            </a>
-            <a href="https://youtube.com" target="blank">
-                <div class="highlight-videos">
-                </div>
-            </a>
-            <a href="https://youtube.com" target="blank">
-                <div class="highlight-videos">
-                </div>
-            </a>
-            <a href="https://youtube.com" target="blank">
-                <div class="week-highlight-video">
-                </div>        
+                <img class="highlight-videos" src="./img/match-placeholder.jpg" alt="">
             </a>
         </div>
     </section>
@@ -177,19 +210,25 @@
             <div>
                 <h3>Contador de gols</h3>
                 <div class="statistic-data">
-                    <p>27</p>
+                    <p>38</p>
                 </div>
             </div>
             <div>
                 <h3>Artilheiro</h3>
                 <div class="statistic-data">
-                    <p>Neymar</p>
+                    <p>Mbappé</p>
                 </div>
             </div>
             <div>
                 <h3>Líder de assistências</h3>
                 <div class="statistic-data">
-                    <p>Gabriel Jesus</p>
+                    <p>Harry Kane</p>
+                </div>
+            </div>
+            <div>
+                <h3>Pênaltis</h3>
+                <div class="statistic-data">
+                    <p>5</p>
                 </div>
             </div>
         </div>
