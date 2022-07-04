@@ -1,9 +1,10 @@
-    
+
     h1 {
        text-transform: uppercase;
     }
     
     div {
+      font-weight: normal;
        border: none;
        padding: 10px;
        margin: 10px;
@@ -20,6 +21,7 @@
     } 
     
     .estatisticas {
+      font-weight: normal;
        display: flex;
        justify-content: space-around;
        font-size: medium;
@@ -87,67 +89,6 @@
       margin: 0 32px;
     }
     
-<<<<<<< HEAD
-    .span_posse_r{
-      margin: 0 68px;
-    }
-
-    .span_passes {
-      margin: 0 32px;
-    }
-
-    .span_passes_r {
-      margin: 0 120px;
-    }
-
-    .span_precisao{
-      margin: 0 32px;
-   } 
-
-   .span_precisao_r{
-      margin: 0 36px;
-   }
-
-    .span_faltas{
-      margin: 0 32px;
-    }
-
-    .span_faltas_r{
-      margin: 0 130px;
-    }
-
-    .span_amarelos{
-      margin: 0 32px;
-    }
-
-    .span_amarelos_r{
-      margin: 0 42px;
-    }
-
-    .span_vermelhos{
-      margin: 0 32px;
-    }
-
-    .span_vermelhos_r{
-      margin: 0 32px;
-    }
-
-    .span_impedimentos{
-      margin: 0 32px;
-    }
-
-    .span_impedimentos_r{
-      margin: 0 78px;
-    }
-
-    .span_escanteios{
-      margin: 0 32px;
-    }
-
-    .span_escanteios_r{
-      margin: 0 92px;
-    }
-
     .strong_titulares {
       font-size: 18px; 
       margin: 78px;
@@ -193,7 +134,42 @@
     .img_hol_reservas {
       margin: 10px;
     }
-=======
 
+    .tabela {
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      font-size: 22px;
+   }
    
->>>>>>> 7948712dca3aea8ef2d3cbdc4b545d65ab945641
+   .bold-td {
+       font-weight: bold;
+       text-align: center;
+   }
+   
+   .all {
+       margin: 5px;
+       padding: 5px;
+       border: 2px solid #0b4075;
+       background-color: rgb(232, 232, 232);
+       font-size: 18px;
+     }
+   
+     .divisor {
+       display: grid;
+       grid-template-columns: 50% 50%;
+     }
+   
+   .span1 {
+       text-align: center;
+       font-weight: bold;
+       font-size: 30px;
+   }
+   
+   .divisor2 {
+       display: grid;
+       grid-template-columns: 50% 50%;
+       margin: 30px;
+       padding: 10px;
+   }
+   
