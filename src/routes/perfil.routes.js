@@ -1,8 +1,8 @@
 const { Router } = require('express')
-const usersController = require('../controllers/usersController')
+const perfilController = require('../controllers/perfilController')
 
 const perfilRouter = Router()
 
-perfilRouter.get('/perfil', usersController.perfil)
+perfilRouter.get('/perfil', perfilController.perfil)
 
 module.exports = perfilRouter

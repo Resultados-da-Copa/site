@@ -1,9 +1,10 @@
 const { Router } = require('express')
-const usersController = require('../controllers/usersController')
+const homeController = require('../controllers/homeController')
 
 const homeRouter = Router()
 
-homeRouter.get('/', usersController.home)
+homeRouter.get('/', homeController.home)
+homeRouter.get('/partida', homeController.partida)
 
 module.exports = homeRouter
 

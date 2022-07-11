@@ -1,8 +1,8 @@
 const { Router } = require('express')
-const usersController = require('../controllers/usersController')
+const resultadosController = require('../controllers/resultadosController')
 
 const resultadosRouter = Router()
 
-resultadosRouter.get('/resultados', usersController.resultados)
+resultadosRouter.get('/resultados', resultadosController.resultados)
 
 module.exports = resultadosRouter

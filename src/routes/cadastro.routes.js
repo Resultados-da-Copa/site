@@ -1,8 +1,8 @@
 const { Router } = require('express')
-const usersController = require('../controllers/usersController')
+const cadastroController = require('../controllers/cadastroController')
 
 const cadastroRouter = Router()
 
-cadastroRouter.get('/cadastro', usersController.cadastro)
+cadastroRouter.get('/cadastro', cadastroController.cadastro)
 
 module.exports = cadastroRouter
