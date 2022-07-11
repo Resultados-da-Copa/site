@@ -1,11 +1,8 @@
-const usersController = {
+const homeController = {
     home: (req, res)=>{
         res.render('index')
-    },
-    partida: (req, res)=>{
-        res.render('partida')
     }
     }
 
 
-module.exports = usersController
+module.exports = homeController

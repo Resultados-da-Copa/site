@@ -6,6 +6,7 @@ const loginRouter = require('./routes/login.routes')
 const perfilRouter = require('./routes/perfil.routes')
 const resultadosRouter = require('./routes/resultados.routes')
 const estatisticasRouter = require('./routes/estatisticas.routes')
+const partidaRouter = require('./routes/partida.routes')
 
 const app = express()
 
@@ -19,6 +20,7 @@ app.use('/', resultadosRouter)
 app.use('/', perfilRouter)
 app.use('/', loginRouter)
 app.use('/', cadastroRouter)
+app.use('/', partidaRouter)
 
 app.listen(2022, ()=>{
     console.log('Server rodando') 
