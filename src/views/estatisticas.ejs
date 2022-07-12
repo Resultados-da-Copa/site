@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/eliminatoria.css">
-    <link rel="stylesheet" href="./css/faseDeGrupos.css">
+    <link rel="stylesheet" href="./css/resultados.css">
+    <link rel="stylesheet" href="./css/estatisticas.css">
     <title>Resultados da Copa</title>
 </head>
 <body>
@@ -20,11 +20,11 @@
               <div class="line3"></div>
             </div>
             <ul class="nav-list">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="faseDeGrupos.html">Estatísticas</a></li>
-              <li><a href="eliminatoria.html">Resultados</a></li>
-              <li><a href="perfil.html">Perfil</a></li>
-              <li><a href="login.html">Login</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/estatisticas">Estatísticas</a></li>
+              <li><a href="/resultados">Resultados</a></li>
+              <li><a href="/perfil">Perfil</a></li>
+              <li><a href="/login">Login</a></li>
             </ul>
           </nav>
     </header>
@@ -777,11 +777,11 @@
                 <div class="geral-footer">
                     <h2>Menu</h2>
                     <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="eliminatoria.html">Eliminatorias</a></li>
-                        <li><a href="faseDeGrupos.html">Fase de Grupos</a></li>
-                        <li><a href="perfil.html">Perfil</a></li>
-                        <li><a href="login.html">Login</a></li>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/estatisticas">Estatísticas</a></li>
+                        <li><a href="/resultados">Resultados</a></li>
+                        <li><a href="/perfil">Perfil</a></li>
+                        <li><a href="/login">Login</a></li>
                     </ul>
                 </div>
 
@@ -794,7 +794,7 @@
                         <h2>Equipe de Desenvolvimento</h2>
                         <ul>
                             <li class="img-name">
-                                <img class="img-profile" src="https://media-exp2.licdn.com/dms/image/D4E35AQF5QvIv0ChHiQ/profile-framedphoto-shrink_200_200/0/1655996284045?e=1656716400&v=beta&t=9Sm0QIAl7P7nZqW0Ce1pH6JCQTQIQ1a3Ax_OnbUDmQQ" alt="foto do perfil do linkedin"/>
+                                <img class="img-profile" src="data:image/jpeg;base64,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" alt="foto do perfil do linkedin"/>
                                 <a href="https://www.linkedin.com/in/crisleyhguimaraes/" target="_blank"></a>
                                   <a href="https://www.linkedin.com/in/crisleyhguimaraes/">Crisley</a>
                               </li>
@@ -809,12 +809,12 @@
                                 <a href="#">João</a>
                             </li>
                             <li class="img-name">
-                                <img class="img-profile" src="https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg" alt="foto do perfil do linkedin"/>
-                                <a href="" target="_blank">
-                                <a href="#">Tiago</a>
+                                <img class="img-profile" src="https://media-exp1.licdn.com/dms/image/C4D03AQHOv_oaRTnmrg/profile-displayphoto-shrink_800_800/0/1657384612959?e=1663200000&v=beta&t=1pK-__2qXT4m5BFioo7MdSXznUM-7S6R8sYq80xkuIs" alt="foto do perfil do linkedin"/>
+                                <a href="https://www.linkedin.com/in/tiagopessoadelima/" target="_blank">
+                                <a href="https://www.linkedin.com/in/tiagopessoadelima/">Tiago</a>
                             </li>
                             <li class="img-name">
-                                <img class="img-profile" src="https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg" alt="foto do perfil do linkedin"/>
+                                <img class="img-profile" src="https://pps.whatsapp.net/v/t61.24694-24/74722496_452129108807102_7178203200830769994_n.jpg?ccb=11-4&oh=01_AVxJMLFUzlroACoaK653bWRdbFwcH9GDmpFcmG7CaFzCdg&oe=62DC7D5E" alt="foto do perfil do linkedin"/>
                                 <a href="" target="_blank">
                                 <a href="#">Newton</a>
                             </li>
@@ -842,7 +842,4 @@
 </body>
 </html>
 
-    <script src="./JS/header.js"></script>
-
-</body>
-</html>
+  
