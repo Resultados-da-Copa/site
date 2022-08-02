@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,28 +14,32 @@
     <div class="cadastro">
         <div class="left-cadastro">
             <h2>Resultados da Copa</h2>
-            <img class="img-login" src="./img/img-cadastro.svg" alt="imagem de dois jogadores de futebol proximo ao gol">
+            <img class="img-login" src="./img/img-cadastro.svg"
+                alt="imagem de dois jogadores de futebol proximo ao gol">
         </div>
 
         <div class="right-cadastro">
             <div class="input-cadastro">
                 <h1>CADASTRE-SE</h1>
-                <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" id="usuario" placeholder="como deseja ser chamado?">
-                </div>
+                <form action="/cadastro" method="post" >
 
-                <div class="textfield">
-                    <label for="e-mail">E-mail</label>
-                    <input type="e-mail" name="email" id="email" placeholder="digite seu e-mail">
-                </div>
+                    <div class="textfield">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="como deseja ser chamado?">
+                    </div>
 
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="sua senha">
-                </div>
+                    <div class="textfield">
+                        <label for="e-mail">E-mail</label>
+                        <input type="e-mail" name="email" id="email" placeholder="digite seu e-mail">
+                    </div>
 
-                <button class="btn-cadastro">Cadastrar</button>
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="sua senha">
+                    </div>
+
+                    <button type="submit" class="btn-cadastro">Cadastrar</button>
+                </form>
             </div>
         </div>
     </div>
@@ -44,10 +49,12 @@
     <script src="./JS/header.js"></script>
 
 </body>
+
 </html>
 
 
 
-    <script src="./JS/header.js"></script>
+<script src="./JS/header.js"></script>
 </body>
+
 </html>
