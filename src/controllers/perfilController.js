@@ -34,6 +34,9 @@ const perfilController = {
 
         return res.redirect('/')
 
+    }, 
+    salvarImagem:(req,res)=>{
+        
     }
 
 }
