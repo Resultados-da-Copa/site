@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,8 @@
     <div class="login">
         <div class="left-login">
             <h2>Resultados da Copa</h2>
-            <img class="img-login" src="./img/img-cadastro.svg" alt="imagem de dois jogadores de futebol proximo ao gol">
+            <img class="img-login" src="./img/img-cadastro.svg"
+                alt="imagem de dois jogadores de futebol proximo ao gol">
         </div>
 
         <div class="right-login">
@@ -26,17 +27,21 @@
                     <input type="text" name="usuario" id="usuario" placeholder="Nome">
                 </div>
                 -->
-                <div class="textfield">
-                    <label for="e-mail">E-mail</label>
-                    <input type="e-mail" name="email" id="email" placeholder="E-mail">
-                </div>
 
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
+                <form action="/login" method="post">
 
-                <button class="btn-login">Entrar</button>
+                    <div class="textfield">
+                        <label for="e-mail">E-mail</label>
+                        <input type="e-mail" name="email" id="email" placeholder="E-mail">
+                    </div>
+
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Senha">
+                    </div>
+
+                    <button type="submit" class="btn-login">Entrar</button>
+                </form>
             </div>
         </div>
     </div>
@@ -46,11 +51,13 @@
     <script src="./JS/header.js"></script>
 
 </body>
+
 </html>
 
 
-    
-    <script src="./JS/header.js"></script>
-    
+
+<script src="./JS/header.js"></script>
+
 </body>
+
 </html>

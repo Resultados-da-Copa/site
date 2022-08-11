@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 
 	<meta charset="utf-8">
@@ -10,27 +11,28 @@
 
 	<title>Perfil</title>
 </head>
+
 <body>
 	<div class="profile">
-        <div class="left-profile">
-            <img class="img-profile" src="./img/profile.svg" alt="profile">
+		<div class="left-profile">
+			<img class="img-profile" src="./img/profile.svg" alt="profile">
 		</div>
-		
+
 
 		<div class="right-profile">
-			<form action="#" method="POST">
-				<h1>Meus Dados</h1>	
-				
+			<form action="/perfil" method="POST" enctype="multipart/form-data">
+				<h1>Meus Dados</h1>
+
 				<fieldset>
-					
+
 					<div class="container">
-						<input type="text" required name="name" autofocus>
+						<input type="text" name="name" autofocus>
 
 						<label>Nome</label>
 					</div>
 
 					<div class="container">
-						<input type="text" required name="name">
+						<input type="text" name="username">
 
 						<label>nome de usuário</label>
 					</div>
@@ -38,43 +40,51 @@
 
 				<fieldset>
 					<div class="container">
-						<input type="email" required name="email">
-					<label>E-mail</label>
+						<input type="email" name="email">
+						<label>E-mail</label>
 					</div>
 				</fieldset>
 
 				<fieldset>
 					<div class="container">
-						<input type="text" required name="text">
+						<input type="password" name="password">
+						<label>Senha</label>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<div class="container">
+						<input type="text" name="team">
 						<label>Seleção favorita</label>
 					</div>
 
 					<div class="container">
-						<input type="date" required name="date">
+						<input type="date" name="date">
 						<label></label>
 					</div>
-				</fieldset>
 
-				<fieldset>
-					<button name="submit">Alterar Senha</button>
-					<button name="submit">Salvar alterações</button>
-				</fieldset>
+					<fieldset>
+						<div>
+							<label>foto do perfil</label>
+							<input type="file" name="imageprofile">
+						</div>
+					</fieldset>
+					<fieldset>
+						<button type="submit">Salvar Alterações</button>
+						<button type="submit" formaction="/logout">Sair</button>
+					</fieldset>
 			</form>
 
+			<img src="https://conteudo.imguol.com.br/c/entretenimento/f9/2019/11/25/o-personagem-apelidado-de-baby-yoda-de-guerra-nas-estrelas-star-wars-1574694887604_v2_450x337.jpg"
+				alt="User">
 
-			<img src="https://conteudo.imguol.com.br/c/entretenimento/f9/2019/11/25/o-personagem-apelidado-de-baby-yoda-de-guerra-nas-estrelas-star-wars-1574694887604_v2_450x337.jpg" alt="User">
 
-			
 		</div>
 
 	</div>
-	
-    <script src="./JS/header.js"></script>
-
-</body>
-</html>
 
 	<script src="./JS/header.js"></script>
 
 </body>
+
 </html>
