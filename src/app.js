@@ -9,7 +9,8 @@ const perfilRouter = require('./routes/perfil.routes')
 const resultadosRouter = require('./routes/resultados.routes')
 const estatisticasRouter = require('./routes/estatisticas.routes')
 const partidaRouter = require('./routes/partida.routes')
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
+const logoutRouter = require('./routes/logout.routes');
 
 const app = express()
 
@@ -31,6 +32,7 @@ app.use('/', perfilRouter)
 app.use('/', loginRouter)
 app.use('/', cadastroRouter)
 app.use('/', partidaRouter)
+app.use('/', logoutRouter)
 
 
 app.use(methodOverride('_method'))
