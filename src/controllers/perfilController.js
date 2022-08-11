@@ -16,6 +16,7 @@ const perfilController = {
 
     updateProfile: (req, res)=>{
         const {name, username, email, password, team, date} = req.body
+        const imageprofile = req.file.filename
 
         const userFound = users.find(user => user.id === req.session.idUser)
 
@@ -28,15 +29,13 @@ const perfilController = {
         if(password !== ''){userFound.senha = passwordHash}
         if(team !== ''){userFound.selecao = team}
         if(date !== ''){userFound.nascimento = date}
+        if(imageprofile !== ''){userFound.avatar = imageprofile}
 
         users = JSON.stringify(users)
         fs.writeFileSync(path.join(__dirname, '..', 'database', 'users-db.json'), users)
 
         return res.redirect('/')
 
-    }, 
-    salvarImagem:(req,res)=>{
-        
     }
 
 }
