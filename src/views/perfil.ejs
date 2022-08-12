@@ -15,7 +15,15 @@
 <body>
 	<div class="profile">
 		<div class="left-profile">
-			<img class="img-profile" src="./img/profile.svg" alt="profile">
+			<img class="img-profile" src="https://conteudo.imguol.com.br/c/entretenimento/f9/2019/11/25/o-personagem-apelidado-de-baby-yoda-de-guerra-nas-estrelas-star-wars-1574694887604_v2_450x337.jpg"
+				alt="User">
+
+				<fieldset class="btn-img"> 
+					<div>
+						<label>Alterar foto</label>
+						<input type="file" name="imageprofile">
+					</div>
+				</fieldset>
 		</div>
 
 
@@ -39,7 +47,7 @@
 				</fieldset>
 
 				<fieldset>
-					<div class="container">
+					<div class="container" id="email" >
 						<input type="email" name="email">
 						<label>E-mail</label>
 					</div>
@@ -50,37 +58,42 @@
 						<input type="password" name="password">
 						<label>Senha</label>
 					</div>
+
+					<div class="container">
+						<input type="password" name="password">
+						<label>Confirmar senha</label>
+					</div>
+					
 				</fieldset>
 
-				<fieldset>
-					<div class="container">
-						<input type="text" name="team">
-						<label>Seleção favorita</label>
-					</div>
-
+				<fieldset class="batata">
 					<div class="container">
 						<input type="date" name="date">
-						<label></label>
+						<label>Data de nascimento</label>
 					</div>
 
-					<fieldset>
-						<div>
-							<label>foto do perfil</label>
-							<input type="file" name="imageprofile">
-						</div>
-					</fieldset>
-					<fieldset>
-						<button type="submit">Salvar Alterações</button>
-						<button type="submit" formaction="/logout">Sair</button>
-					</fieldset>
+					<div class="container">
+						<label for="selecao"></label>
+						<select name="selecao" id="selecao">
+							<option value="Seleção">Seleção</option>
+							<option value="Equador">Equador</option>
+							<option value="Senegal">Senegal</option>
+							<option value="Holanda">Holanda</option>
+							<option value="Inglaterra">Inglaterra</option>
+							<option value="Irã">Irã</option>
+							<option value="EUA">EUA</option>
+							<option value="Argentina">Argentina</option>
+							<option value="França">França</option>
+							<option value="Brasil">Brasil</option>
+						</select>					
+					</div>
+				</fieldset>
+					<div class="submit">
+						<button type="submit">Salvar</button> 
+						<button type="submit" formaction="/logout">Sair</button>						
+					</div>				
 			</form>
-
-			<img src="https://conteudo.imguol.com.br/c/entretenimento/f9/2019/11/25/o-personagem-apelidado-de-baby-yoda-de-guerra-nas-estrelas-star-wars-1574694887604_v2_450x337.jpg"
-				alt="User">
-
-
 		</div>
-
 	</div>
 
 	<script src="./JS/header.js"></script>

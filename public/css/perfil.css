@@ -9,14 +9,7 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
-body {
-	background-color: #2e2e2e;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	background-color: #2e2e2e;
-}
+
 
 form h1 {
 	color: white;
@@ -31,15 +24,18 @@ form h1 {
 	background: #0e1766;
 }
 
-.left-profile{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
+.left-profile{	
+    height: 50vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+.batata{	
+	display: flex;
+	justify-content: center;
+	flex-direction: space-around;
+}
 
 .right-profile{
     width: 50vw;
@@ -49,8 +45,15 @@ form h1 {
     align-items: center;
 }
 
-.img-profile{
-    width: 100vw;
+img{
+    border-radius: 50%;
+	width: 200px;
+}
+
+.btn-img{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: antiquewhite;
 }
 
 profile {
@@ -62,7 +65,7 @@ profile {
 }
 
 profile h1 {
-	padding: 40px 10px;
+	padding: 40px;
 	text-align: center;
 }
 
@@ -107,6 +110,12 @@ fieldset:last-child {
 	padding: 14px 10px 0 10px;
 }
 
+.submit{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
 .container label {
 	text-transform: uppercase;
 	font-size: 14px;
@@ -120,8 +129,6 @@ fieldset:last-child {
 	pointer-events: none;
 	transition: 0.5s;
 }
-
-
 
 
 #check {
@@ -157,8 +164,7 @@ fieldset:last-child {
 	color: #00acd7;
 }
 
-button {
-	
+button {	
 	margin: 40px 0;
 	margin-left: 10px;
 	width: calc(50% - 10px);
@@ -170,7 +176,6 @@ button {
 	border-radius: 20px;
 	cursor: pointer;
 	transition: .3s linear;
-
 }
 
 button:hover {
