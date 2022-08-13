@@ -3,19 +3,29 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
     box-sizing: border-box;
     justify-content: space-around;
 }
 
 footer{
     background-color: #0b4075;
-    padding: 50px 0;
+    padding: 10px 0;
 }
 
 .container-footer{
     max-width: 1400px;
     padding: 0 4%;
     margin: auto;
+}
+
+.col-result{
+    margin-top: 80px;
+    align-items: center;
+    margin-left: 45px;
+}
+.col-result img{
+    margin-left: 45px;
 }
 
 .row-footer{
@@ -50,12 +60,19 @@ footer{
     text-transform: uppercase;
 }
 
+#linha-vertical {
+    height: 300px;
+    border-right: 1px solid rgb(255, 255, 255);
+
+}
+
+
 .geral-footer ul{
     list-style: none;
 }
 
 .geral-footer ul li{
-    margin: 10px 0;
+    margin: 32px 0;
 }
 
 .geral-footer ul li a{
@@ -64,14 +81,72 @@ footer{
     color:  #ffffff;
     text-decoration: none;
     font-weight: 300;
-    display: block;
     transition: all 0.3s ease;
+    margin: auto;
 }
 
 .geral-footer ul li a:hover{
-    color:  #1f4063;
+    color:  #1b7ae0;
     padding-left: 10px;
 }
+
+
+.footer-bottom{
+    color: #fff;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(255, 254, 254, 0.26);
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight:200;
+}
+
+.img-profile{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.img-name:nth-child(1){
+    display: flex;
+    margin: 0;
+}
+
+.img-name:nth-child(2){
+    display: flex;
+    margin: 0;
+}
+
+.img-name:nth-child(3){
+    display: flex;
+    margin: 0;
+}
+
+.img-name:nth-child(4){
+    display: flex;
+    margin: 0;
+}
+
+.img-name:nth-child(5){
+    display: flex;
+    margin: 0;
+}
+
+.footer-profile ul li a{
+    margin-left: -150px;
+}
+
 
 @media (max-width: 800px) {
     .geral-footer{
@@ -82,5 +157,8 @@ footer{
 @media (max-width:600px) {
     .geral-footer{
         width: 100%;
+    }
+    .footer-profile ul li a{
+        margin-left: 0;
     }
 }

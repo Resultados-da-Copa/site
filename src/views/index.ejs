@@ -1,34 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados da Copa - Página Inicial</title>
 
+<head>
+    <title>Resultados da Copa - Página Inicial</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <%- include('./partials/head')%>
 </head>
+
 <body>
-    <!-- <header>
-        <nav class="header">
-          <a class="logo" href="/">resultadosdacopa.com.br</a>
-          <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-          <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="faseDeGrupos.html">Estatísticas</a></li>
-            <li><a href="eliminatoria.html">Resultados</a></li>
-            <li><a href="perfil.html">Perfil</a></li>
-            <li><a href="login.html">Login</a></li>
-          </ul>
-        </nav>
-      </header> -->
-    
+    <!--***** Header *****-->
+    <%- include('./partials/header')%>
+
     <!--***** Main section of website *****-->
     <main>
         <div id="main-news">
@@ -36,7 +18,7 @@
                 <img src="./img/match-placeholder.jpg" alt="">
             </div>
             <a href="">
-                <div id="main-news-background" ></div>
+                <div id="main-news-background"></div>
                 <h1>SELEÇÃO AMERICANA PERDE NOVAMENTE</h1>
             </a>
         </div>
@@ -45,27 +27,32 @@
             <div class="line"></div>
             <div class="short-info">
                 <a href="#">
-                    <h3>Alemanha ganha Partida difícil e vira líder do grupo 8</h3>
+                    <h3>Alemanha ganha partida difícil contra
+                        Bélgica e se mantém líder do grupo</h3>
                 </a>
             </div>
             <div class="short-info">
                 <a href="#">
-                    <h3>Brasil ganha partida</h3>
+                    <h3>Alemanha ganha partida difícil contra
+                        Bélgica e se mantém líder do grupo</h3>
                 </a>
             </div>
             <div class="short-info">
                 <a href="#">
-                    <h3>Japão ganha partida</h3>
+                    <h3>Alemanha ganha partida difícil contra
+                        Bélgica e se mantém líder do grupo</h3>
                 </a>
             </div>
             <div class="short-info">
                 <a href="#">
-                    <h3>Canadá ganha partida</h3>
+                    <h3>Alemanha ganha partida difícil contra
+                        Bélgica e se mantém líder do grupo</h3>
                 </a>
             </div>
             <div class="short-info">
                 <a href="#">
-                    <h3>País de Gales ganha partida difícil contra Croácia e passa de fase</h3>
+                    <h3>Alemanha ganha partida difícil contra
+                        Bélgica e se mantém líder do grupo</h3>
                 </a>
             </div>
         </div>
@@ -73,44 +60,44 @@
 
     <!--***** Section about matchs *****-->
     <section id="matches">
-        
+
         <!--Card about matchs news-->
         <div id="matches-of-the-day">
             <h2>Partidas do dia</h2>
             <div id="matches-card">
-                <a href="partida.html">
-                    <span class="soccer-selection">Alemanha</span>
-                    <span>x</span>
+                <a href="/partida">
+                    <span class="soccer-selection">Alemanha </span>
+                    <span> x </span>
                     <span class="soccer-selection">Bélgica</span>
                 </a>
                 <div class="line"></div>
-                <a href="partida.html">
-                    <span class="soccer-selection">Brasil</span>
-                    <span>x</span>
+                <a href="/partida">
+                    <span class="soccer-selection">Brasil </span>
+                    <span> x </span>
                     <span class="soccer-selection">Argentina</span>
                 </a>
                 <div class="line"></div>
-                <a href="partida.html">
-                    <span class="soccer-selection">França</span>
-                    <span>x</span>
+                <a href="/partida">
+                    <span class="soccer-selection">França </span>
+                    <span> x </span>
                     <span class="soccer-selection">Japão</span>
                 </a>
                 <div class="line"></div>
-                <a href="partida.html">
-                    <span class="soccer-selection">Canadá</span>
-                    <span>x</span>
+                <a href="/partida">
+                    <span class="soccer-selection">Canadá </span>
+                    <span> x </span>
                     <span class="soccer-selection">Inglaterra</span>
                 </a>
                 <div class="line"></div>
-                <a href="partida.html">
-                    <span class="soccer-selection">Canadá</span>
-                    <span>x</span>
+                <a href="/partida">
+                    <span class="soccer-selection">Canadá </span>
+                    <span> x </span>
                     <span class="soccer-selection">Inglaterra</span>
                 </a>
                 <div class="line"></div>
-                <a href="partida.html">
-                    <span class="soccer-selection">Canadá</span>
-                    <span>x</span>
+                <a href="/partida">
+                    <span class="soccer-selection">Canadá </span>
+                    <span> x </span>
                     <span class="soccer-selection">Inglaterra</span>
                 </a>
             </div>
@@ -121,31 +108,31 @@
             <h2>Principais confrontos</h2>
             <div id="clashes-card">
                 <span class="match">
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
-                        0 x 0
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
+                    <div class="match-flags">
+                        <img src="/img/flag-placeholder.png" alt="country flag">
+                    </div>
+                    0 x 0
+                    <div class="match-flags">
+                        <img src="/img/flag-placeholder.png" alt="country flag">
+                    </div>
                 </span>
                 <span class="match">
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
-                        0 x 0
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
+                    <div class="match-flags">
+                        <img src="/img/flag-placeholder.png" alt="country flag">
+                    </div>
+                    0 x 0
+                    <div class="match-flags">
+                        <img src="/img/flag-placeholder.png" alt="country flag">
+                    </div>
                 </span>
                 <span class="match">
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
-                        0 x 0
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
+                    <div class="match-flags">
+                        <img src="/img/flag-placeholder.png" alt="country flag">
+                    </div>
+                    0 x 0
+                    <div class="match-flags">
+                        <img src="/img/flag-placeholder.png" alt="country flag">
+                    </div>
                 </span>
             </div>
         </div>
@@ -167,7 +154,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!--Card about player statistics-->
             <div id="round-statistics">
                 <h2>Estatísticas da rodada</h2>
@@ -192,7 +179,7 @@
             </div>
         </div>
     </section>
-    
+
     <!--***** Section of Highlights *****-->
     <section id="highlights">
         <h2>Vídeos em destaque</h2>
@@ -235,41 +222,10 @@
     </section>
 
     <!--***** Footer *****-->
-   <!--  <footer>
+    <%- include('./partials/footer') %>
 
-        <div class="footer">
-            <div class="row-footer">
 
-                <div>                    
-                    <h1>Resultados da Copa</h1>
-                    <img class="img-footer" src="./img/logo.png" alt="logo do site, imagem de um trofeu da copa do mundo">                    
-                </div>
 
-                <div class="geral-footer">
-                    <h2>Menu</h2>
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="eliminatoria.html">Eliminatorias</a></li>
-                        <li><a href="faseDeGrupos.html">Fase de Grupos</a></li>
-                        <li><a href="perfil.html">Perfil</a></li>
-                        <li><a href="login.html">Login</a></li>
-                    </ul>
-                </div>
-
-                <div class="geral-footer">
-                    <h2>Equipe de Desenvolvimento</h2>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/crisleyhguimaraes/">Crisley</a></li>
-                        <li><a href="#">Carlos</a></li>
-                        <li><a href="#">João</a></li>
-                        <li><a href="#">Tiago</a></li>
-                        <li><a href="#">Newton</a></li>
-                    </ul>
-                </div>
-                </div>
-                <div></div>
-            </div>
-        </div>
-    </footer> -->
 </body>
+
 </html>
