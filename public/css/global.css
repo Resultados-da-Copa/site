@@ -36,6 +36,12 @@ p {
     color: var(--gray);
 }
 
+a{
+    font-size: 15rem;
+    color: var(--blue);
+    text-decoration: none;
+}
+
 
 /* =============1366p LAYOUT============= */
 
