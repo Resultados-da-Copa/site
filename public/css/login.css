@@ -5,7 +5,8 @@
 }
 
 #login-form {
-    margin: 0 99rem 151rem 99rem;
+    margin-bottom: 151rem;
+    padding: 0 99rem
 }
 
 .textfield {
@@ -59,34 +60,37 @@
     font-weight: 400;
 }
 
-/* @media only screen and (max-width: 950px){
-    .input-login{
-        width: 85%;
+
+
+@media only screen and (min-width: 1366px){
+    #h1{
+        margin: 50rem 454rem;
+    }
+
+    #login-form {
+        margin-bottom: 151rem;
+        padding: 0 495rem;
+    }
+
+    .textfield-label{
+        font-size: 20rem;
+        margin-bottom: 10rem;
+    }
+
+    .textfield-input{
+        font-size: 20rem;
+        margin-bottom: 25rem;
+    }
+
+    .textfield ::placeholder{
+        font-size: 20rem;
+    }
+
+    .btn-login{
+        font-size: 20rem;
+    }
+
+    #no-account-link{
+        font-size: 20rem;
     }
 }
-
-@media only screen and (max-width: 600px){
-    .login{
-        flex-direction: column;
-    }
-    .left-login >h2{
-        display: none;
-    }
-    .left-login{
-        width: 100%;
-        height: auto;
-    }
-    .right-login >h1{
-        display: none;
-    }
-    .right-login{
-        width: 100%;
-        height: auto;
-    }
-    .img-login{
-        width: 50vw;
-    }
-    .input-login{
-        width: 90%;
-    }
-} */
