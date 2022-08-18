@@ -64,12 +64,12 @@
 
 @media only screen and (min-width: 1366px){
     #h1{
-        margin: 50rem 454rem;
+        margin: 50rem 33%;
     }
 
     #login-form {
         margin-bottom: 151rem;
-        padding: 0 495rem;
+        padding: 0 36.23%;
     }
 
     .textfield-label{
