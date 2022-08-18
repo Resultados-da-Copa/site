@@ -9,7 +9,7 @@ let users = JSON.parse(usersDB)
 const loginController = {
     renderpage: (req, res) => {
         if (!req.session.isAuthorized) {
-            res.render('login')
+            return res.render('login')
         }
         res.redirect('/perfil')
     },
