@@ -2,59 +2,36 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head')%>
     <link rel="stylesheet" href="./css/cadastro.css">
-    <title>Cadastro</title>
+    <title>Cadastro | Resultados da copa</title>
 </head>
-
-
 <body>
-    <div class="cadastro">
-        <div class="left-cadastro">
-            <h2>Resultados da Copa</h2>
-            <img class="img-login" src="./img/img-cadastro.svg"
-                alt="imagem de dois jogadores de futebol proximo ao gol">
+    <%- include('./partials/header')%>
+    <h1 id="h1">Crie sua conta no Resultados da Copa</h1>
+    <div>
+    <form id="cadastro-form" action="/cadastro" method="post">
+        <div class="textfield">
+            <label class="textfield-label" for="name">Nome completo:</label>
+            <input class="textfield-input" type="name" name="nome" id="nome" placeholder="Nome completo">
+        </div>
+        <div>
+            <label class="textfield-label" for="e-mail">E-mail:</label>
+            <input  class="textfield-input" type="e-mail" name="email" id="email" placeholder="E-mail">
+        </div>
+        <div class="textfield">
+            <label class="textfield-label" for="senha">Senha:</label>
+            <input class="textfield-input" type="password" name="senha" placeholder="Senha">
         </div>
 
-        <div class="right-cadastro">
-            <div class="input-cadastro">
-                <h1>CADASTRE-SE</h1>
-                <form action="/cadastro" method="post" >
+        <button type="submit" class="btn-cadastro">CADASTRAR</button>
 
-                    <div class="textfield">
-                        <label for="usuario">Usuário</label>
-                        <input type="text" name="usuario" id="usuario" placeholder="como deseja ser chamado?">
-                    </div>
-
-                    <div class="textfield">
-                        <label for="e-mail">E-mail</label>
-                        <input type="e-mail" name="email" id="email" placeholder="digite seu e-mail">
-                    </div>
-
-                    <div class="textfield">
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" placeholder="sua senha">
-                    </div>
-
-                    <button type="submit" class="btn-cadastro">Cadastrar</button>
-                </form>
-            </div>
-        </div>
+        <p id="no-account-link">
+            Já possui uma conta?
+            <a href="/login">LOGIN</a>
+        </p>
+    </form>
     </div>
-
-
-
-    <script src="./JS/header.js"></script>
-
+    <%- include('./partials/footer')%>
 </body>
-
-</html>
-
-
-
-<script src="./JS/header.js"></script>
-</body>
-
 </html>

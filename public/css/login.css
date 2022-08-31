@@ -1,180 +1,96 @@
- /*
-    VW - porcentagem da largura da tela
-    VH - porcentagem da altura da tela
-
-    X - esquerda e direita
-    Y - cima e baixo
-
-    DISPLAY
-    FLEX organiza os itens lado alado
-    BLOCK organiza os itens em bloco
-    INLINE organiza os itens em linha
-    NONE esconde os itens
-    INLINE-BLOCK organiza os itens em linha e em bloco
-
-    FLEX-DIRECTION
-    ROW organiza os itens na mesma linha
-    ROW-REVERSE organiza os itens na mesma linha, mas de trás para frente
-    COLUMN organiza os itens na mesma coluna
-    COLUMN-REVERSE organiza os itens na mesma coluna, mas de trás para frente
-    
-    JUSTIFY-CONTENT organiza os itens de forma que o conteúdo seja alinhado
-    START ajusta a esquerda
-    FLEX END ajusta a direita
-    CENTER ajusta no centro
-    SPACE BETWEEN ajusta entre os itens
-    SPACE AROUND ajusta ao redor dos itens
-
-    PADDING
-    primeiro valor se refere ao eixo Y (cima e baixo)
-    segundo valor se refere ao eixo X (esquerda e direita)
-
-    BOX-SHADOW
-    peimeiro valor se refere ao eixo Y (esquerda e direita)
-    segundo valor se refere ao eixo X (cima e baixo)
-    terceiro valor  se refere ao efeito blur
-    quarto valor se refere a cor
-    
-*/
-
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    box-sizing: border-box;
+#h1 {
+    text-align: center;
+    margin-top: 15rem;
+    margin-bottom: 52rem;
 }
 
-
-
-.login{
-    width: 100vw; 
-    height: 100vh;
-    background: #1277D9;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+#login-form {
+    margin-bottom: 151rem;
+    padding: 0 99rem
 }
 
-.left-login{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.left-login >h2{
-    font-size: 3vw;
-    color: #fff;
-}
-
-.img-login{
-    width: 40vw;
-}
-
-.right-login{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.input-login{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 40px;
-    background: #326295;
-    border-radius: 25px;
-    box-shadow: 0px 10px 40px #1f4063;
-}
-
-.input-login >h1{
-    color: #ffffff;
-    font-weight: 800;
-    margin: 0;
-}
-
-.textfield{
+.textfield {
     width: 100%;
-    margin: 12px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
 
-.textfield >input{
+.textfield-label {
+    font-size: 15rem;
+    font-weight: 400;
+    color: #333333;
+    margin-bottom: 5rem;
+}
+
+.textfield-input {
     width: 100%;
+    border: 1px solid #CACACA;
+    font-size: 15rem;
+    font-weight: 400;
+    color: #333333;
+    padding: 8rem 12rem;
+    margin-bottom: 20rem;
+}
+
+.textfield ::placeholder {
+    font-size: 15rem;
+    font-weight: 400;
+    color: #CACACA;
+}
+
+.btn-login {
+    width: 100%;
+    font-size: 15rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: #0B4075;
     border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background: #1f4063;
-    color: #fff;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px #1f4063;
-    outline: none;
-    box-sizing: border-box;
-}
-
-.textfield >label{
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.textfield ::placeholder{
-    color: #86c4d6;
-}
-
-.btn-login{
-    width: 100%;
-    padding: 15px;
-    margin: 30px;
-    border-radius: 10px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #1277D9;
-    background: #ffffff;
+    padding: 8rem 12rem;
     cursor: pointer;
-    box-shadow: 0px 10px 40px -10px #4975a5;
 }
 
-@media only screen and (max-width: 950px){
-    .input-login{
-        width: 85%;
-    }
+#no-account-link {
+    margin-top: 15rem;
+    text-align: center;
 }
 
-@media only screen and (max-width: 600px){
-    .login{
-        flex-direction: column;
+#no-account-link a {
+    font-weight: 400;
+}
+
+
+
+@media only screen and (min-width: 1366px){
+    #h1{
+        margin: 50rem 33%;
     }
-    .left-login >h2{
-        display: none;
+
+    #login-form {
+        margin-bottom: 151rem;
+        padding: 0 36.23%;
     }
-    .left-login{
-        width: 100%;
-        height: auto;
+
+    .textfield-label{
+        font-size: 20rem;
+        margin-bottom: 10rem;
     }
-    .right-login >h1{
-        display: none;
+
+    .textfield-input{
+        font-size: 20rem;
+        margin-bottom: 25rem;
     }
-    .right-login{
-        width: 100%;
-        height: auto;
+
+    .textfield ::placeholder{
+        font-size: 20rem;
     }
-    .img-login{
-        width: 50vw;
+
+    .btn-login{
+        font-size: 20rem;
     }
-    .input-login{
-        width: 90%;
+
+    #no-account-link{
+        font-size: 20rem;
     }
 }

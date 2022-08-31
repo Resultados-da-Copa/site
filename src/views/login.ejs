@@ -2,62 +2,38 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/login.css">
-    <title>Login</title>
+    <%- include('./partials/head')%>
+        <link rel="stylesheet" href="./css/login.css">
+        <title>Login | Resultados da Copa</title>
 </head>
 
 
 <body>
-    <div class="login">
-        <div class="left-login">
-            <h2>Resultados da Copa</h2>
-            <img class="img-login" src="./img/img-cadastro.svg"
-                alt="imagem de dois jogadores de futebol proximo ao gol">
+    <%- include('./partials/header')%>
+
+    <h1 id="h1">Acesse sua conta no Resultados da Copa</h1>
+
+    <form id="login-form" action="/login" method="post">
+
+        <div class="textfield">
+            <label class="textfield-label" for="e-mail">E-mail:</label>
+            <input class="textfield-input" type="e-mail" name="email" id="email" placeholder="E-mail">
         </div>
 
-        <div class="right-login">
-            <div class="input-login">
-                <h1>LOGIN</h1>
-                <!--  
-                <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" id="usuario" placeholder="Nome">
-                </div>
-                -->
-
-                <form action="/login" method="post">
-
-                    <div class="textfield">
-                        <label for="e-mail">E-mail</label>
-                        <input type="e-mail" name="email" id="email" placeholder="E-mail">
-                    </div>
-
-                    <div class="textfield">
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" placeholder="Senha">
-                    </div>
-
-                    <button type="submit" class="btn-login">Entrar</button>
-                </form>
-            </div>
+        <div class="textfield">
+            <label class="textfield-label" for="senha">Senha:</label>
+            <input class="textfield-input" type="password" name="senha" placeholder="Senha">
         </div>
-    </div>
 
+        <button type="submit" class="btn-login">ENTRAR</button>
 
+        <p id="no-account-link">
+            Não possui uma conta?
+            <a href="/cadastro">CADASTRE-SE</a>
+        </p>
+    </form>
 
-    <script src="./JS/header.js"></script>
-
-</body>
-
-</html>
-
-
-
-<script src="./JS/header.js"></script>
-
+    <%- include('./partials/footer')%>
 </body>
 
 </html>
