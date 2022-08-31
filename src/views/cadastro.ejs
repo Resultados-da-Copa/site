@@ -2,11 +2,9 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head')%>
     <link rel="stylesheet" href="./css/cadastro.css">
-    <title>Cadastro</title>
+    <title>Cadastro | Resultados da copa</title>
 </head>
 <body>
     <%- include('./partials/header')%>
@@ -26,7 +24,12 @@
             <input class="textfield-input" type="password" name="senha" placeholder="Senha">
         </div>
 
-        <button type="submit" class="btn-login">CADASTRAR</button>
+        <button type="submit" class="btn-cadastro">CADASTRAR</button>
+
+        <p id="no-account-link">
+            Já possui uma conta?
+            <a href="/cadastro">LOGIN</a>
+        </p>
     </form>
     </div>
     <%- include('./partials/footer')%>
