@@ -1,8 +1,4 @@
 
-    h1 {
-      text-transform: uppercase;
-   }
-   
    div {
      font-weight: normal;
       border: none;
@@ -20,16 +16,8 @@
       font-size: 15px;
    } 
    
-   .estatisticas {
-     font-weight: normal;
-      display: flex;
-      justify-content: space-around;
-      font-size: medium;
-      margin-right: 30px;
-      background-color: rgb(232, 232, 232);
-      border: 2px solid #0b4075;
-      
-   
+   .stats {
+    text-align: center;
    }
    .alinhar_flex {
       padding: 1px;
@@ -174,5 +162,10 @@
   }
   .direita-stats {
    text-align: right;
+  }
+
+  .fase {
+    text-align: center;
+    font-size: ;
   }
   
