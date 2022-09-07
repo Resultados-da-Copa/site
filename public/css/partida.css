@@ -1,171 +1,25 @@
+h1 {
+  text-align: center;
+}
 
-   div {
-     font-weight: normal;
-      border: none;
-      padding: 10px;
-      margin: 10px;
-   } 
-   
-   .stadium{
-      border: none;
-      font-size: 15px;
-   }
-   
-   .data {
-      border: none;
-      font-size: 15px;
-   } 
-   
-   .stats {
-    text-align: center;
-   }
-   .alinhar_flex {
-      padding: 1px;
-      margin: 1px;
-      border: none;
-      display: flex;
-      justify-content: space-around;
-   }
-   
-   .jogadores {
-      padding: 1px;
-      margin: 1px;
-      border: none;
-      display: flex;
-      justify-content: space-around;
-   }
+main {
+  text-align: center;
+  border: solid #333333 1px;
+  margin: 10px;
+}
+h2 {
+  font-size: 18px;
+}
 
-   .all {
-     border: 2px solid #0b4075;
-     background-color: rgb(232, 232, 232);
-   }
+.titulares {
+  text-align: center;
+  font-size: 10px;
+}
 
-   .strong_stats {
-     margin: 58px;
-     font-size: 18px;
-   }
+tr {
+  font-size: 10px;
+}
 
-   .strong_moments {
-     font-size: 20px;
-   }
 
-   .senegal_stats_img {
-     margin: 0 30px;
-   }
 
-   .holanda_stats_img {
-     margin: 0 168px;
-   }
-
-   .span_chutes {
-     margin: 0 32px;
-   }
-
-   .span_chutes_r {
-     margin: 0 120px;
-   }
-
-   .span_chutes_gol {
-     margin: 0 32px;
-   }
-
-   .span_chutes_gol_r {
-     margin: 0 79px;
-   }
-
-   .span_posse {
-     margin: 0 32px;
-   }
-   
-   .strong_titulares {
-     font-size: 18px; 
-     margin: 78px;
-   }
-
-   .strong_banco {
-     font-size: 18px; 
-      margin: 78px
-   }
-
-   .strong_arb {
-     font-size: 15px;
-   }
-
-   .table_sen_titulares {
-     margin: 0px;
-   }
-
-   .table_hol_titulares {
-     margin: 0px;
-   }
-
-   .img_sen_titulares {
-     margin: 10px;
-   }
-
-   .img_hol_titulares {
-     margin: 10px;
-   }
-
-   .table_sen_reservas {
-     margin: 0px;
-   }
-
-   .table_hol_reservas {
-     margin: 0px;
-   }
-
-   .img_sen_reservas {
-     margin: 10px;
-   }
-
-   .img_hol_reservas {
-     margin: 10px;
-   }
-
-   .tabela {
-     text-align: center;
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     font-size: 22px;
-  }
-  
-  .bold-td {
-      font-weight: bold;
-      text-align: center;
-  }
-  
-  .all {
-      margin: 5px;
-      padding: 5px;
-      border: 2px solid #0b4075;
-      background-color: rgb(232, 232, 232);
-      font-size: 18px;
-    }
-  
-    .divisor {
-      display: grid;
-      grid-template-columns: 50% 50%;
-    }
-  
-  .span1 {
-      text-align: center;
-      font-weight: bold;
-      font-size: 30px;
-  }
-  
-  .divisor2 {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      margin: 30px;
-      padding: 10px;
-  }
-  .direita-stats {
-   text-align: right;
-  }
-
-  .fase {
-    text-align: center;
-    font-size: ;
-  }
   
