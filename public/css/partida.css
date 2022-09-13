@@ -12,11 +12,10 @@ h2 {
 }
 
 .titulares {
-  text-align: center;
-  font-size: 10px;
+margin: auto;
 }
 
-tr {
+td {
   font-size: 10px;
 }
 
