@@ -2,11 +2,11 @@ h1 {
   text-align: center;
 }
 
-main {
+section {
   text-align: center;
   border: solid #333333 1px;
-  margin: 10px;
 }
+
 h2 {
   font-size: 18px;
 }
@@ -15,10 +15,31 @@ h2 {
 margin: auto;
 }
 
-td {
+th {
   font-size: 10px;
 }
 
+.reservas {
+  margin: auto;
+}
 
+.estatisticas {
+  margin: auto;
+}
+
+.titulo-titulares {
+  font-size: 14px;
+  text-align: center;
+}
+
+.titulo-reservas {
+  font-size: 14px;
+  text-align: center;
+}
+
+.titulo-estatisticas {
+  font-size: 14px;
+  text-align: center;
+}
 
   
