@@ -1,45 +1,180 @@
 h1 {
   text-align: center;
+  font-size: 30rem;
+  font-weight: 400;
+  margin-top: 25rem;
 }
 
 section {
+  padding: 15rem 2.62%;
   text-align: center;
-  border: solid #333333 1px;
+  border: 1px solid #CACACA;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  margin: 25rem 10.41% 60rem 10.41%;
 }
 
-h2 {
-  font-size: 18px;
+#resultado-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15rem 0;
 }
 
-.titulares {
-margin: auto;
+.sigla {
+  font-size: 20rem;
+}
+
+.flag {
+  width: 40rem; 
+  height: 40rem;
+  border-radius: 50%;
+}
+
+.resultado {
+  font-size: 30rem;
+}
+
+.divisor-resultado {
+  font-size: 20rem;
+}
+
+#grupo-de-tabelas {
+  margin-left: 10.41%;
+  margin-right: 10.41%;
+}
+
+.h2-tabela {
+  font-size: 20rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.tabela {
+  width: 100%;
+  border: 1px solid #CACACA;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  margin-bottom: 60rem;
+  border-spacing: 0;
+  margin-top: 20rem;
+}
+
+.tabela th {
+  padding: 20rem 10rem 15rem 10rem;
+}
+
+.tabela td {
+  padding: 10rem 10rem;
+}
+
+.tabela tr:nth-child(even){
+  background-color: #CACACA;
+}
+
+.tabela-estatisticas {
+  width: 100%;
+}
+
+.tabela-estatisticas tr:nth-child(even) {
+  background-color: #FFFFFF;
+}
+
+.texto-a-esquerda {
+  font-size: 15rem;
+  text-align: left;
+}
+
+.texto-a-direita {
+  font-size: 15rem;
+  text-align: right;
+}
+
+.texto-centralizado {
+  font-size: 15rem;
+  text-align: center;
 }
 
 th {
-  font-size: 10px;
+  font-size: 15rem;
 }
 
-.reservas {
-  margin: auto;
+#cabecalho-tabela {
+  width: 100%;
 }
 
-.estatisticas {
-  margin: auto;
+/* =============1366p LAYOUT============= */
+
+@media (min-width: 1366px) {
+
+  h1 {
+    font-size: 35rem;
+    margin-top: 60rem;
+  }
+
+  section {
+    width: 58.56%;
+    margin-top: 60rem;
+    padding: 20rem 11.78%;
+    margin-bottom: 87rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #resultado-div {
+    margin: 20rem 0;
+  }
+
+  .sigla {
+    font-size: 25rem;
+  }
+
+  .flag {
+    width: 60rem;
+    height: 60rem;
+  }
+
+  .resultado {
+    font-size: 35rem;
+  }
+
+  #divisor-resultado {
+    font-size: 25rem;
+  }
+
+  #grupo-de-tabelas {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 135rem;
+    margin-left: 6.73%;
+    margin-right: 6.73%;
+  }
+
+  .tabela {
+    margin-bottom: 0;
+  }
+
+  .tamanho-da-tabela {
+    width: 27.8%;
+  }
+
+  .texto-a-direita {
+    font-size: 20rem;
+  }
+
+  .texto-a-esquerda {
+    font-size: 20rem;
+  }
+
+  .texto-centralizado {
+    font-size: 20rem;
+  }
+
+
+
 }
 
-.titulo-titulares {
-  font-size: 14px;
-  text-align: center;
-}
 
-.titulo-reservas {
-  font-size: 14px;
-  text-align: center;
-}
 
-.titulo-estatisticas {
-  font-size: 14px;
-  text-align: center;
-}
+
+
 
   
