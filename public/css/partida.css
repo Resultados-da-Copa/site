@@ -1,178 +1,180 @@
+h1 {
+  text-align: center;
+  font-size: 30rem;
+  font-weight: 400;
+  margin-top: 25rem;
+}
 
-    h1 {
-      text-transform: uppercase;
-   }
-   
-   div {
-     font-weight: normal;
-      border: none;
-      padding: 10px;
-      margin: 10px;
-   } 
-   
-   .stadium{
-      border: none;
-      font-size: 15px;
-   }
-   
-   .data {
-      border: none;
-      font-size: 15px;
-   } 
-   
-   .estatisticas {
-     font-weight: normal;
-      display: flex;
-      justify-content: space-around;
-      font-size: medium;
-      margin-right: 30px;
-      background-color: rgb(232, 232, 232);
-      border: 2px solid #0b4075;
-      
-   
-   }
-   .alinhar_flex {
-      padding: 1px;
-      margin: 1px;
-      border: none;
-      display: flex;
-      justify-content: space-around;
-   }
-   
-   .jogadores {
-      padding: 1px;
-      margin: 1px;
-      border: none;
-      display: flex;
-      justify-content: space-around;
-   }
+section {
+  padding: 15rem 2.62%;
+  text-align: center;
+  border: 1px solid #CACACA;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  margin: 25rem 10.41% 60rem 10.41%;
+}
 
-   .all {
-     border: 2px solid #0b4075;
-     background-color: rgb(232, 232, 232);
-   }
+#resultado-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15rem 0;
+}
 
-   .strong_stats {
-     margin: 58px;
-     font-size: 18px;
-   }
+.sigla {
+  font-size: 20rem;
+}
 
-   .strong_moments {
-     font-size: 20px;
-   }
+.flag {
+  width: 40rem; 
+  height: 40rem;
+  border-radius: 50%;
+}
 
-   .senegal_stats_img {
-     margin: 0 30px;
-   }
+.resultado {
+  font-size: 30rem;
+}
 
-   .holanda_stats_img {
-     margin: 0 168px;
-   }
+.divisor-resultado {
+  font-size: 20rem;
+}
 
-   .span_chutes {
-     margin: 0 32px;
-   }
+#grupo-de-tabelas {
+  margin-left: 10.41%;
+  margin-right: 10.41%;
+}
 
-   .span_chutes_r {
-     margin: 0 120px;
-   }
+.h2-tabela {
+  font-size: 20rem;
+  font-weight: 400;
+  text-align: center;
+}
 
-   .span_chutes_gol {
-     margin: 0 32px;
-   }
+.tabela {
+  width: 100%;
+  border: 1px solid #CACACA;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  margin-bottom: 60rem;
+  border-spacing: 0;
+  margin-top: 20rem;
+}
 
-   .span_chutes_gol_r {
-     margin: 0 79px;
-   }
+.tabela th {
+  padding: 20rem 10rem 15rem 10rem;
+}
 
-   .span_posse {
-     margin: 0 32px;
-   }
-   
-   .strong_titulares {
-     font-size: 18px; 
-     margin: 78px;
-   }
+.tabela td {
+  padding: 10rem 10rem;
+}
 
-   .strong_banco {
-     font-size: 18px; 
-      margin: 78px
-   }
+.tabela tr:nth-child(even){
+  background-color: #CACACA;
+}
 
-   .strong_arb {
-     font-size: 15px;
-   }
+.tabela-estatisticas {
+  width: 100%;
+}
 
-   .table_sen_titulares {
-     margin: 0px;
-   }
+.tabela-estatisticas tr:nth-child(even) {
+  background-color: #FFFFFF;
+}
 
-   .table_hol_titulares {
-     margin: 0px;
-   }
+.texto-a-esquerda {
+  font-size: 15rem;
+  text-align: left;
+}
 
-   .img_sen_titulares {
-     margin: 10px;
-   }
+.texto-a-direita {
+  font-size: 15rem;
+  text-align: right;
+}
 
-   .img_hol_titulares {
-     margin: 10px;
-   }
+.texto-centralizado {
+  font-size: 15rem;
+  text-align: center;
+}
 
-   .table_sen_reservas {
-     margin: 0px;
-   }
+th {
+  font-size: 15rem;
+}
 
-   .table_hol_reservas {
-     margin: 0px;
-   }
+#cabecalho-tabela {
+  width: 100%;
+}
 
-   .img_sen_reservas {
-     margin: 10px;
-   }
+/* =============1366p LAYOUT============= */
 
-   .img_hol_reservas {
-     margin: 10px;
-   }
+@media (min-width: 1366px) {
 
-   .tabela {
-     text-align: center;
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     font-size: 22px;
+  h1 {
+    font-size: 35rem;
+    margin-top: 60rem;
   }
-  
-  .bold-td {
-      font-weight: bold;
-      text-align: center;
+
+  section {
+    width: 58.56%;
+    margin-top: 60rem;
+    padding: 20rem 11.78%;
+    margin-bottom: 87rem;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  .all {
-      margin: 5px;
-      padding: 5px;
-      border: 2px solid #0b4075;
-      background-color: rgb(232, 232, 232);
-      font-size: 18px;
-    }
-  
-    .divisor {
-      display: grid;
-      grid-template-columns: 50% 50%;
-    }
-  
-  .span1 {
-      text-align: center;
-      font-weight: bold;
-      font-size: 30px;
+
+  #resultado-div {
+    margin: 20rem 0;
   }
-  
-  .divisor2 {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      margin: 30px;
-      padding: 10px;
+
+  .sigla {
+    font-size: 25rem;
   }
-  .direita-stats {
-   text-align: right;
+
+  .flag {
+    width: 60rem;
+    height: 60rem;
   }
+
+  .resultado {
+    font-size: 35rem;
+  }
+
+  #divisor-resultado {
+    font-size: 25rem;
+  }
+
+  #grupo-de-tabelas {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 135rem;
+    margin-left: 6.73%;
+    margin-right: 6.73%;
+  }
+
+  .tabela {
+    margin-bottom: 0;
+  }
+
+  .tamanho-da-tabela {
+    width: 27.8%;
+  }
+
+  .texto-a-direita {
+    font-size: 20rem;
+  }
+
+  .texto-a-esquerda {
+    font-size: 20rem;
+  }
+
+  .texto-centralizado {
+    font-size: 20rem;
+  }
+
+
+
+}
+
+
+
+
+
+
   
