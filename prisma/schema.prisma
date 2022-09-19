@@ -1,0 +1,81 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// datasource db {
+//  provider = "postgresql"
+//  url      = env("DATABASE_URL")
+//}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Usuarios {
+  usuario_id      String   @id
+  nome            String
+  email           String
+  foto            String
+  data_nascimento DateTime
+}
+
+model Equipes {
+  equipe_id String @id
+  nome      String
+  sigla     String
+  bandeira  String
+}
+
+model Atletas {
+  atleda_id       String   @id
+  nome            String
+  foto            String
+  nacionalidade   String
+  data_nascimento DateTime
+  peso            Float
+  numero_camisa   Int
+  altura          Float
+  pe_dominante    String
+}
+
+model Tecnicos {
+  tecnico_id String @id
+  nome       String
+}
+
+model Estatisticas {
+  estatistica_id  String @id
+  escanteiros     Int
+  gol             Int
+  cartao_amarelo  Int
+  cartao_vermelho Int
+  Impedimentos    Int
+  Faltas          Int
+}
+
+model Partidas {
+  partida_id String   @id
+  data       DateTime
+  situacao   String
+}
+
+model Campeonatos {
+  campeonato_id String @id
+  nome          String
+  situacao      String
+}
+
+model Grupos {
+  grupo String @id
+  nome  String
+}
+
+model Fases_Campeonato {
+  fase_id  String @id
+  nome     String
+  situacao String
+}
