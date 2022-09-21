@@ -102,3 +102,48 @@ input{
 	font-weight: 400;
 
 }
+
+/* =============1366p LAYOUT============= */
+
+@media (min-width: 1366px) {
+
+	h1{
+		margin-top: 106rem;
+	}
+
+	#userImage{
+		width: 232rem;
+		height: 232rem;
+	}
+
+	#nameFieldset{
+		display: flex;
+
+	}
+
+	#passwordFieldset{
+		width: 58.56%;
+		display: flex;
+		justify-content: space-between;
+		margin-left: auto;
+
+	}
+
+	#dateFieldset{
+		width: 58.56%;
+		justify-content: space-between;
+		margin-left: auto;
+	}
+
+	#btnFieldset{
+		display: flex;
+		justify-content: space-between;
+		width: 58.56%;
+		margin-left: auto;
+	}
+
+	.btn{
+		width: 27.45%;
+
+	}
+}

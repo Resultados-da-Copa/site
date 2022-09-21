@@ -20,31 +20,41 @@
 				alt="User">
 
 			<fieldset id="nameFieldset">
-				<label class="label">Nome completo</label>
-				<input type="text" name="name" autofocus>
+				<fieldset>
+					<label class="label">Nome completo</label>
+					<input type="text" name="name" autofocus>
+				</fieldset>
+				<fieldset>
+					<label class="label">Nome de usuário</label>
+					<input type="text" name="username">
 
-				<label class="label">Nome de usuário</label>
-				<input type="text" name="username">
+				</fieldset>
 			</fieldset>
 
 		</fieldset>
 
-		<label class="label">E-mail</label>
-		<input type="email" name="email">
+		<fieldset id="passwordFieldset">
+			<fieldset>
+				<label class="label">E-mail</label>
+				<input type="email" name="email">
+			</fieldset>
+			<fieldset>
+				<label class="label">Senha</label>
+				<input type="password" name="password">
+			</fieldset>
 
-		<label class="label">Senha</label>
-		<input type="password" name="password">
+		</fieldset>
 
 		<fieldset id="dateFieldset">
 			<div class="container">
 				<label class="label">Seleção favorita</label>
 				<input type="text" name="team">
 			</div>
-	
-	        <div class="container">
+
+			<div class="container">
 				<label class="label">Data de nascimento</label>
 				<input type="date" name="date">
-			</div>	
+			</div>
 		</fieldset>
 
 		<fieldset id="imgFieldset">
@@ -52,12 +62,12 @@
 			<input type="file" name="imageprofile">
 		</fieldset>
 
-		<fieldset>
+		<fieldset id="btnFieldset">
 			<button class="btn" id="save-btn" type="submit">SALVAR</button>
 			<button class="btn" id="logout-btn" type="submit" formaction="/logout">
-			<a>
-				SAIR
-			</a>	
+				<a>
+					SAIR
+				</a>
 			</button>
 		</fieldset>
 	</form>
