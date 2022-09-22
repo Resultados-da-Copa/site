@@ -1,4 +1,5 @@
 const express = require('express')
+const sequelize = require('sequelize')
 const session = require('express-session');
 const connection = require('../src/database/connectionDB');
 
@@ -14,6 +15,9 @@ const estatisticasRouter = require('./routes/estatisticas.routes')
 const partidaRouter = require('./routes/partida.routes')
 const methodOverride = require('method-override');
 const logoutRouter = require('./routes/logout.routes');
+
+const Equipe = require('./database/migrations/Equipes');
+const Usuario = require('./database/migrations/Usuarios');
 
 const app = express()
 
