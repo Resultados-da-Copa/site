@@ -3,7 +3,7 @@ const connection = require("../connectionDB");
 
 module.exports = {
     up: async (queryInterface, Sequelize) => {
-      await queryInterface.createTable('usuarios', {
+      await queryInterface.createTable('grupos_campeonatos', {
     id: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
@@ -14,24 +14,10 @@ module.exports = {
         type: Sequelize.STRING(100),
         allowNull: false
     },
-    email:{
-        type: Sequelize.STRING(100),
-        allowNull: false
-    },
-    foto:{
-        type: Sequelize.STRING(200),
-        allowNull: false,
-    }, 
-    data_nascimento:{
-        type: Sequelize.DATE,
-        allowNull: false,
-    },
     down: async (queryInterface, _Sequelize) => {
-        await queryInterface.dropTable('usuarios');
+        await queryInterface.dropTable('grupos_campeonatos');
     },
 });
 },
 }
 
-usuarios.belongsTo('equipes'); 
-// belongsTo => um  pertence a uma

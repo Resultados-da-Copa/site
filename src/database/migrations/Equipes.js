@@ -1,19 +1,37 @@
 const Sequelize = require("sequelize");
 const connection = require("../connectionDB");
-const Usuario = require("./Equipes");
 
-const Equipe = connection.define('esquipes',{
+module.exports = {
+    up: async (queryInterface, Sequelize) => {
+      await queryInterface.createTable('equipes', {
+        id: {
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
+        allowNull: false,
+        primaryKey: true
+    },
     name:{
         type: Sequelize.STRING,
-    },sigla:{
+        allowNull: false
+    },
+    sigla:{
         type: Sequelize.STRING,
-    },bandeira:{
+        allowNull: false
+    },
+    bandeira:{
         type: Sequelize.STRING,
-    }
-})
-Equipe.hasMany('Usuario'); //uma equipe pode pertencer a varios usuarios
-Usuario.belongsTo('Equipe'); //um usuario pertence a uma equipe
+        allowNull: false
+    },
+});
+},
+
+down: async (queryInterface, _Sequelize) => {
+await queryInterface.dropTable('equipes');
+}
+};
 
 
-Equipe.sync({force: true})
-module.exports = Equipe;
+Equipe.hasMany('Usuario'); 
+//hasMany => uma pertence a varios
+
+
