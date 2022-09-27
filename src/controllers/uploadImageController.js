@@ -2,8 +2,6 @@ const path = require('path')
 const multer = require ('multer')
 const { v4: uuid } = require('uuid')
 
-
-
 const multerDiskStorage = multer.diskStorage({
     destination: (req, file, callback)=> {
         let folder = path.join(__dirname, '../../public/img/profileImage/')
