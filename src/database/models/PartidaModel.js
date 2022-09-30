@@ -1,6 +1,8 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
-const sequelize = require('../config')
+const sequelize = require('../config');
+const Equipe = require('./EquipeModel');
+const GrupoCampeonato = require('./GrupoCampeonatoModel');
 
 const Partida = sequelize.define(
     'Partida',
@@ -38,5 +40,18 @@ const Partida = sequelize.define(
         createdAt: "dataCriacao",
     }
 ); 
+
+Partida.belongsTo(GrupoCampeonato, {
+    constraint: true,
+    foreignKey: "GrupoCampeonatoID",
+})
+Partida.belongsTo(Equipe, {
+    constraint: true,
+    foreignKey: "Equipe_MandanteID",
+})
+Partida.belongsTo(Equipe, {
+    constraint: true,
+    foreignKey: "Equipe_VisitanteID",
+})
 
 module.exports = Partida;

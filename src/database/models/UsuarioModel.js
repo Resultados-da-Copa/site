@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config')
+const Equipe = require('./EquipeModel')
 
 const Usuario = sequelize.define(
     'Usuario',
@@ -39,5 +40,11 @@ const Usuario = sequelize.define(
         createdAt: "dataCriacao",
     }
 ); 
+
+Usuario.belongsTo(Equipe, {
+    constraint: true,
+    foreignKey: "EquipeID",
+})
+
 
 module.exports = Usuario;

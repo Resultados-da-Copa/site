@@ -21,4 +21,10 @@ const Tecnico = sequelize.define(
     }
 ); 
 
+Tecnico.belongsTo(Equipe, {
+    constraint: true,
+    foreignKey: "EquipeID",
+})
+
+
 module.exports = Tecnico;

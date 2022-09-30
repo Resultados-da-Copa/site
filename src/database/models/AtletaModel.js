@@ -50,4 +50,9 @@ const Atleta = sequelize.define(
     }
 ); 
 
+Atleta.belongsTo(Equipe, {
+    constraint: true,
+    foreignKey: "EquipeID",
+})
+
 module.exports = Atleta;

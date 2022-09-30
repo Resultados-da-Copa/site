@@ -1,6 +1,8 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
-const sequelize = require('../config')
+const sequelize = require('../config');
+const Atleta = require('./AtletaModel');
+const Partida = require('./PartidaModel');
 
 const Estatistica = sequelize.define(
     'Estatistica',
@@ -62,5 +64,14 @@ const Estatistica = sequelize.define(
         createdAt: "dataCriacao",
     }
 ); 
+
+Estatistica.belongsTo(Partida, {
+    constraint: true,
+    foreignKey: "PartidaID",
+})
+Estatistica.belongsTo(Atleta, {
+    constraint: true,
+    foreignKey: "AtletaID",
+})
 
 module.exports = Estatistica;

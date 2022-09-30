@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
-const sequelize = require('../config')
+const sequelize = require('../config');
+const Campeonato = require('./CampeonatoModel');
 
 const FaseCampeonato = sequelize.define(
     'FaseCampeonato',
@@ -38,5 +39,11 @@ const FaseCampeonato = sequelize.define(
         createdAt: "dataCriacao",
     }
 ); 
+
+
+FaseCampeonato.belongsTo(Campeonato, {
+    constraint: true,
+    foreignKey: "CampeonatoID",
+})
 
 module.exports = FaseCampeonato;
