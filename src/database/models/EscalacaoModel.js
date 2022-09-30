@@ -39,7 +39,7 @@ const Escalacao = sequelize.define(
     }
 ); 
 
-Escalacao.belongsTo(Atleta, {
+Escalacao.hasMany(Atleta, {
     constraint: true,
     foreignKey: "AtletaID",
 })

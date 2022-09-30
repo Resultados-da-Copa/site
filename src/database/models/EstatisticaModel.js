@@ -65,11 +65,11 @@ const Estatistica = sequelize.define(
     }
 ); 
 
-Estatistica.belongsTo(Partida, {
+Estatistica.hasMany(Partida, {
     constraint: true,
     foreignKey: "PartidaID",
 })
-Estatistica.belongsTo(Atleta, {
+Estatistica.hasMany(Atleta, {
     constraint: true,
     foreignKey: "AtletaID",
 })

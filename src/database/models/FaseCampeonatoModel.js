@@ -41,7 +41,7 @@ const FaseCampeonato = sequelize.define(
 ); 
 
 
-FaseCampeonato.belongsTo(Campeonato, {
+FaseCampeonato.hasMany(Campeonato, {
     constraint: true,
     foreignKey: "CampeonatoID",
 })
