@@ -2,20 +2,55 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-     */
+    await queryInterface.createTable(
+      'Escalacao', 
+      { 
+        id:{
+          type: DataTypes.UUID,
+          defaultValue: DataTypes.UUIDV4,
+          allowNull: false,
+          primaryKey: true
+      },
+      AtletaID:{
+          type: DataTypes.UUIDV4,
+          references:{
+              model: AtletaModel,
+              key:"id",
+          }
+      },
+      PartidaID:{
+          type: DataTypes.UUIDV4,
+          references:{
+              model: PartidaModel,
+              key:"id",
+          }
+      },
+      jogadoresTitulares: {
+          type: DataTypes.String,
+          defaultValue: false,
+          field: "jogadores_titulares",
+      },
+      jogadoresReservas: {
+          type: DataTypes.INTEGER,
+          defaultValue: false,
+          field: "jogadores_reservas",
+      },
+      jogadoresCortados: {
+          type: DataTypes.INTEGER,
+          defaultValue: false,
+          field: "jogadores_cortados",
+      },
+      dataCriacao:{
+          type: DataTypes.DATE,
+          field: "data_criacao",
+      },
+      });
+    
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
+    
+    await queryInterface.dropTable('Escalacao');
+     
   }
 };

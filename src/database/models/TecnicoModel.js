@@ -11,6 +11,13 @@ const Tecnico = sequelize.define(
             allowNull: false,
             primaryKey: true
         },
+        EquipeID:{
+            type: DataTypes.UUIDV4,
+            references:{
+                model: EquipeModel,
+                key:"id",
+            }
+        },
         name:{
             type: DataTypes.STRING(100),
             allowNull: false

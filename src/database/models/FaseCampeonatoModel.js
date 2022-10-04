@@ -12,6 +12,13 @@ const FaseCampeonato = sequelize.define(
             allowNull: false,
             primaryKey: true
         },
+        CampeonatoID:{
+            type: DataTypes.UUIDV4,
+            references:{
+                model: CampeonatoModel,
+                key:"id",
+            }
+        },
         name:{
             type: DataTypes.STRING(100),
             allowNull: false

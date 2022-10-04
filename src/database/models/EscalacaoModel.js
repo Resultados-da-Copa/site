@@ -2,6 +2,7 @@ const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config');
 const Atleta = require('./AtletaModel');
+const Partida = require('./PartidaModel');
 
 const Escalacao = sequelize.define(
     'Escalacao',
@@ -11,6 +12,20 @@ const Escalacao = sequelize.define(
             defaultValue: DataTypes.UUIDV4,
             allowNull: false,
             primaryKey: true
+        },
+        AtletaID:{
+            type: DataTypes.UUIDV4,
+            references:{
+                model: AtletaModel,
+                key:"id",
+            }
+        },
+        PartidaID:{
+            type: DataTypes.UUIDV4,
+            references:{
+                model: PartidaModel,
+                key:"id",
+            }
         },
         jogadoresTitulares: {
             type: DataTypes.String,
@@ -42,6 +57,10 @@ const Escalacao = sequelize.define(
 Escalacao.hasMany(Atleta, {
     constraint: true,
     foreignKey: "AtletaID",
+})
+Escalacao.hasMany(Partida, {
+    constraint: true,
+    foreignKey: "PartidaID",
 })
 
 module.exports = Escalacao;

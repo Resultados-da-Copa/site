@@ -13,6 +13,20 @@ const Estatistica = sequelize.define(
             allowNull: false,
             primaryKey: true
         },
+        AtletaID:{
+            type: DataTypes.UUIDV4,
+            references:{
+                model: AtletaModel,
+                key:"id",
+            }
+        },
+        PartidaID:{
+            type: DataTypes.UUIDV4,
+            references:{
+                model: PartidaModel,
+                key:"id",
+            }
+        },
         name:{
             type: DataTypes.STRING(100),
             allowNull: false

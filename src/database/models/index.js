@@ -26,33 +26,38 @@ fs
     db[model.name] = model;
   });
 
+
+  (async () => {
+    const database = requite('../connectionDB.js')
+  
+    const Usuario = require('./UsuarioModel');
+    const Escalacao = require('./EscalacaoModel');
+    const Atleta = require('./AtletaModel');
+    const Tecnico = require('./TecnicoModel');
+    const FaseCampeonato = require('./FaseCampeonatoModel');
+    const Campeonato = require('./CampeonatoModel');
+    const GrupoCampeonato = require('./GrupoCampeonatoModel');
+    const Partida = require('./PartidaModel');
+    const Escalacao = require('./EscalacaoModel');
+    const Estatistica = require('./EstatisticaModel');
+  
+    await database.sync({force: true});
+  
+    
+  })();
+
+
+
+
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }
 });
 
-(async () => {
-  const database = requite('../connectionDB.js')
-
-  const Usuario = require('./UsuarioModel');
-  const Escalacao = require('./EscalacaoModel');
-  const Atleta = require('./AtletaModel');
-  const Tecnico = require('./TecnicoModel');
-  const FaseCampeonato = require('./FaseCampeonatoModel');
-  const Campeonato = require('./CampeonatoModel');
-  const GrupoCampeonato = require('./GrupoCampeonatoModel');
-  const Partida = require('./PartidaModel');
-  const Escalacao = require('./EscalacaoModel');
-  const Estatistica = require('./EstatisticaModel');
-
-  await database.sync({force: true});
-
-  
-})();
 
 
 
 
-db.sequelize = sequelize;
+
 module.exports = db;

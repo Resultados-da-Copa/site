@@ -12,6 +12,13 @@ const Usuario = sequelize.define(
             allowNull: false,
             primaryKey: true
         },
+        EquipeID:{
+            type: DataTypes.UUIDV4,
+            references:{
+                model: EquipeModel,
+                key:"id",
+            }
+        },
         name:{
             type: DataTypes.STRING(100),
             allowNull: false
@@ -20,6 +27,10 @@ const Usuario = sequelize.define(
             type: DataTypes.STRING(100),
             allowNull: false
         },
+        password: {
+            allowNull: false,
+            type: Sequelize.STRING(32),
+          },
         dataNascimento:{
             type: DataTypes.DATE,
             defaultValue: false,
