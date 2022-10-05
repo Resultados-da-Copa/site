@@ -1,10 +1,10 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config')
-const Equipe = require('./EquipeModel')
+const team = require('./Team')
 
-const Usuario = sequelize.define(
-    'Usuario',
+const users = sequelize.define(
+    'users',
      {
         id:{
             type: DataTypes.UUID,
@@ -12,10 +12,10 @@ const Usuario = sequelize.define(
             allowNull: false,
             primaryKey: true
         },
-        EquipeID:{
+        team_id:{
             type: DataTypes.UUIDV4,
             references:{
-                model: EquipeModel,
+                model: TeamModel,
                 key:"id",
             }
         },
@@ -31,31 +31,28 @@ const Usuario = sequelize.define(
             allowNull: false,
             type: Sequelize.STRING(32),
           },
-        dataNascimento:{
+        birth_date:{
             type: DataTypes.DATE,
             defaultValue: false,
-            field: "data_nascimento",
         },
-        foto:{
+        photograph:{
             type: DataTypes.STRING(500),
             allowNull: false
         },
-        dataCriacao:{
-            type: DataTypes.DATE,
-            field: "data_criacao",
+        createdAt:{
+            type: DataTypes.DATE
         },
      },
     {
-        tableName: "usuarios",
-        timestamps: true,
-        createdAt: "dataCriacao",
+        tableName: "users",
+        timestamps: true
     }
 ); 
 
-Usuario.belongsTo(Equipe, {
+users.belongsTo(team, {
     constraint: true,
-    foreignKey: "EquipeID",
+    foreignKey: "team_id",
 })
 
 
-module.exports = Usuario;
+module.exports = users;

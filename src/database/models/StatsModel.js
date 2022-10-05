@@ -1,29 +1,29 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config');
-const Atleta = require('./AtletaModel');
-const Partida = require('./PartidaModel');
+const player = require('./PlayerModel');
+const mach = require('./MatchModel');
 
-const Estatistica = sequelize.define(
-    'Estatistica',
-     {
+const stats= sequelize.define(
+    'stats',
+    {
         id:{
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
             allowNull: false,
             primaryKey: true
         },
-        AtletaID:{
+        player_id:{
             type: DataTypes.UUIDV4,
             references:{
-                model: AtletaModel,
+                model: PlayerModel,
                 key:"id",
             }
         },
-        PartidaID:{
+        match_id:{
             type: DataTypes.UUIDV4,
             references:{
-                model: PartidaModel,
+                model: MatchModel,
                 key:"id",
             }
         },
@@ -31,61 +31,56 @@ const Estatistica = sequelize.define(
             type: DataTypes.STRING(100),
             allowNull: false
         },
-        primeiroTempo: {
+        first_half: {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
-            field: "primeiro_tempo",
         },
-        segundoTempo: {
+        second_half: {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
-            field: "segundo_tempo",
         },
-        cartoesAmarelos: {
-            type: DataTypes.INTEGER,
-            defaultValue: false,
-            field: "cartoes_amarelos",
-        },
-        cartoesVermelhos: {
-            type: DataTypes.INTEGER,
-            defaultValue: false,
-            field: "cartoes_vermelhos",
-        },
-        impedimentos: {
+        yellow_cards: {
             type: DataTypes.INTEGER,
             defaultValue: false,
         },
-        escanteios: {
+        red_cards: {
             type: DataTypes.INTEGER,
             defaultValue: false,
         },
-        faltas: {
+        impediments: {
             type: DataTypes.INTEGER,
             defaultValue: false,
         },
-        gols: {
+        corner: {
+            type: DataTypes.INTEGER,
+            defaultValue: false,
+        },
+        offside: {
+            type: DataTypes.INTEGER,
+            defaultValue: false,
+        },
+        goals: {
             type: DataTypes.INTEGER,
             defaultValue: false,
         },        
-        dataCriacao:{
+        createdAt:{
             type: DataTypes.DATE,
-            field: "data_criacao",
         },
-     },
+    },
     {
-        tableName: "estatisticas",
+        tableName: "stats",
         timestamps: true,
-        createdAt: "dataCriacao",
+        createdAt: "createdAt",
     }
 ); 
 
-Estatistica.hasMany(Partida, {
+stats.hasMany(match, {
     constraint: true,
-    foreignKey: "PartidaID",
+    foreignKey: "match_id",
 })
-Estatistica.hasMany(Atleta, {
+stats.hasMany(player, {
     constraint: true,
-    foreignKey: "AtletaID",
+    foreignKey: "player_id",
 })
 
-module.exports = Estatistica;
+module.exports = stats

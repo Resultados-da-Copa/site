@@ -8,8 +8,9 @@ const config = {
     database: process.env.DB_SCHEMA,
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
-    dialect: "mysql",
+    dialect: "mysql2",
 };
+console.log(process.env.DB_USER);
 
 const sequelize = new Sequelize(
     config.database,

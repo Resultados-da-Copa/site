@@ -1,36 +1,36 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config');
-const Equipe = require('./EquipeModel');
-const GrupoCampeonato = require('./GrupoCampeonatoModel');
+const team = require('./Team');
+const cup_group = require('./CupGroupModel');
 
-const Partida = sequelize.define(
-    'Partida',
-     {
+const match = sequelize.define(
+    'match',
+    {
         id:{
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
             allowNull: false,
             primaryKey: true
         },
-        GrupoCampeonatoID:{
+        cup_group_id:{
             type: DataTypes.UUIDV4,
             references:{
-                model: GrupoCampeonatoModel,
+                model: CupGroupModel,
                 key:"id",
             }
         },
-        Equipe_MandanteID:{
+        home_team_id:{
             type: DataTypes.UUIDV4,
             references:{
-                model: EquipeModel,
+                model: TeamModel,
                 key:"id",
             }
         },
-        Equipe_VisitanteID:{
+        visitors_team_id:{
             type: DataTypes.UUIDV4,
             references:{
-                model: EquipeModel,
+                model: TeamModel,
                 key:"id",
             }
         },
@@ -38,41 +38,40 @@ const Partida = sequelize.define(
             type: DataTypes.STRING(100),
             allowNull: false
         },
-        Partida_iniciada: {
+        started_match: {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
         },
-        Partida_finalizada: {
+        end_match: {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
         },
-        Partida_pausada: {
+        stopped_match: {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
         },
-        dataCriacao:{
-            type: DataTypes.DATE,
-            field: "data_criacao",
+        createdAt:{
+            type: DataTypes.DATE
         },
-     },
+    },
     {
-        tableName: "partidas",
+        tableName: "match",
         timestamps: true,
-        createdAt: "dataCriacao",
+        createdAt: "createdAt",
     }
 ); 
 
-Partida.belongsTo(GrupoCampeonato, {
+match.belongsTo(cup_group, {
     constraint: true,
-    foreignKey: "GrupoCampeonatoID",
+    foreignKey: "cup_group_id",
 })
-Partida.belongsTo(Equipe, {
+match.belongsTo(team, {
     constraint: true,
-    foreignKey: "Equipe_MandanteID",
+    foreignKey: "home_team_id",
 })
-Partida.belongsTo(Equipe, {
+match.belongsTo(team, {
     constraint: true,
-    foreignKey: "Equipe_VisitanteID",
+    foreignKey: "visitors_team_id",
 })
 
-module.exports = Partida;
+module.exports = match;

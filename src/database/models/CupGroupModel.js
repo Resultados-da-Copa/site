@@ -1,21 +1,21 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config');
-const FaseCampeonato = require('./FaseCampeonatoModel');
+const cup_stage = require('./CupStageModel');
 
-const GrupoCampeonato = sequelize.define(
-    'GrupoCampeonato',
-     {
+const cup_group = sequelize.define(
+    'cup_group',
+    {
         id:{
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
             allowNull: false,
             primaryKey: true
         },
-        FaseCampeonatoID:{
+        cup_stage_id:{
             type: DataTypes.UUIDV4,
             references:{
-                model: FaseCampeonatoIDModel,
+                model: CupStageModel,
                 key:"id",
             }
         },
@@ -23,22 +23,20 @@ const GrupoCampeonato = sequelize.define(
             type: DataTypes.STRING(100),
             allowNull: false
         },
-        dataCriacao:{
+        createdAt:{
             type: DataTypes.DATE,
-            field: "data_criacao",
         },
-     },
+    },
     {
-        tableName: "grupos_campeonato",
+        tableName: "cup_group",
         timestamps: true,
-        createdAt: "dataCriacao",
     }
 ); 
 
 
-GrupoCampeonato.hasMany(FaseCampeonato, {
+cup_group.hasMany(cup_stage, {
     constraint: true,
-    foreignKey: "FaseCampeonatoID",
+    foreignKey: "cup_stage_id",
 })
 
-module.exports = GrupoCampeonato;
+module.exports = cup_group;

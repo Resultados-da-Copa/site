@@ -2,8 +2,9 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
+    
     await queryInterface.createTable(
-      'FaseCampeonato', 
+      'cup_stage', 
       { 
         id:{
           type: DataTypes.UUID,
@@ -11,7 +12,7 @@ module.exports = {
           allowNull: false,
           primaryKey: true
       },
-      CampeonatoID:{
+      cup_id:{
           type: DataTypes.UUIDV4,
           references:{
               model: CampeonatoModel,
@@ -22,28 +23,26 @@ module.exports = {
           type: DataTypes.STRING(100),
           allowNull: false
       },
-      fase_iniciada: {
+      initial_stage: {
           type: DataTypes.BOOLEAN,
           defaultValue: false,
       },
-      fase_finalizada: {
+      finish_stage: {
           type: DataTypes.BOOLEAN,
           defaultValue: false,
       },
-      fase_pausada: {
+      stopped_stage: {
           type: DataTypes.BOOLEAN,
           defaultValue: false,
       },
-      dataCriacao:{
+      createdAt:{
           type: DataTypes.DATE,
-          field: "data_criacao",
       },
       });
-     
+
   },
 
-  async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('FaseCampeonato');
-    
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('cup_stage');
   }
 };

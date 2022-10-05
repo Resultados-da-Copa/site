@@ -2,8 +2,8 @@ const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config')
 
-const Tecnico = sequelize.define(
-    'Tecnico',
+const coach = sequelize.define(
+    'coach',
      {
         id:{
             type: DataTypes.UUID,
@@ -11,10 +11,10 @@ const Tecnico = sequelize.define(
             allowNull: false,
             primaryKey: true
         },
-        EquipeID:{
+        team_id:{
             type: DataTypes.UUIDV4,
             references:{
-                model: EquipeModel,
+                model: TeamModel,
                 key:"id",
             }
         },
@@ -24,14 +24,14 @@ const Tecnico = sequelize.define(
         },
      },
     {
-        tableName: "tecnicos",
+        tableName: "coach",
     }
 ); 
 
-Tecnico.belongsTo(Equipe, {
+coach.belongsTo(team, {
     constraint: true,
-    foreignKey: "EquipeID",
+    foreignKey: "team_id",
 })
 
 
-module.exports = Tecnico;
+module.exports = coach;

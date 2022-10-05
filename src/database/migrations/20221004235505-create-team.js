@@ -1,10 +1,11 @@
-const { DataTypes } = require('sequelize');
-const { Sequelize } = require('.');
-const sequelize = require('../config')
+'use strict';
 
-const Equipe = sequelize.define(
-    'Equipe',
-     {
+module.exports = {
+  async up (queryInterface, Sequelize) {
+    
+    await queryInterface.createTable(
+      'team',
+      { 
         id:{
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
@@ -15,24 +16,22 @@ const Equipe = sequelize.define(
             type: DataTypes.STRING(100),
             allowNull: false
         },
-        sigla:{
+        abbreviation:{
             type: DataTypes.STRING(100),
             defaultValue: false,
         },
-        bandeira:{
+        flag:{
             type: DataTypes.STRING(500),
             allowNull: false
         },
-        dataCriacao:{
+        createdAt:{
             type: DataTypes.DATE,
-            field: "data_criacao",
         },
-     },
-    {
-        tableName: "equipes",
-        timestamps: true,
-        createdAt: "dataCriacao",
-    }
-); 
+      });
+    
+  },
 
-module.exports = Equipe;
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('team');
+  }
+};

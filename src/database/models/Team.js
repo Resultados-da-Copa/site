@@ -2,9 +2,9 @@ const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config')
 
-const Campeonato = sequelize.define(
-    'Campeonato',
-     {
+const team = sequelize.define(
+    'team',
+    {
         id:{
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
@@ -15,28 +15,23 @@ const Campeonato = sequelize.define(
             type: DataTypes.STRING(100),
             allowNull: false
         },
-        campeonato_iniciado: {
-            type: DataTypes.BOOLEAN,
+        abbreviation:{
+            type: DataTypes.STRING(100),
             defaultValue: false,
         },
-        campeonato_finalizado: {
-            type: DataTypes.BOOLEAN,
-            defaultValue: false,
+        flag:{
+            type: DataTypes.STRING(500),
+            allowNull: false
         },
-        campeonato_pausado: {
-            type: DataTypes.BOOLEAN,
-            defaultValue: false,
-        },
-        dataCriacao:{
+        createdAt:{
             type: DataTypes.DATE,
-            field: "data_criacao",
         },
-     },
+    },
     {
-        tableName: "campeonatos",
+        tableName: "teams",
         timestamps: true,
-        createdAt: "dataCriacao",
+        createdAt: "createdAt",
     }
 ); 
 
-module.exports = Campeonato;
+module.exports = team;

@@ -1,0 +1,52 @@
+'use strict';
+
+module.exports = {
+  async up (queryInterface, Sequelize) {
+  
+  await queryInterface.createTable(
+    'users', 
+    { 
+      id:{
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+        allowNull: false,
+        primaryKey: true
+    },
+    team_id:{
+        type: DataTypes.UUIDV4,
+        references:{
+            model: TeamModel,
+            key:"id",
+        }
+    },
+    name:{
+        type: DataTypes.STRING(100),
+        allowNull: false
+    },
+    email:{
+        type: DataTypes.STRING(100),
+        allowNull: false
+    },
+    password: {
+        allowNull: false,
+        type: Sequelize.STRING(32),
+      },
+    birth_date:{
+        type: DataTypes.DATE,
+        defaultValue: false,
+    },
+    photograph:{
+        type: DataTypes.STRING(500),
+        allowNull: false
+    },
+    createdAt:{
+        type: DataTypes.DATE
+    }, 
+    });
+  
+  },
+
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('users');
+  }
+};

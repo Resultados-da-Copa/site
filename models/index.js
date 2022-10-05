@@ -5,9 +5,8 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.json')[env];
+const config = require(__dirname + '/../config/database.json')[env];
 const db = {};
-
 
 let sequelize;
 if (config.use_env_variable) {
@@ -26,38 +25,13 @@ fs
     db[model.name] = model;
   });
 
-
-  (async () => {
-    const database = requite('../connectionDB.js')
-  
-    const Usuario = require('./UsersModel');
-    const Escalacao = require('./TeamLineupModel');
-    const Atleta = require('./PlayerModel');
-    const Tecnico = require('./CoachModel');
-    const FaseCampeonato = require('./CupStageModel');
-    const Campeonato = require('./ChampionshipModel');
-    const GrupoCampeonato = require('./CupGroupModel');
-    const Partida = require('./MatchModel');
-    const Escalacao = require('./TeamLineupModel');
-    const Estatistica = require('./StatsModel');
-  
-    await database.sync({force: true});
-  
-    
-  })();
-
-
-
-
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }
 });
 
-
-
-
-
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
 
 module.exports = db;

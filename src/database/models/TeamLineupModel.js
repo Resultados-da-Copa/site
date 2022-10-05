@@ -1,11 +1,11 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config');
-const Atleta = require('./AtletaModel');
-const Partida = require('./PartidaModel');
+const player = require('./PlayerModel');
+const match = require('./MatchModel');
 
-const Escalacao = sequelize.define(
-    'Escalacao',
+const team_lineup = sequelize.define(
+    'team_lineup',
      {
         id:{
             type: DataTypes.UUID,
@@ -13,54 +13,52 @@ const Escalacao = sequelize.define(
             allowNull: false,
             primaryKey: true
         },
-        AtletaID:{
+        player_id:{
             type: DataTypes.UUIDV4,
             references:{
-                model: AtletaModel,
+                model: MatchModel,
                 key:"id",
             }
         },
-        PartidaID:{
+        match_id:{
             type: DataTypes.UUIDV4,
             references:{
-                model: PartidaModel,
+                model: MatchModel,
                 key:"id",
             }
         },
-        jogadoresTitulares: {
+        starting_players: {
             type: DataTypes.String,
             defaultValue: false,
-            field: "jogadores_titulares",
         },
-        jogadoresReservas: {
+        substitutes_players: {
             type: DataTypes.INTEGER,
             defaultValue: false,
-            field: "jogadores_reservas",
         },
-        jogadoresCortados: {
+        
+        unrelated_players: {
             type: DataTypes.INTEGER,
             defaultValue: false,
-            field: "jogadores_cortados",
         },
-        dataCriacao:{
+        createdAt:{
             type: DataTypes.DATE,
-            field: "data_criacao",
+            field: "createdAt",
         },
     },
     {
-        tableName: "escalacoes",
+        tableName: "team_lineup",
         timestamps: true,
-        createdAt: "dataCriacao",
+        createdAt: "createdAt",
     }
 ); 
 
-Escalacao.hasMany(Atleta, {
+team_lineup.hasMany(player, {
     constraint: true,
-    foreignKey: "AtletaID",
+    foreignKey: "player_id",
 })
-Escalacao.hasMany(Partida, {
+team_lineup.hasMany(match, {
     constraint: true,
-    foreignKey: "PartidaID",
+    foreignKey: "match_id",
 })
 
-module.exports = Escalacao;
+module.exports = team_lineup;

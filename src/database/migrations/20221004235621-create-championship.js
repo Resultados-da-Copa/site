@@ -2,9 +2,10 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
+    
     await queryInterface.createTable(
-      'Campeonatos',
-       { 
+      'championship', 
+      { 
         id:{
           type: DataTypes.UUID,
           defaultValue: DataTypes.UUIDV4,
@@ -15,29 +16,26 @@ module.exports = {
           type: DataTypes.STRING(100),
           allowNull: false
       },
-      campeonato_iniciado: {
+      started_championship: {
           type: DataTypes.BOOLEAN,
           defaultValue: false,
       },
-      campeonato_finalizado: {
+      finished_championship: {
           type: DataTypes.BOOLEAN,
           defaultValue: false,
       },
-      campeonato_pausado: {
+      stopped_championship: {
           type: DataTypes.BOOLEAN,
           defaultValue: false,
       },
-      dataCriacao:{
+      createdAt:{
           type: DataTypes.DATE,
-          field: "data_criacao",
-      },
-       });
-    
+      }, 
+      });
+
   },
 
-  async down (queryInterface, Sequelize) {
-    
-    await queryInterface.dropTable('Campeonatos');
-    
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('championship');
   }
 };

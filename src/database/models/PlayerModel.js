@@ -2,19 +2,19 @@ const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config')
 
-const Atleta = sequelize.define(
-    'Atleta',
-     {
+const player = sequelize.define(
+    'players',
+    {
         id:{
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
             allowNull: false,
             primaryKey: true
         },
-        EquipeID:{
+        team_id:{
             type: DataTypes.UUIDV4,
             references:{
-                model: EquipeModel,
+                model: TeamModel,
                 key:"id",
             }
         },
@@ -22,44 +22,43 @@ const Atleta = sequelize.define(
             type: DataTypes.STRING(100),
             allowNull: false
         },
-        foto:{
+        photograph:{
             type: DataTypes.STRING(500),
             allowNull: false
         },
-        dataNascimento:{
+        birth_date:{
             type: DataTypes.DATE,
             defaultValue: false,
-            field: "data_nascimento",
         },
-        nacionalidade:{
+        nationality:{
             type: DataTypes.STRING(500),
             allowNull: false
         },
-        peso:{
+        weight:{
             type: DataTypes.DECIMAL(2, 2),
             allowNull: false
         },
-        numero_camiseta: {
+        number: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        altura: {
+        height: {
             type: DataTypes.DECIMAL(2, 2),
             allowNull: false,
         },
-        pe_dominante: {
+        foot: {
             type: DataTypes.STRING(100),
             allowNull: false,
         },
-     },
+    },
     {
-        tableName: "atletas",
+        tableName: "player",
     }
 ); 
 
-Atleta.belongsTo(Equipe, {
+player.belongsTo(team, {
     constraint: true,
-    foreignKey: "EquipeID",
+    foreignKey: "team_id",
 })
 
-module.exports = Atleta;
+module.exports = player;

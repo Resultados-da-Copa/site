@@ -2,8 +2,9 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
+    
     await queryInterface.createTable(
-      'Equipes', 
+      'cup_group',
       { 
         id:{
           type: DataTypes.UUID,
@@ -11,29 +12,25 @@ module.exports = {
           allowNull: false,
           primaryKey: true
       },
+      cup_stage_id:{
+          type: DataTypes.UUIDV4,
+          references:{
+              model: CupStageModel,
+              key:"id",
+          }
+      },
       name:{
           type: DataTypes.STRING(100),
           allowNull: false
       },
-      sigla:{
-          type: DataTypes.STRING(100),
-          defaultValue: false,
-      },
-      bandeira:{
-          type: DataTypes.STRING(500),
-          allowNull: false
-      },
-      dataCriacao:{
+      createdAt:{
           type: DataTypes.DATE,
-          field: "data_criacao",
       },
       });
-     
+    
   },
 
-  async down (queryInterface, Sequelize) {
-   
-    await queryInterface.dropTable('Equipes');
-    
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('cup_group');
   }
 };
