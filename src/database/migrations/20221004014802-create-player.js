@@ -29,7 +29,6 @@ module.exports = {
         },
         birth_date: {
           type: Sequelize.DataTypes.DATE,
-          defaultValue: false,
         },
         nationality: {
           type: Sequelize.DataTypes.STRING(500),

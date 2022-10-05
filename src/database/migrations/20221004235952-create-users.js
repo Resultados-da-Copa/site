@@ -33,7 +33,6 @@ module.exports = {
       },
     birth_date:{
         type: Sequelize.DataTypes.DATE,
-        defaultValue: false,
     },
     photograph:{
         type: Sequelize.DataTypes.STRING(500),
