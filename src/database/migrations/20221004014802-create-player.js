@@ -6,48 +6,48 @@ module.exports = {
         await queryInterface.createTable(
             'players', {
                 id: {
-                    type: DataTypes.UUID,
-                    defaultValue: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUID,
+                    defaultValue: Sequelize.DataTypes.UUIDV4,
                     allowNull: false,
                     primaryKey: true
                 },
                 team_id: {
-                    type: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUIDV4,
                     references: {
-                        model: TeamModel,
+                        model: "team",
                         key: "id",
                     }
                 },
                 name: {
-                    type: DataTypes.STRING(100),
+                    type: Sequelize.DataTypes.STRING(100),
                     allowNull: false
                 },
                 photograph: {
-                    type: DataTypes.STRING(500),
+                    type: Sequelize.DataTypes.STRING(500),
                     allowNull: false
                 },
                 birth_date: {
-                    type: DataTypes.DATE,
+                    type: Sequelize.DataTypes.DATE,
                     defaultValue: false,
                 },
                 nationality: {
-                    type: DataTypes.STRING(500),
+                    type: Sequelize.DataTypes.STRING(500),
                     allowNull: false
                 },
                 weight: {
-                    type: DataTypes.DECIMAL(2, 2),
+                    type: Sequelize.DataTypes.DECIMAL(2, 2),
                     allowNull: false
                 },
                 number: {
-                    type: DataTypes.INTEGER,
+                    type: Sequelize.DataTypes.INTEGER,
                     allowNull: false,
                 },
                 height: {
-                    type: DataTypes.DECIMAL(2, 2),
+                    type: Sequelize.DataTypes.DECIMAL(2, 2),
                     allowNull: false,
                 },
                 foot: {
-                    type: DataTypes.STRING(100),
+                    type: Sequelize.DataTypes.STRING(100),
                     allowNull: false,
                 },
             });

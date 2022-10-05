@@ -1,11 +1,10 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config')
-const team = require('./Team')
 
-const users = sequelize.define(
-    'users',
-     {
+const player = sequelize.define(
+    'players',
+    {
         id:{
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
@@ -23,36 +22,43 @@ const users = sequelize.define(
             type: DataTypes.STRING(100),
             allowNull: false
         },
-        email:{
-            type: DataTypes.STRING(100),
-            allowNull: false
-        },
-        password: {
-            allowNull: false,
-            type: Sequelize.STRING(32),
-          },
-        birth_date:{
-            type: DataTypes.DATE,
-            defaultValue: false,
-        },
         photograph:{
             type: DataTypes.STRING(500),
             allowNull: false
         },
-        createdAt:{
-            type: DataTypes.DATE
+        birth_date:{
+            type: DataTypes.DATE,
+            defaultValue: false,
         },
-     },
+        nationality:{
+            type: DataTypes.STRING(500),
+            allowNull: false
+        },
+        weight:{
+            type: DataTypes.DECIMAL(2, 2),
+            allowNull: false
+        },
+        number: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        height: {
+            type: DataTypes.DECIMAL(2, 2),
+            allowNull: false,
+        },
+        foot: {
+            type: DataTypes.STRING(100),
+            allowNull: false,
+        },
+    },
     {
-        tableName: "users",
-        timestamps: true
+        tableName: "player",
     }
 ); 
 
-users.belongsTo(team, {
+player.belongsTo(team, {
     constraint: true,
-    foreignKey: "team_id",
+    foreignKey: "id",
 })
 
-
-module.exports = users;
+module.exports = player;

@@ -1,11 +1,10 @@
-'use strict';
+const { DataTypes } = require('sequelize');
+const { Sequelize } = require('.');
+const sequelize = require('../config')
 
-module.exports = {
-  async up (queryInterface, Sequelize) {
-    
-    await queryInterface.createTable(
-      'team',
-      { 
+const team = sequelize.define(
+    'team',
+    {
         id:{
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
@@ -27,11 +26,12 @@ module.exports = {
         createdAt:{
             type: DataTypes.DATE,
         },
-      });
-    
-  },
+    },
+    {
+        tableName: "team",
+        timestamps: true,
+        createdAt: "createdAt",
+    }
+); 
 
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('team');
-  }
-};
+module.exports = team;

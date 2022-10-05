@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config');
-const player = require('./PlayerModel');
-const match = require('./MatchModel');
+const player = require('./player');
+const match = require('./match');
 
 const team_lineup = sequelize.define(
     'team_lineup',

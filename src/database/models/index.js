@@ -30,16 +30,16 @@ fs
   (async () => {
     const database = requite('../connectionDB.js')
   
-    const Usuario = require('./UsersModel');
-    const Escalacao = require('./TeamLineupModel');
-    const Atleta = require('./PlayerModel');
-    const Tecnico = require('./CoachModel');
-    const FaseCampeonato = require('./CupStageModel');
-    const Campeonato = require('./ChampionshipModel');
-    const GrupoCampeonato = require('./CupGroupModel');
-    const Partida = require('./MatchModel');
-    const Escalacao = require('./TeamLineupModel');
-    const Estatistica = require('./StatsModel');
+    const Usuario = require('./users');
+    const Escalacao = require('./team_lineup');
+    const Atleta = require('./player');
+    const Tecnico = require('./coach');
+    const FaseCampeonato = require('./cup_stage');
+    const Campeonato = require('./championship');
+    const GrupoCampeonato = require('./cup_group');
+    const Partida = require('./match');
+    const Escalacao = require('./team_lineup');
+    const Estatistica = require('./stats');
   
     await database.sync({force: true});
   

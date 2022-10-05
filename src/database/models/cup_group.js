@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize } = require('.');
 const sequelize = require('../config');
-const cup_stage = require('./CupStageModel');
+const cup_stage = require('./cup_stage');
 
 const cup_group = sequelize.define(
     'cup_group',
