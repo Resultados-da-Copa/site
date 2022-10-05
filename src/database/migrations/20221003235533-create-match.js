@@ -6,50 +6,50 @@ module.exports = {
         await queryInterface.createTable(
             'match', {
                 id: {
-                    type: DataTypes.UUID,
-                    defaultValue: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUID,
+                    defaultValue: Sequelize.DataTypes.UUIDV4,
                     allowNull: false,
                     primaryKey: true
                 },
                 cup_group_id: {
-                    type: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUID,
                     references: {
-                        model: CupGroupModel,
+                        model: "cup_group",
                         key: "id",
                     }
                 },
                 home_team_id: {
-                    type: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUID,
                     references: {
-                        model: TeamModel,
+                        model: "team",
                         key: "id",
                     }
                 },
                 visitors_team_id: {
-                    type: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUID,
                     references: {
-                        model: TeamModel,
+                        model: "team",
                         key: "id",
                     }
                 },
                 name: {
-                    type: DataTypes.STRING(100),
+                    type: Sequelize.DataTypes.STRING(100),
                     allowNull: false
                 },
                 started_match: {
-                    type: DataTypes.BOOLEAN,
+                    type: Sequelize.DataTypes.BOOLEAN,
                     defaultValue: false,
                 },
                 end_match: {
-                    type: DataTypes.BOOLEAN,
+                    type: Sequelize.DataTypes.BOOLEAN,
                     defaultValue: false,
                 },
                 stopped_match: {
-                    type: DataTypes.BOOLEAN,
+                    type: Sequelize.DataTypes.BOOLEAN,
                     defaultValue: false,
                 },
                 createdAt: {
-                    type: DataTypes.DATE
+                    type: Sequelize.DataTypes.DATE
                 },
             });
 

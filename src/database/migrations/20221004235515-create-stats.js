@@ -2,67 +2,66 @@
 
 module.exports = {
     async up(queryInterface, Sequelize) {
-
         await queryInterface.createTable(
             'stats', {
                 id: {
-                    type: DataTypes.UUID,
-                    defaultValue: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUID,
+                    defaultValue: Sequelize.DataTypes.UUIDV4,
                     allowNull: false,
                     primaryKey: true
                 },
                 player_id: {
-                    type: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUID,
                     references: {
-                        model: PlayerModel,
+                        model: "players",
                         key: "id",
                     }
                 },
                 match_id: {
-                    type: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUID,
                     references: {
-                        model: MatchModel,
+                        model: "match",
                         key: "id",
                     }
                 },
                 name: {
-                    type: DataTypes.STRING(100),
+                    type: Sequelize.DataTypes.STRING(100),
                     allowNull: false
                 },
                 first_half: {
-                    type: DataTypes.BOOLEAN,
+                    type: Sequelize.DataTypes.BOOLEAN,
                     defaultValue: false,
                 },
                 second_half: {
-                    type: DataTypes.BOOLEAN,
+                    type: Sequelize.DataTypes.BOOLEAN,
                     defaultValue: false,
                 },
                 yellow_cards: {
-                    type: DataTypes.INTEGER,
+                    type: Sequelize.DataTypes.INTEGER,
                     defaultValue: false,
                 },
                 red_cards: {
-                    type: DataTypes.INTEGER,
+                    type: Sequelize.DataTypes.INTEGER,
                     defaultValue: false,
                 },
                 impediments: {
-                    type: DataTypes.INTEGER,
+                    type: Sequelize.DataTypes.INTEGER,
                     defaultValue: false,
                 },
                 corner: {
-                    type: DataTypes.INTEGER,
+                    type: Sequelize.DataTypes.INTEGER,
                     defaultValue: false,
                 },
                 offside: {
-                    type: DataTypes.INTEGER,
+                    type: Sequelize.DataTypes.INTEGER,
                     defaultValue: false,
                 },
                 goals: {
-                    type: DataTypes.INTEGER,
+                    type: Sequelize.DataTypes.INTEGER,
                     defaultValue: false,
                 },
                 createdAt: {
-                    type: DataTypes.DATE,
+                    type: Sequelize.DataTypes.DATE,
                 },
             });
 

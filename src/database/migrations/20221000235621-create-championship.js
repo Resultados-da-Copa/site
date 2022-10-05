@@ -7,29 +7,29 @@ module.exports = {
       'championship', 
       { 
         id:{
-          type: DataTypes.UUID,
-          defaultValue: DataTypes.UUIDV4,
+          type: Sequelize.DataTypes.UUID,
+          defaultValue: Sequelize.DataTypes.UUIDV4,
           allowNull: false,
           primaryKey: true
       },
       name:{
-          type: DataTypes.STRING(100),
+          type: Sequelize.DataTypes.STRING(100),
           allowNull: false
       },
       started_championship: {
-          type: DataTypes.BOOLEAN,
+          type: Sequelize.DataTypes.BOOLEAN,
           defaultValue: false,
       },
       finished_championship: {
-          type: DataTypes.BOOLEAN,
+          type: Sequelize.DataTypes.BOOLEAN,
           defaultValue: false,
       },
       stopped_championship: {
-          type: DataTypes.BOOLEAN,
+          type: Sequelize.DataTypes.BOOLEAN,
           defaultValue: false,
       },
       createdAt:{
-          type: DataTypes.DATE,
+          type: Sequelize.DataTypes.DATE,
       }, 
       });
 

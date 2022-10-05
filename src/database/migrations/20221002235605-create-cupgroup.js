@@ -7,24 +7,24 @@ module.exports = {
       'cup_group',
       { 
         id:{
-          type: DataTypes.UUID,
-          defaultValue: DataTypes.UUIDV4,
+          type: Sequelize.DataTypes.UUID,
+          defaultValue: Sequelize.DataTypes.UUIDV4,
           allowNull: false,
           primaryKey: true
       },
       cup_stage_id:{
-          type: DataTypes.UUIDV4,
+          type: Sequelize.DataTypes.UUID,
           references:{
-              model: CupStageModel,
+              model: "cup_stage",
               key:"id",
           }
       },
       name:{
-          type: DataTypes.STRING(100),
+          type: Sequelize.DataTypes.STRING(100),
           allowNull: false
       },
       createdAt:{
-          type: DataTypes.DATE,
+          type: Sequelize.DataTypes.DATE,
       },
       });
     

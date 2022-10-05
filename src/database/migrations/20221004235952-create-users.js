@@ -7,24 +7,24 @@ module.exports = {
     'users', 
     { 
       id:{
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
+        type: Sequelize.DataTypes.UUID,
+        defaultValue: Sequelize.DataTypes.UUIDV4,
         allowNull: false,
         primaryKey: true
     },
     team_id:{
-        type: DataTypes.UUIDV4,
+        type: Sequelize.DataTypes.UUID,
         references:{
-            model: TeamModel,
+            model: "team",
             key:"id",
         }
     },
     name:{
-        type: DataTypes.STRING(100),
+        type: Sequelize.DataTypes.STRING(100),
         allowNull: false
     },
     email:{
-        type: DataTypes.STRING(100),
+        type: Sequelize.DataTypes.STRING(100),
         allowNull: false
     },
     password: {
@@ -32,15 +32,15 @@ module.exports = {
         type: Sequelize.STRING(32),
       },
     birth_date:{
-        type: DataTypes.DATE,
+        type: Sequelize.DataTypes.DATE,
         defaultValue: false,
     },
     photograph:{
-        type: DataTypes.STRING(500),
+        type: Sequelize.DataTypes.STRING(500),
         allowNull: false
     },
     createdAt:{
-        type: DataTypes.DATE
+        type: Sequelize.DataTypes.DATE
     }, 
     });
   

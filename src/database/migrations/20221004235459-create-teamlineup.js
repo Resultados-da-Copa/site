@@ -5,40 +5,40 @@ module.exports = {
         await queryInterface.createTable(
             'team_lineup', {
                 id: {
-                    type: DataTypes.UUID,
-                    defaultValue: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUID,
+                    defaultValue: Sequelize.DataTypes.UUIDV4,
                     allowNull: false,
                     primaryKey: true
                 },
                 player_id: {
-                    type: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUID,
                     references: {
-                        model: MatchModel,
+                        model: "players",
                         key: "id",
                     }
                 },
                 match_id: {
-                    type: DataTypes.UUIDV4,
+                    type: Sequelize.DataTypes.UUID,
                     references: {
-                        model: MatchModel,
+                        model: "match",
                         key: "id",
                     }
                 },
                 starting_players: {
-                    type: DataTypes.String,
+                    type: Sequelize.DataTypes.STRING,
                     defaultValue: false,
                 },
                 substitutes_players: {
-                    type: DataTypes.INTEGER,
+                    type: Sequelize.DataTypes.INTEGER,
                     defaultValue: false,
                 },
 
                 unrelated_players: {
-                    type: DataTypes.INTEGER,
+                    type: Sequelize.DataTypes.INTEGER,
                     defaultValue: false,
                 },
                 createdAt: {
-                    type: DataTypes.DATE,
+                    type: Sequelize.DataTypes.DATE,
                     field: "createdAt",
                 },
             });
