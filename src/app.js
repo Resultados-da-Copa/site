@@ -1,9 +1,5 @@
 const express = require('express')
-const sequelize = require('sequelize')
 const session = require('express-session');
-const connection = require('../src/database/connectionDB');
-
-
 const {v4: uuid} = require('uuid')
 const path = require('path')
 const cadastroRouter = require('./routes/cadastro.routes')
@@ -16,23 +12,7 @@ const partidaRouter = require('./routes/partida.routes')
 const methodOverride = require('method-override');
 const logoutRouter = require('./routes/logout.routes');
 
-const Equipe = require('./database/migrations/Equipes');
-const Usuario = require('./database/migrations/Usuarios');
-
 const app = express()
-
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-connection
-    .authenticated()
-    .then(() =>{
-        console.log("Sucesso ao se conectar ao banco");
-    }).catch((error) =>{
-        console.log("Erro ao se conectar ao banco");
-    })
-
 
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
