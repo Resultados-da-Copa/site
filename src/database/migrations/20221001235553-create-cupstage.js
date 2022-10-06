@@ -1,45 +1,43 @@
 'use strict';
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    
+  async up(queryInterface, Sequelize) {
     await queryInterface.createTable(
-      'cup_stage', 
-      { 
-        id:{
+      'cup_stage',
+      {
+        id: {
           type: Sequelize.DataTypes.UUID,
           defaultValue: Sequelize.DataTypes.UUIDV4,
           allowNull: false,
           primaryKey: true
-      },
-      cup_id:{
+        },
+        cup_id: {
           type: Sequelize.DataTypes.UUID,
-          references:{
-              model: "championship",
-              key:"id",
+          references: {
+            model: "championship",
+            key: "id",
           }
-      },
-      name:{
+        },
+        name: {
           type: Sequelize.DataTypes.STRING(100),
           allowNull: false
-      },
-      initial_stage: {
+        },
+        initial_stage: {
           type: Sequelize.DataTypes.BOOLEAN,
           defaultValue: false,
-      },
-      finish_stage: {
+        },
+        finish_stage: {
           type: Sequelize.DataTypes.BOOLEAN,
           defaultValue: false,
-      },
-      stopped_stage: {
+        },
+        stopped_stage: {
           type: Sequelize.DataTypes.BOOLEAN,
           defaultValue: false,
-      },
-      createdAt:{
+        },
+        createdAt: {
           type: Sequelize.DataTypes.DATE,
-      },
+        },
       });
-
   },
 
   down: (queryInterface, Sequelize) => {

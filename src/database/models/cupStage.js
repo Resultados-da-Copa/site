@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const match = sequelize.define(
-        'match',
+    const cupStage = sequelize.define(
+        'cup_stage',
         {
             id:{
                 type: DataTypes.UUID,
@@ -8,54 +8,40 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 primaryKey: true
             },
-            cup_group_id:{
-                type: DataTypes.UUIDV4,
-            },
-            home_team_id:{
-                type: DataTypes.UUIDV4,
-            },
-            visitors_team_id:{
+            cup_id:{
                 type: DataTypes.UUIDV4,
             },
             name:{
                 type: DataTypes.STRING(100),
                 allowNull: false
             },
-            started_match: {
+            initial_stage: {
                 type: DataTypes.BOOLEAN,
                 defaultValue: false,
             },
-            end_match: {
+            finish_stage: {
                 type: DataTypes.BOOLEAN,
                 defaultValue: false,
             },
-            stopped_match: {
+            stopped_stage: {
                 type: DataTypes.BOOLEAN,
                 defaultValue: false,
             },
             createdAt:{
-                type: DataTypes.DATE
+                type: DataTypes.DATE,
             },
         },
         {
-            tableName: "match",
+            tableName: "cup_stages",
             timestamps: true,
             createdAt: "createdAt",
         }
     ); 
     
-    // match.belongsTo(cup_group, {
+    // cup_stage.hasMany(cup, {
     //     constraint: true,
-    //     foreignKey: "cup_group_id",
-    // })
-    // match.belongsTo(team, {
-    //     constraint: true,
-    //     foreignKey: "home_team_id",
-    // })
-    // match.belongsTo(team, {
-    //     constraint: true,
-    //     foreignKey: "visitors_team_id",
+    //     foreignKey: "cup_id",
     // })
 
-    return match;
+    return cupStage;
 }
