@@ -1,40 +1,43 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config');
+module.exports = (sequelize, DataTypes) => {
+    const championship = sequelize.define(
+        'championship',
+        {
+            id: {
+                type: DataTypes.UUID,
+                defaultValue: DataTypes.UUIDV4,
+                allowNull: false,
+                primaryKey: true
+            },
+            name: {
+                type: DataTypes.STRING(100),
+                allowNull: false
+            },
+            startedChampionship: {
+                type: DataTypes.BOOLEAN,
+                defaultValue: false,
+                field: 'started_championship'
+            },
+            finishedChampionship: {
+                type: DataTypes.BOOLEAN,
+                defaultValue: false,
+                field: 'finished_championship'
+            },
+            stoppedChampionship: {
+                type: DataTypes.BOOLEAN,
+                defaultValue: false,
+                field: 'stopped_championship'
+            },
+            createdAt: {
+                type: DataTypes.DATE,
+            },
+        },
+        {
+            tableName: "championship",
+            timestamps: true,
+            createdAt: "createdAt",
+            updatedAt: false
+        }
+    );
 
-const championship = sequelize.define(
-    'championship',
-    {
-        id:{
-            type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV4,
-            allowNull: false,
-            primaryKey: true
-        },
-        name:{
-            type: DataTypes.STRING(100),
-            allowNull: false
-        },
-        started_championship: {
-            type: DataTypes.BOOLEAN,
-            defaultValue: false,
-        },
-        finished_championship: {
-            type: DataTypes.BOOLEAN,
-            defaultValue: false,
-        },
-        stopped_championship: {
-            type: DataTypes.BOOLEAN,
-            defaultValue: false,
-        },
-        createdAt:{
-            type: DataTypes.DATE,
-        },
-    },
-    {
-        tableName: "championship",
-        timestamps: true,
-        createdAt: "createdAt",
-    }
-); 
-
-module.exports = championship;
+    return championship;
+}
