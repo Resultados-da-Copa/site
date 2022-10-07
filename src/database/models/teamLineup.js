@@ -40,14 +40,14 @@ module.exports = (sequelize, DataTypes) => {
         }
     ); 
     
-    stats.belongsTo.associate((models) => {
+    stats.hasMany.associate((models) => {
         teamLineup.hasMany(models.player, {
             constraint: true,
             foreignKey: "playerID",
         });
     });
-    stats.belongsTo.associate((models) => {
-        teamLineup.hasMany(match, {
+    stats.hasMany.associate((models) => {
+        teamLineup.hasMany(models.match, {
             constraint: true,
             foreignKey: "matchID",
         });
