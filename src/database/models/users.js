@@ -41,10 +41,12 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
     
-    // users.belongsTo(team, {
-    //     constraint: true,
-    //     foreignKey: "team_id",
-    // })
+    users.associate((models) => {
+        users.belongsTo(team, {
+            constraint: true,
+            foreignKey: "teamID",
+        });
+    });
 
     return users;
 }

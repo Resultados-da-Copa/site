@@ -2,17 +2,17 @@
 module.exports = (sequelize, DataTypes) => {
     const teamLineup = sequelize.define(
         'team_lineup',
-         {
+        {
             id:{
                 type: DataTypes.UUID,
                 defaultValue: DataTypes.UUIDV4,
                 allowNull: false,
                 primaryKey: true
             },
-            player_id:{
+            playerID:{
                 type: DataTypes.UUIDV4,
             },
-            match_id:{
+            matchID:{
                 type: DataTypes.UUIDV4,
             },
             starting_players: {
@@ -40,14 +40,18 @@ module.exports = (sequelize, DataTypes) => {
         }
     ); 
     
-    // team_lineup.hasMany(player, {
-    //     constraint: true,
-    //     foreignKey: "player_id",
-    // })
-    // team_lineup.hasMany(match, {
-    //     constraint: true,
-    //     foreignKey: "match_id",
-    // })
+    stats.belongsTo.associate((models) => {
+        teamLineup.hasMany(player, {
+            constraint: true,
+            foreignKey: "playerID",
+        });
+    });
+    stats.belongsTo.associate((models) => {
+        teamLineup.hasMany(match, {
+            constraint: true,
+            foreignKey: "matchID",
+        });
+    });
 
     return teamLineup
 }
