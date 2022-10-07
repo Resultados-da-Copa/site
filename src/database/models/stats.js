@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
     ); 
     
     stats.belongsTo.associate((models) => {
-        stats.hasMany(match, {
+        stats.hasMany(models.match, {
             constraint: true,
             foreignKey: "matchID",
         });

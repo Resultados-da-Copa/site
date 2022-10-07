@@ -59,7 +59,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     
     match.belongsTo.associate((models) => {
-        match.belongsTo(team, {
+        match.belongsTo(models.team, {
         constraint: true,
         foreignKey: "visitors_teamID",
         });

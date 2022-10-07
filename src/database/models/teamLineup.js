@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
     ); 
     
     stats.belongsTo.associate((models) => {
-        teamLineup.hasMany(player, {
+        teamLineup.hasMany(models.player, {
             constraint: true,
             foreignKey: "playerID",
         });

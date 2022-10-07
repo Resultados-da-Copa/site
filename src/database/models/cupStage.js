@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     ); 
     cupStage.associate((models) => {
-        cupStage.hasMany(championship, {
+        cupStage.hasMany(models.championship, {
         constraint: true,
         foreignKey: "championshipID",
     });

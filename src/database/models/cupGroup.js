@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     ); 
 
     cupGroup.associate((models) => {
-        cupGroup.hasMany(cup_stage, {
+        cupGroup.hasMany(models.cup_stage, {
             constraint: true,
             foreignKey: "cup_stageID",
     });

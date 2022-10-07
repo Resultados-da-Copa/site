@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
     ); 
 
     player.belongsTo.associate((models) => {
-    player.belongsTo(team, {
+    player.belongsTo(models.team, {
         constraint: true,
         foreignKey: "teamID",
         });
