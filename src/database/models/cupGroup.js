@@ -8,11 +8,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 primaryKey: true
             },
-<<<<<<< HEAD
-            cup_stageID: {
-=======
             cup_stageID:{
->>>>>>> main
                 type: DataTypes.UUIDV4,
             },
             name: {
@@ -27,29 +23,14 @@ module.exports = (sequelize, DataTypes) => {
             tableName: "cup_group",
             timestamps: true,
         }
-<<<<<<< HEAD
     );
-
-    /* cupGroup.associate((models) => {
-        cupGroup.hasMany(cup_stage, {
-            constraint: true,
-            foreignKey: "cup_stageID",
-        });
-
-    }); */
-=======
-    ); 
 
     cupGroup.associate((models) => {
         cupGroup.hasMany(models.cup_stage, {
             constraint: true,
             foreignKey: "cup_stageID",
     });
-    
 });
->>>>>>> main
-
+    
     return cupGroup;
 }
-
-

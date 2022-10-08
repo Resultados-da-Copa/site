@@ -39,33 +39,13 @@ module.exports = (sequelize, DataTypes) => {
             createdAt: "createdAt",
         }
     ); 
-    
-<<<<<<< HEAD
-    /* stats.belongsTo.associate((models) => {
-        teamLineup.hasMany(player, {
-=======
-    stats.hasMany.associate((models) => {
-        teamLineup.hasMany(models.player, {
->>>>>>> main
-            constraint: true,
-            foreignKey: "playerID",
-        });
-    });
-<<<<<<< HEAD
-    stats.belongsTo.associate((models) => {
-        teamLineup.hasMany(match, {
-            constraint: true,
-            foreignKey: "matchID",
-        });
-    }); */
-=======
+
     stats.hasMany.associate((models) => {
         teamLineup.hasMany(models.match, {
             constraint: true,
             foreignKey: "matchID",
         });
     });
->>>>>>> main
 
     return teamLineup
 }

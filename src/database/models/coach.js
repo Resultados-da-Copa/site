@@ -22,21 +22,6 @@ module.exports = (sequelize, DataTypes) => {
             timestamps: false
         }
     );
-
-<<<<<<< HEAD
-    /* coach.associate((models) => {
-=======
-    coach.associate((models) => {
->>>>>>> main
-        coach.belongsTo(models.team, {
-            constraint: true,
-            foreignKey: "teamId",
-    });
-<<<<<<< HEAD
-}); */
-=======
-});
->>>>>>> main
-
+    
     return coach;
 };

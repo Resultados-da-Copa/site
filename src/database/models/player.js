@@ -48,23 +48,12 @@ module.exports = (sequelize, DataTypes) => {
             tableName: "player",
         }
     ); 
-
-<<<<<<< HEAD
-    /* player.belongsTo.associate((models) => {
-    player.belongsTo(team, {
-        constraint: true,
-        foreignKey: "teamID",
-        });
-    }); */
-=======
     player.hasMany.associate((models) => {
     player.hasMany(models.team, {
         constraint: true,
         foreignKey: "teamID",
         });
     });
->>>>>>> main
-
     return player;
 }
 

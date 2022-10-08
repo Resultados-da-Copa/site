@@ -8,7 +8,10 @@
     "dev": "nodemon ./src/app.js",
     "generate:migration": "npx sequelize-cli migration:generate --name",
     "execute:migration": "npx sequelize-cli db:migrate --debug",
-    "undo:migration": "npx sequelize-cli db:migrate:undo"
+    "undo:migration": "npx sequelize-cli db:migrate:undo",
+    "execute:seed": "npx sequelize-cli db:seed:all",
+    "generate:seed": "npx sequelize-cli seed:generate --name"
+
   },
   "repository": {
     "type": "git",
