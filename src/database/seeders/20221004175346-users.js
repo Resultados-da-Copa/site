@@ -4,13 +4,12 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     
     await queryInterface.bulkInsert('users', [{
-      name: 'Crisley',
+      id: "dsfsfdfd",
+      name: 'joao',
       email: 'crisleyhguimaraes@gmail.com',
       password:'1234',
-      birth_date: 23/10/1993,
+      birth_date: "1993-10-23",
       photograph: 'https://github.com/crisleyhguimaraes.png',
-      createdAt: new Date(),
-      updatedAt: new Date()
     }]);
   },
 
