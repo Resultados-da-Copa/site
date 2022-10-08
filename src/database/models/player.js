@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 primaryKey: true
             },
-            team_id:{
+            teamID:{
                 type: DataTypes.UUIDV4,
             },
             name:{
@@ -48,11 +48,13 @@ module.exports = (sequelize, DataTypes) => {
             tableName: "player",
         }
     ); 
-    
-    // player.belongsTo(team, {
-    //     constraint: true,
-    //     foreignKey: "id",
-    // })
+
+    /* player.belongsTo.associate((models) => {
+    player.belongsTo(team, {
+        constraint: true,
+        foreignKey: "teamID",
+        });
+    }); */
 
     return player;
 }

@@ -8,13 +8,13 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 primaryKey: true
             },
-            cup_group_id:{
+            cup_groupID:{
                 type: DataTypes.UUIDV4,
             },
-            home_team_id:{
+            home_teamID:{
                 type: DataTypes.UUIDV4,
             },
-            visitors_team_id:{
+            visitors_teamID:{
                 type: DataTypes.UUIDV4,
             },
             name:{
@@ -43,19 +43,27 @@ module.exports = (sequelize, DataTypes) => {
             createdAt: "createdAt",
         }
     ); 
+
+    /* match.belongsTo.associate((models) => {
+        match.belongsTo(cup_group, {
+            constraint: true,
+            foreignKey: "cup_groupID",
+        });
+    });
     
-    // match.belongsTo(cup_group, {
-    //     constraint: true,
-    //     foreignKey: "cup_group_id",
-    // })
-    // match.belongsTo(team, {
-    //     constraint: true,
-    //     foreignKey: "home_team_id",
-    // })
-    // match.belongsTo(team, {
-    //     constraint: true,
-    //     foreignKey: "visitors_team_id",
-    // })
+    match.belongsTo.associate((models) => {
+        match.belongsTo(team, {
+            constraint: true,
+            foreignKey: "home_teamID",
+        });
+    });
+    
+    match.belongsTo.associate((models) => {
+        match.belongsTo(team, {
+        constraint: true,
+        foreignKey: "visitors_teamID",
+        });
+    }); */
 
     return match;
 }

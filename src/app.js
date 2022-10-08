@@ -13,6 +13,8 @@ const methodOverride = require('method-override');
 const logoutRouter = require('./routes/logout.routes');
 // const team = require('./database/models/team');
 const { coach } = require('./database');
+const { championship } = require('./database');
+const { team } = require('./database');
 
 const app = express()
 
@@ -28,12 +30,13 @@ app.use(session({
 }))
 
 app.post('/teste', async (request, response) => {
-    const coachCreated = await coach.create({
-        name: 'teste',
-        teamId: '8dedbe44-0085-426f-905c-548d4615a621'
+    const teamCreated = await team.create({
+        name: 'brasil',
+        abbreviation: 'bra',
+        flag: ""
     });
 
-    response.json(coachCreated)
+    response.json(teamCreated)
 });
 
 app.use('/', homeRouter)

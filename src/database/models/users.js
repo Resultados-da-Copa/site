@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
             },
             password: {
                 allowNull: false,
-                type: DataTypes.STRING(32),
+                type: DataTypes.STRING(500),
             },
             birth_date: {
                 type: DataTypes.DATE,
@@ -37,14 +37,17 @@ module.exports = (sequelize, DataTypes) => {
         },
         {
             tableName: "users",
-            timestamps: true
+            timestamps: true,
+            updatedAt: false
         }
     );
     
-    // users.belongsTo(team, {
-    //     constraint: true,
-    //     foreignKey: "team_id",
-    // })
+    /* users.associate((models) => {
+        users.belongsTo(team, {
+            constraint: true,
+            foreignKey: "teamID",
+        });
+    }); */
 
     return users;
 }

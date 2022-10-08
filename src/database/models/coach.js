@@ -23,12 +23,12 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
 
-    // coach.associate((models) => {
-    //     coach.belongsTo(models.team, {
-    //         constraint: true,
-    //         foreignKey: "teamId",
-    //     });
-    // });
+    /* coach.associate((models) => {
+        coach.belongsTo(models.team, {
+            constraint: true,
+            foreignKey: "teamId",
+    });
+}); */
 
     return coach;
 };

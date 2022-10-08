@@ -2,20 +2,20 @@ module.exports = (sequelize, DataTypes) => {
     const cupGroup = sequelize.define(
         'cup_group',
         {
-            id:{
+            id: {
                 type: DataTypes.UUID,
                 defaultValue: DataTypes.UUIDV4,
                 allowNull: false,
                 primaryKey: true
             },
-            cup_stage_id:{
+            cup_stageID: {
                 type: DataTypes.UUIDV4,
             },
-            name:{
+            name: {
                 type: DataTypes.STRING(100),
                 allowNull: false
             },
-            createdAt:{
+            createdAt: {
                 type: DataTypes.DATE,
             },
         },
@@ -23,11 +23,15 @@ module.exports = (sequelize, DataTypes) => {
             tableName: "cup_group",
             timestamps: true,
         }
-    ); 
-    // cup_group.hasMany(cup_stage, {
-    //     constraint: true,
-    //     foreignKey: "cup_stage_id",
-    // })
+    );
+
+    /* cupGroup.associate((models) => {
+        cupGroup.hasMany(cup_stage, {
+            constraint: true,
+            foreignKey: "cup_stageID",
+        });
+
+    }); */
 
     return cupGroup;
 }

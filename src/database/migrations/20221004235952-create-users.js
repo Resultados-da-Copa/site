@@ -29,7 +29,7 @@ module.exports = {
     },
     password: {
         allowNull: false,
-        type: Sequelize.STRING(32),
+        type: Sequelize.STRING(500),
       },
     birth_date:{
         type: Sequelize.DataTypes.DATE,

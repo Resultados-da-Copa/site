@@ -8,10 +8,10 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 primaryKey: true
             },
-            player_id:{
+            playerID:{
                 type: DataTypes.UUIDV4,
             },
-            match_id:{
+            matchID:{
                 type: DataTypes.UUIDV4,
             },
             name:{
@@ -61,14 +61,19 @@ module.exports = (sequelize, DataTypes) => {
         }
     ); 
     
-    // stats.hasMany(match, {
-    //     constraint: true,
-    //     foreignKey: "match_id",
-    // })
-    // stats.hasMany(player, {
-    //     constraint: true,
-    //     foreignKey: "player_id",
-    // })
+    /* stats.belongsTo.associate((models) => {
+        stats.hasMany(match, {
+            constraint: true,
+            foreignKey: "matchID",
+        });
+    });
+
+    stats.belongsTo.associate((models) => {
+        stats.hasMany(player, {
+            constraint: true,
+            foreignKey: "playerID",
+        });
+    }); */
 
     return stats;
 };
