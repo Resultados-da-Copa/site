@@ -12,6 +12,12 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.UUIDV4,
             },
             matchID:{
+<<<<<<< HEAD
+=======
+                type: DataTypes.UUIDV4,
+            },
+            teamID:{
+>>>>>>> main
                 type: DataTypes.UUIDV4,
             },
             name:{
@@ -61,19 +67,39 @@ module.exports = (sequelize, DataTypes) => {
         }
     ); 
     
+<<<<<<< HEAD
     /* stats.belongsTo.associate((models) => {
         stats.hasMany(match, {
+=======
+    stats.belongsToMany.associate((models) => {
+        stats.hasMany(models.match, {
+>>>>>>> main
             constraint: true,
             foreignKey: "matchID",
         });
     });
 
+<<<<<<< HEAD
     stats.belongsTo.associate((models) => {
+=======
+    stats.belongsToMany.associate((models) => {
+>>>>>>> main
         stats.hasMany(player, {
             constraint: true,
             foreignKey: "playerID",
         });
+<<<<<<< HEAD
     }); */
+=======
+    });
+
+    stats.belongsToMany.associate((models) => {
+        stats.hasMany(team, {
+            constraint: true,
+            foreignKey: "teamID",
+        });
+    });
+>>>>>>> main
 
     return stats;
 };

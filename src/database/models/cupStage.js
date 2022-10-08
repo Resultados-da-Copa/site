@@ -37,12 +37,21 @@ module.exports = (sequelize, DataTypes) => {
             createdAt: "createdAt",
         }
     ); 
+<<<<<<< HEAD
     /* cupStage.associate((models) => {
         cupStage.hasMany(championship, {
         constraint: true,
         foreignKey: "championshipID",
     });
     }); */
+=======
+    cupStage.associate((models) => {
+        cupStage.hasMany(models.championship, {
+        constraint: true,
+        foreignKey: "championshipID",
+    });
+    });
+>>>>>>> main
 
     return cupStage;
 }
