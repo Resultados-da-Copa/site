@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 primaryKey: true
             },
-            teamID:{
+            team_id:{
                 type: DataTypes.UUIDV4,
             },
             name:{
@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false
             },
             weight:{
-                type: DataTypes.DECIMAL(2, 2),
+                type: DataTypes.INTEGER,
                 allowNull: false
             },
             number: {
@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             height: {
-                type: DataTypes.DECIMAL(2, 2),
+                type: DataTypes.INTEGER,
                 allowNull: false,
             },
             foot: {
