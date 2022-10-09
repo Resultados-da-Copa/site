@@ -35,7 +35,7 @@ module.exports = {
           allowNull: false
         },
         weight: {
-          type: Sequelize.DataTypes.DECIMAL(2, 2),
+          type: Sequelize.DataTypes.INTEGER,
           allowNull: false
         },
         number: {
@@ -43,7 +43,7 @@ module.exports = {
           allowNull: false,
         },
         height: {
-          type: Sequelize.DataTypes.DECIMAL(2, 2),
+          type: Sequelize.DataTypes.INTEGER,
           allowNull: false,
         },
         foot: {

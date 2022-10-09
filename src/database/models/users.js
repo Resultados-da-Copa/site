@@ -42,21 +42,12 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
     
-<<<<<<< HEAD
     /* users.associate((models) => {
         users.belongsTo(team, {
             constraint: true,
             foreignKey: "teamID",
         });
     }); */
-=======
-    users.associate((models) => {
-        users.belongsTo(models.team, {
-            constraint: true,
-            foreignKey: "teamID",
-        });
-    });
->>>>>>> main
 
     return users;
 }

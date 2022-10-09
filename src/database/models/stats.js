@@ -14,9 +14,6 @@ module.exports = (sequelize, DataTypes) => {
             matchID:{
                 type: DataTypes.UUIDV4,
             },
-            teamID:{
-                type: DataTypes.UUIDV4,
-            },
             name:{
                 type: DataTypes.STRING(100),
                 allowNull: false
@@ -63,12 +60,20 @@ module.exports = (sequelize, DataTypes) => {
             createdAt: "createdAt",
         }
     ); 
-
-    stats.belongsToMany.associate((models) => {
-        stats.hasMany(team, {
+    
+    /* stats.belongsTo.associate((models) => {
+        stats.hasMany(match, {
             constraint: true,
-            foreignKey: "teamID",
+            foreignKey: "matchID",
         });
     });
+
+    stats.belongsTo.associate((models) => {
+        stats.hasMany(player, {
+            constraint: true,
+            foreignKey: "playerID",
+        });
+    }); */
+
     return stats;
 };

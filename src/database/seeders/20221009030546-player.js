@@ -7,45 +7,46 @@ module.exports = {
   async up(queryInterface) {
 
     const name = [
-      "Saad Al Sheeb", "Yousof Hassanl", "Meshaal Barsham",
-      "Salah Zakaria", "Ro-Ro", "Abdelkarim Hassan",
-      "Boualem Khoukhi", "Salem Al Hajri", "M Khoder",
-      "Almoez Ali", "Akram Afif", "Bassam Al Rawi", 
-      "Musaab Khidir", "Ahmed Suhail", "Homam Ahmed", 
-      "Mohamed Emad Ayash", "Jassem Gaber",
-      "Abdulsallam", "Ahmed Fadel Hasaba", "Abdelaziz Hatim", 
-      "Karim Boudiaf", "Moustafa Tarek", "Naif Al Hadhrami", 
-      "Mohammed Muntari", "Muneer Ali", "Ahmed Alaa"
+      "Alisson", "Ederson", "Weverton",
+      "Danilo", "Bremer", "Eder Militao",
+      "Ibanez", "Marquinhos", "Thiago Silva",
+      "Alex Sandro", "Alex Telles", "Bruno Guimaraes", 
+      "Casemiro", "Fabinho", "Fred", 
+      "Everton Ribeiro", "Lucas Paqueta",
+      "Antony", "Neymar", "Matheus Cunha", 
+      "Pedro", "Raphinha", "Richarlison", 
+      "Firmino", "Rodrygo", "Vinicius Junior"
     ]
 
     const photograph = [
       'public/img/player/padrao.png']
-    const birth_date = ["1993-10-23"]
+    const birth_date = ["1958-10-01"]
     const nationality = ['qatar']
     const weight = [
-      73, 82, 78, 68, 77, 87, 
-      56, 68, 68, 78, 73, 76, 
-      78, 75, 90, 56, 73, 71, 
       70, 78, 82, 87,84, 77, 
-      90, 87
+      78, 75, 90, 56, 73, 71,
+      90, 87, 73, 82, 78, 68, 
+      77, 87, 56, 68, 68, 78, 
+      73, 76
     ]
     const number = [
-      1, 2, 3, 4, 
-      5, 6, 7, 8, 
-      9, 10, 11, 12, 
-      13, 14, 15, 16,
-      17, 18, 19, 20, 
-      21, 22, 23, 24, 
-      25, 26
+      1, 12, 22, 23, 
+      14, 4, 13, 3, 
+      5, 30, 18, 19, 
+      6, 14, 2, 16,
+      8, 17, 10, 25, 
+      19, 7, 9, 13, 
+      19, 7
     ]
     const height = [
-      180, 183, 175, 180, 
+      178, 180, 191, 182,       
       178, 18, 178, 187, 
-      178, 18, 178, 183,
-      191, 182, 168, 193,
-      175, 163, 183, 180, 
-      160, 182, 168, 193,
-      178, 180
+      180, 183, 175, 180,
+      178, 18, 178, 183,      
+      168, 193, 175, 163, 
+      183, 180, 160, 182, 
+      168, 193,
+      
     ]
     const foot = [
       "E", "D", "D", "D", 

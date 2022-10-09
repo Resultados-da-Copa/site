@@ -44,10 +44,26 @@ module.exports = (sequelize, DataTypes) => {
         }
     ); 
 
-    match.belongsTo(models.team, {
+    /* match.belongsTo.associate((models) => {
+        match.belongsTo(cup_group, {
+            constraint: true,
+            foreignKey: "cup_groupID",
+        });
+    });
+    
+    match.belongsTo.associate((models) => {
+        match.belongsTo(team, {
+            constraint: true,
+            foreignKey: "home_teamID",
+        });
+    });
+    
+    match.belongsTo.associate((models) => {
+        match.belongsTo(team, {
         constraint: true,
         foreignKey: "visitors_teamID",
         });
+    }); */
 
     return match;
 }
