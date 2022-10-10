@@ -28,7 +28,7 @@ const loginController = {
 
                 req.session.idUser = result.dataValues.id
                 req.session.isAuthorized = true
-                return res.status(200).redirect('/')
+                return res.status(200).redirect('/perfil')
             }
         })
     }

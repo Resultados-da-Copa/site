@@ -9,7 +9,7 @@ module.exports = {
 
       id: uuid(),
       name: 'Joao Pedro',
-      email: 'blabla',
+      email: 'teste@teste',
       password:'1234',
       birth_date: "1993-10-23",
       photograph: 'https://github.com/crisleyhguimaraes.png',

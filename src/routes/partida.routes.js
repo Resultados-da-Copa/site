@@ -3,6 +3,6 @@ const partidaController = require('../controllers/partidaController')
 
 const partidaRouter = Router()
 
-partidaRouter.get('/partida', partidaController.partida)
+partidaRouter.get('/partida/:id', partidaController.partida)
 
 module.exports = partidaRouter

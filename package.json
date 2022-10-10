@@ -11,7 +11,6 @@
     "undo:migration": "npx sequelize-cli db:migrate:undo",
     "execute:seed": "npx sequelize-cli db:seed:all --debug",
     "generate:seed": "npx sequelize-cli seed:generate --name"
-
   },
   "repository": {
     "type": "git",

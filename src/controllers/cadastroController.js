@@ -44,7 +44,7 @@ const cadastroController = {
                     email: email,
                     password: passwordHash,
                     birth_date: '2004-01-01',
-                    photograph: 'public/img/profileImage/avatar.png'
+                    photograph: 'avatar.png'
                 })
 
                 req.session.isAuthorized = true
