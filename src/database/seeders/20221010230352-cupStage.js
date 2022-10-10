@@ -12,7 +12,7 @@ module.exports = {
 
       id: uuid(),
       championshipID: '13870273-05e2-490a-b31b-295c58c46668',
-      name: 'Group Stage',
+      name: 'Knockout Stage',
       startedCupStage : true,
       finishedCupStage : false,
       createdAt : new Date

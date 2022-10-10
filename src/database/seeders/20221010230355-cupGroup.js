@@ -8,11 +8,12 @@ module.exports = {
     
 
 
-    await queryInterface.bulkInsert('cupStage', [{
+    await queryInterface.bulkInsert('cupGroup', [{
 
       id: uuid(),
       championshipID: '13870273-05e2-490a-b31b-295c58c46668',
-      name: 'Group Stage',
+      name: 'A',
+      cupGroupId:'',
       startedCupStage : true,
       finishedCupStage : false,
       createdAt : new Date
@@ -21,8 +22,6 @@ module.exports = {
 
 
   down: async (queryInterface) => {
-    await queryInterface.bulkDelete('cupStage', null, {});
+    await queryInterface.bulkDelete('cupGroup', null, {});
   }
 };
-// group stage 
-// knockout stage
