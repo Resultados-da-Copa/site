@@ -8,6 +8,9 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 primaryKey: true
             },
+            cupStageID:{
+                type: DataTypes.UUIDV4,
+            },
             cup_groupID:{
                 type: DataTypes.UUIDV4,
             },
@@ -19,6 +22,9 @@ module.exports = (sequelize, DataTypes) => {
             },
             name:{
                 type: DataTypes.STRING(100),
+                allowNull: false
+            },
+            matchDate:{type: DataTypes.DATE,
                 allowNull: false
             },
             started_match: {
