@@ -11,6 +11,7 @@ const estatisticasRouter = require('./routes/estatisticas.routes')
 const partidaRouter = require('./routes/partida.routes')
 const methodOverride = require('method-override');
 const logoutRouter = require('./routes/logout.routes');
+const noticiaRouter = require('./routes/noticia.routes');
 // const team = require('./database/models/team');
 const { coach } = require('./database');
 const { championship } = require('./database');
@@ -20,7 +21,8 @@ const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-app.use(express.static('./public'))
+//app.use(express.static('./public'))
+app.use(express.static(path.join(__dirname, "../public")))
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 app.use(session({
@@ -47,6 +49,7 @@ app.use('/', loginRouter)
 app.use('/', cadastroRouter)
 app.use('/', partidaRouter)
 app.use('/', logoutRouter)
+app.use('/', noticiaRouter)
 
 
 app.use(methodOverride('_method'))

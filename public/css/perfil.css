@@ -1,3 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rajdhani:wght@300&display=swap');
 
 
+h1{
+	text-align: center;
+	margin-top: 23rem;
+
+
+}
+ 
+form {
+	margin-left: 10.41%;
+	margin-right: 10.41%;
+	margin-top: 80rem;
+
+
+
+}
+
+fieldset{
+	border: none;
+}
+
+#imageFieldset{
+	display: flex;
+	justify-content: space-between;
+
+
+
+}
+
+#userImage{
+	width: 115rem;
+	height: 115rem;
+	border-radius: 50%;
+
+}
+
+#nameFieldset{
+	width: 61.31%;
+
+}
+
+.label{
+	font-size: 15rem;
+	font-weight: 400;
+	display: block;
+	margin-bottom: 5rem;
+
+}
+
+input{
+	width: 100%;
+	margin-bottom: 20rem;
+	font-size: 15rem;
+	padding: 8rem 12rem;
+	color: #333333;
+	border: 1px solid #CACACA;
+}
+
+#dateFieldset{
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.container{
+	width: 48.15%;
+
+}
+
+#imgFieldset{
+	display: none;
+
+}
+
+.btn{
+	display: block;
+}
+
+#save-btn{
+	width: 100%;
+	font-size: 15rem;
+	font-weight: 700;
+	color: #FFFFFF;
+	background: #0B4075;
+	border: none;
+	padding: 8rem 12rem;
+	cursor: pointer;
+
+}
+
+#logout-btn{
+	background: #FFFFFF;
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 8rem 12rem;
+	cursor: pointer;
+}
+
+#logout-btn a{
+	font-weight: 400;
+
+}

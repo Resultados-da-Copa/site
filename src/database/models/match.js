@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     ); 
 
-    /*match.belongsTo.associate((models) => {
+    /* match.belongsTo.associate((models) => {
         match.belongsTo(cup_group, {
             constraint: true,
             foreignKey: "cup_groupID",

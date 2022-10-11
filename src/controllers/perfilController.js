@@ -1,43 +1,63 @@
-const path = require('path')
-const fs = require('fs')
-const usersDB = fs.readFileSync(path.join(__dirname, '..', 'database', 'users-db.json'), 'utf-8')
+const { users } = require('../database')
+const { team } = require('../database')
 const bcrypt = require('bcryptjs')
-const { v4: uuid } = require('uuid')
-
-let users = JSON.parse(usersDB)
 
 const perfilController = {
-    perfil: (req, res) => {
+    perfil: async (req, res) => {
         if (!req.session.isAuthorized) {
-            return res.redirect('/login')
+            return res.status(401).redirect('/login')
         }
-        res.render('perfil')
+        let userData = {}
+        console.log(req.session.idUser)
+        await users.findOne({
+            where: {
+                id: req.session.idUser
+            }
+        }).then((result) => {
+
+            userData.nome = result.dataValues.name
+            userData.email = result.dataValues.email
+            userData.birth_date = result.dataValues.birth_date
+            userData.photograph = result.dataValues.photograph
+        })
+        res.render('perfil', {userData})
     },
 
     updateProfile: (req, res) => {
-        const { name, username, email, password, team, date } = req.body
+        let { name, email, password, user_team, date } = req.body
+        let updateUser = {}
         const imageprofile = req.file.filename
-
-        const userFound = users.find(user => user.id === req.session.idUser)
-
+        console.log(imageprofile)
         const passwordHash = bcrypt.hashSync(password)
 
+        team.findOne({
+            where: {
+                name: user_team
+            }
+        }).then((result) => {
+            if(result){
+                user_team = result.dataValues.id
+            } else {
+                user_team = ''
+            }
+        })
 
-        if (name !== '') { userFound.nome = name }
-        if (username !== '') { userFound.usuario = username }
-        if (email !== '') { userFound.email = email }
-        if (password !== '') { userFound.senha = passwordHash }
-        if (team !== '') { userFound.selecao = team }
-        if (date !== '') { userFound.nascimento = date }
-        if (imageprofile !== '') { userFound.avatar = imageprofile }
+        if(name !== ''){updateUser.name = name}
+        if(email !== ''){updateUser.email = email}
+        if(password !== ''){updateUser.password = passwordHash}
+        if(date !== ''){updateUser.birth_date = date}
+        if(user_team !== ''){updateUser.team_id = user_team}
+        //if(imageprofile !== undefined){updateUser.photograph = imageprofile}
+        
+        users.update(
+            updateUser,
+            {
+                where: {id: req.session.idUser}
+            }
+        )
 
-        users = JSON.stringify(users)
-        fs.writeFileSync(path.join(__dirname, '..', 'database', 'users-db.json'), users)
-
-        return res.redirect('/')
-
+        return res.status(200).redirect('/perfil')
     }
-
 }
 
 module.exports = perfilController

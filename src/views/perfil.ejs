@@ -2,88 +2,65 @@
 <html lang="pt-br">
 
 <head>
+	<%- include('./partials/head') %>
+		<link rel="stylesheet" href="./css/perfil.css">
 
-	<meta charset="utf-8">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href="./css/perfil.css">
-
-	<title>Perfil</title>
+		<title>Perfil</title>
 </head>
 
 <body>
-	<div class="profile">
-		<div class="left-profile">
-			<img class="img-profile" src="./img/profile.svg" alt="profile">
-		</div>
 
 
-		<div class="right-profile">
-			<form action="/perfil" method="POST" enctype="multipart/form-data">
-				<h1>Meus Dados</h1>
+	<h1>Perfil</h1>
+	<form action="/perfil" method="POST" enctype="multipart/form-data">
 
-				<fieldset>
-
-					<div class="container">
-						<input type="text" name="name" autofocus>
-
-						<label>Nome</label>
-					</div>
-
-					<div class="container">
-						<input type="text" name="username">
-
-						<label>nome de usuário</label>
-					</div>
-				</fieldset>
-
-				<fieldset>
-					<div class="container">
-						<input type="email" name="email">
-						<label>E-mail</label>
-					</div>
-				</fieldset>
-
-				<fieldset>
-					<div class="container">
-						<input type="password" name="password">
-						<label>Senha</label>
-					</div>
-				</fieldset>
-
-				<fieldset>
-					<div class="container">
-						<input type="text" name="team">
-						<label>Seleção favorita</label>
-					</div>
-
-					<div class="container">
-						<input type="date" name="date">
-						<label></label>
-					</div>
-
-					<fieldset>
-						<div>
-							<label>foto do perfil</label>
-							<input type="file" name="imageprofile">
-						</div>
-					</fieldset>
-					<fieldset>
-						<button type="submit">Salvar Alterações</button>
-						<button type="submit" formaction="/logout">Sair</button>
-					</fieldset>
-			</form>
-
-			<img src="https://conteudo.imguol.com.br/c/entretenimento/f9/2019/11/25/o-personagem-apelidado-de-baby-yoda-de-guerra-nas-estrelas-star-wars-1574694887604_v2_450x337.jpg"
+		<fieldset id="imageFieldset">
+			<img id="userImage"
+				src="/img/match-placeholder.jpg"
 				alt="User">
 
+			<fieldset id="nameFieldset">
+				<label class="label">Nome completo</label>
+				<input type="text" name="name" value=<%=userData.nome%>  autofocus>
 
-		</div>
+				<label class="label">Nome de usuário</label>
+				<input type="text" name="username" value=<%=userData.nome %> >
+			</fieldset>
 
-	</div>
+		</fieldset>
 
-	<script src="./JS/header.js"></script>
+		<label class="label">E-mail</label>
+		<input type="email" name="email" value=<%=userData.email%> >
+
+		<label class="label">Senha</label>
+		<input type="password" name="password" placeholder="Nova Senha">
+
+		<fieldset id="dateFieldset">
+			<div class="container">
+				<label class="label">Seleção favorita</label>
+				<input type="text" name="user_team">
+			</div>
+	
+	        <div class="container">
+				<label class="label">Data de nascimento</label>
+				<input type="date" name="date" value=<%=userData.birth_date%> >
+			</div>	
+		</fieldset>
+
+		<fieldset id="imgFieldset">
+			<label class="label">foto do perfil</label>
+			<input type="file" name="imageprofile">
+		</fieldset>
+
+		<fieldset>
+			<button class="btn" id="save-btn" type="submit">SALVAR</button>
+			<button class="btn" id="logout-btn" type="submit" formaction="/logout">
+			<a>
+				SAIR
+			</a>	
+			</button>
+		</fieldset>
+	</form>
 
 </body>
 
