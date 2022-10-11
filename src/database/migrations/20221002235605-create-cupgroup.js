@@ -22,6 +22,14 @@ module.exports = {
           type: Sequelize.DataTypes.STRING(100),
           allowNull: false
         },
+        started_cup_stage: {
+          type: Sequelize.DataTypes.BOOLEAN,
+          allowNull: false
+        },
+        finished_cup_stage: {
+          type: Sequelize.DataTypes.BOOLEAN,
+          allowNull: false
+        },
         createdAt: {
           type: Sequelize.DataTypes.DATE,
         },

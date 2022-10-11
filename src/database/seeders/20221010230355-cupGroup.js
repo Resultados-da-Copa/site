@@ -1,6 +1,5 @@
 'use strict';
 
-const { BOOLEAN } = require("sequelize");
 const { v4: uuid } = require("uuid");
 
 module.exports = {
@@ -8,20 +7,19 @@ module.exports = {
     
 
 
-    await queryInterface.bulkInsert('cupGroup', [{
+    await queryInterface.bulkInsert('cup_group', [{
 
       id: uuid(),
-      championshipID: '13870273-05e2-490a-b31b-295c58c46668',
+      cup_stage_id: '0b89d8a0-ff80-4f41-8ba2-b6be61ad3325',
       name: 'A',
-      cupGroupId:'',
-      startedCupStage : true,
-      finishedCupStage : false,
-      createdAt : new Date
+      started_cup_stage : true,
+      finished_cup_stage : false,
+      createdAt : new Date()
     }]);
   },
 
 
   down: async (queryInterface) => {
-    await queryInterface.bulkDelete('cupGroup', null, {});
+    await queryInterface.bulkDelete('cup_group', null, {});
   }
 };

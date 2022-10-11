@@ -1,28 +1,35 @@
 'use strict';
 
-const { v4: uuid } = require("uuid");
+const { team } = require('../../database')
+const { v4: uuid } = require('uuid');
 
 module.exports = {
+
   async up(queryInterface) {
-  
     const teamID = [
       'alemanha', 'frança', 'brasil',
       'inglaterra', 'holanda', 'qatar',
       'portugal', 'arabia', 'suica',
       'espanha'
     ]
-    const name = [      
+    const name = [
       'Hansi Flick', 'Didier Deschamps', 'Tite',
       'Gareth Southgate', 'Louis van Gall', 'Felix Sanchez',
       'Fernando Santos', 'Herve Renard', 'Murat Yakin',
       'Luis Enrique'
     ]
 
-    for(let i = 0; i < name.length; i++){
+    for (let i = 0; i < name.length; i++) {
       await queryInterface.bulkInsert('coach', [{
         id: uuid(),
         name: name[i],
-        teamID: teamID[i],
+        team_id: await team.findOne({
+          where: {
+            name: teamID[i]
+          }
+        }).then((result) => {
+          return result.dataValues.id
+        })
       }]);
     }
   },

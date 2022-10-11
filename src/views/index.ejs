@@ -11,218 +11,199 @@
     <!--***** Header *****-->
     <%- include('./partials/header')%>
 
-    <!--***** Main section of website *****-->
-    <main>
-        <div id="main-news">
-            <div id="main-news-img">
-                <!-- <img src="./img/match-placeholder.jpg" alt=""> -->
-                <img src="./img/match-placeholder.jpg" alt="">
-            </div>
-            <a href="">
-                <div id="main-news-background"></div>
-                <h1>SELEÇÃO AMERICANA PERDE NOVAMENTE</h1>
-            </a>
-        </div>
-        <div id="news">
-            <h2>Principais Notícias</h2>
-            <div class="line"></div>
-            <div class="short-info">
-                <a href="#">
-                    <h3>Alemanha ganha partida difícil contra
-                        Bélgica e se mantém líder do grupo</h3>
+        <!--***** Main section of website *****-->
+        <main>
+            <div id="main-news">
+                <div id="main-news-img">
+                    <!-- <img src="./img/match-placeholder.jpg" alt=""> -->
+                    <img src="./img/articleCovers/<%= articles[0].dataValues.article_cover %> " alt="">
+                </div>
+                <a href="">
+                    <div id="main-news-background"></div>
+                    <h1>
+                        <%= articles[0].dataValues.article_headline %>
+                    </h1>
                 </a>
             </div>
-            <div class="short-info">
-                <a href="#">
-                    <h3>Alemanha ganha partida difícil contra
-                        Bélgica e se mantém líder do grupo</h3>
-                </a>
+            <div id="news">
+                <h2>Principais Notícias</h2>
+                <div class="line"></div>
+                <% articles.forEach((element, index)=> { %>
+                    <% if(index !== 0) { %>
+                    <div class="short-info">
+                        <a href="/noticia/<%= element.dataValues.id %> ">
+                            <h3><%= element.dataValues.article_headline %> </h3>
+                        </a>
+                    </div>
+                   <% } %>
+                <% }) %>
             </div>
-            <div class="short-info">
-                <a href="#">
-                    <h3>Alemanha ganha partida difícil contra
-                        Bélgica e se mantém líder do grupo</h3>
-                </a>
-            </div>
-            <div class="short-info">
-                <a href="#">
-                    <h3>Alemanha ganha partida difícil contra
-                        Bélgica e se mantém líder do grupo</h3>
-                </a>
-            </div>
-            <div class="short-info">
-                <a href="#">
-                    <h3>Alemanha ganha partida difícil contra
-                        Bélgica e se mantém líder do grupo</h3>
-                </a>
-            </div>
-        </div>
-    </main>
+        </main>
 
-    <!--***** Section about matchs *****-->
-    <section id="matches">
+        <!--***** Section about matchs *****-->
+        <section id="matches">
 
-        <!--Card about matchs news-->
-        <div id="matches-of-the-day">
-            <h2>Partidas do dia</h2>
-            <div id="matches-card">
-                <a href="/partida/id">
-                    <span class="soccer-selection">Alemanha </span>
-                    <span> x </span>
-                    <span class="soccer-selection">Bélgica</span>
-                </a>
-                <div class="line"></div>
-                <a href="/partida">
-                    <span class="soccer-selection">Brasil </span>
-                    <span> x </span>
-                    <span class="soccer-selection">Argentina</span>
-                </a>
-                <div class="line"></div>
-                <a href="/partida">
-                    <span class="soccer-selection">França </span>
-                    <span> x </span>
-                    <span class="soccer-selection">Japão</span>
-                </a>
-                <div class="line"></div>
-                <a href="/partida">
-                    <span class="soccer-selection">Canadá </span>
-                    <span> x </span>
-                    <span class="soccer-selection">Inglaterra</span>
-                </a>
-                <div class="line"></div>
-                <a href="/partida">
-                    <span class="soccer-selection">Canadá </span>
-                    <span> x </span>
-                    <span class="soccer-selection">Inglaterra</span>
-                </a>
-                <div class="line"></div>
-                <a href="/partida">
-                    <span class="soccer-selection">Canadá </span>
-                    <span> x </span>
-                    <span class="soccer-selection">Inglaterra</span>
-                </a>
+            <!--Card about matchs news-->
+            <div id="matches-of-the-day">
+                <h2>Partidas do dia</h2>
+                <div id="matches-card">
+                    <a href="/partida/id">
+                        <span class="soccer-selection">Alemanha </span>
+                        <span> x </span>
+                        <span class="soccer-selection">Bélgica</span>
+                    </a>
+                    <div class="line"></div>
+                    <a href="/partida">
+                        <span class="soccer-selection">Brasil </span>
+                        <span> x </span>
+                        <span class="soccer-selection">Argentina</span>
+                    </a>
+                    <div class="line"></div>
+                    <a href="/partida">
+                        <span class="soccer-selection">França </span>
+                        <span> x </span>
+                        <span class="soccer-selection">Japão</span>
+                    </a>
+                    <div class="line"></div>
+                    <a href="/partida">
+                        <span class="soccer-selection">Canadá </span>
+                        <span> x </span>
+                        <span class="soccer-selection">Inglaterra</span>
+                    </a>
+                    <div class="line"></div>
+                    <a href="/partida">
+                        <span class="soccer-selection">Canadá </span>
+                        <span> x </span>
+                        <span class="soccer-selection">Inglaterra</span>
+                    </a>
+                    <div class="line"></div>
+                    <a href="/partida">
+                        <span class="soccer-selection">Canadá </span>
+                        <span> x </span>
+                        <span class="soccer-selection">Inglaterra</span>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <!--Card about matchs-->
-        <div id="main-clashes">
-            <h2>Principais confrontos</h2>
-            <div id="clashes-card">
-                <span class="match">
-                    <div class="match-flags">
-                        <img src="/img/flag-placeholder.png" alt="country flag">
-                    </div>
-                    0 x 0
-                    <div class="match-flags">
-                        <img src="/img/flag-placeholder.png" alt="country flag">
-                    </div>
-                </span>
-                <span class="match">
-                    <div class="match-flags">
-                        <img src="/img/flag-placeholder.png" alt="country flag">
-                    </div>
-                    0 x 0
-                    <div class="match-flags">
-                        <img src="/img/flag-placeholder.png" alt="country flag">
-                    </div>
-                </span>
-                <span class="match">
-                    <div class="match-flags">
-                        <img src="/img/flag-placeholder.png" alt="country flag">
-                    </div>
-                    0 x 0
-                    <div class="match-flags">
-                        <img src="/img/flag-placeholder.png" alt="country flag">
-                    </div>
-                </span>
+            <!--Card about matchs-->
+            <div id="main-clashes">
+                <h2>Principais confrontos</h2>
+                <div id="clashes-card">
+                    <span class="match">
+                        <div class="match-flags">
+                            <img src="/img/flag-placeholder.png" alt="country flag">
+                        </div>
+                        0 x 0
+                        <div class="match-flags">
+                            <img src="/img/flag-placeholder.png" alt="country flag">
+                        </div>
+                    </span>
+                    <span class="match">
+                        <div class="match-flags">
+                            <img src="/img/flag-placeholder.png" alt="country flag">
+                        </div>
+                        0 x 0
+                        <div class="match-flags">
+                            <img src="/img/flag-placeholder.png" alt="country flag">
+                        </div>
+                    </span>
+                    <span class="match">
+                        <div class="match-flags">
+                            <img src="/img/flag-placeholder.png" alt="country flag">
+                        </div>
+                        0 x 0
+                        <div class="match-flags">
+                            <img src="/img/flag-placeholder.png" alt="country flag">
+                        </div>
+                    </span>
+                </div>
             </div>
-        </div>
 
-        <div id="half-data-cards">
-            <!--Card about "player of the match"-->
-            <div id="player-of-the-match">
-                <h2>Jogador da rodada</h2>
-                <div class="data-card">
-                    <div id="player-profile-pic">
-                        <img src="./img/messi.jpg" alt="">
+            <div id="half-data-cards">
+                <!--Card about "player of the match"-->
+                <div id="player-of-the-match">
+                    <h2>Jogador da rodada</h2>
+                    <div class="data-card">
+                        <div id="player-profile-pic">
+                            <img src="./img/messi.jpg" alt="">
+                        </div>
+                        <div id="">
+                            <span id="player-first-name">Lionel </span>
+                            <span id="player-last-name">Messi</span>
+                            <div>
+                                <span id="player-country">Argentina</span>
+                            </div>
+                        </div>
                     </div>
-                    <div id="">
-                        <span id="player-first-name">Lionel </span>
-                        <span id="player-last-name">Messi</span>
-                        <div>
-                            <span id="player-country">Argentina</span>
+                </div>
+
+                <!--Card about player statistics-->
+                <div id="round-statistics">
+                    <h2>Estatísticas da rodada</h2>
+                    <div class="data-card">
+                        <div class="round-statistics-data">
+                            <p>12</p>
+                            <p>gols</p>
+                        </div>
+                        <div class="round-statistics-data">
+                            <p>7</p>
+                            <p>assistências</p>
+                        </div>
+                        <div class="round-statistics-data">
+                            <p>4</p>
+                            <p>cartões</p>
+                        </div>
+                        <div class="round-statistics-data">
+                            <p>2</p>
+                            <p>pênaltis</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <!--***** Section of Highlights *****-->
+        <section id="highlights">
+            <h2>Vídeos em destaque</h2>
+            <div class="highlight-videos-row">
+                <a href="https://youtube.com" target="blank">
+                    <img class="highlight-videos" src="./img/match-placeholder.jpg" alt="">
+                </a>
+            </div>
+        </section>
 
-            <!--Card about player statistics-->
-            <div id="round-statistics">
-                <h2>Estatísticas da rodada</h2>
-                <div class="data-card">
-                    <div class="round-statistics-data">
-                        <p>12</p>
-                        <p>gols</p>
+        <!--***** Section of Statistics *****-->
+        <section id="statistics">
+            <h2>Estatísticas</h2>
+            <div class="statistic-row">
+                <div>
+                    <h3>Contador de gols</h3>
+                    <div class="statistic-data">
+                        <p>38</p>
                     </div>
-                    <div class="round-statistics-data">
-                        <p>7</p>
-                        <p>assistências</p>
+                </div>
+                <div>
+                    <h3>Artilheiro</h3>
+                    <div class="statistic-data">
+                        <p>Mbappé</p>
                     </div>
-                    <div class="round-statistics-data">
-                        <p>4</p>
-                        <p>cartões</p>
+                </div>
+                <div>
+                    <h3>Líder de assistências</h3>
+                    <div class="statistic-data">
+                        <p>Harry Kane</p>
                     </div>
-                    <div class="round-statistics-data">
-                        <p>2</p>
-                        <p>pênaltis</p>
+                </div>
+                <div>
+                    <h3>Pênaltis</h3>
+                    <div class="statistic-data">
+                        <p>5</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!--***** Section of Highlights *****-->
-    <section id="highlights">
-        <h2>Vídeos em destaque</h2>
-        <div class="highlight-videos-row">
-            <a href="https://youtube.com" target="blank">
-                <img class="highlight-videos" src="./img/match-placeholder.jpg" alt="">
-            </a>
-        </div>
-    </section>
+        </section>
 
-    <!--***** Section of Statistics *****-->
-    <section id="statistics">
-        <h2>Estatísticas</h2>
-        <div class="statistic-row">
-            <div>
-                <h3>Contador de gols</h3>
-                <div class="statistic-data">
-                    <p>38</p>
-                </div>
-            </div>
-            <div>
-                <h3>Artilheiro</h3>
-                <div class="statistic-data">
-                    <p>Mbappé</p>
-                </div>
-            </div>
-            <div>
-                <h3>Líder de assistências</h3>
-                <div class="statistic-data">
-                    <p>Harry Kane</p>
-                </div>
-            </div>
-            <div>
-                <h3>Pênaltis</h3>
-                <div class="statistic-data">
-                    <p>5</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--***** Footer *****-->
-    <%- include('./partials/footer') %>
+        <!--***** Footer *****-->
+        <%- include('./partials/footer') %>
 
 
 

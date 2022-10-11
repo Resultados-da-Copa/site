@@ -7,7 +7,7 @@ module.exports = {
     await queryInterface.bulkInsert('article', [{
       id: uuid(),
       article_cover: 'placeholder.jpg',
-      article_headline: 'Honduras ganha partida difícil contra Macau e se mantém líder do grupo',
+      article_headline: 'Coréia do Norte avassala Coréia do Sul',
       article_paragraphs: `Lorem Ipsum is simply dummy text of the printing and 
                             typesetting industry. Lorem Ipsum has been the industry's 
                             standard dummy text ever since the 1500s, when an unknown 
