@@ -9,9 +9,9 @@ module.exports = {
 
       id: uuid(),
       name : "copa do mundo",
-      startedChampionship : true,
-      finishedChampionship : false,
-      stoppedChampionship : false,
+      started_championship : true,
+      finished_championship : false,
+      stopped_championship : false,
       createdAt : new Date
     }]);
   },

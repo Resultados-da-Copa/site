@@ -1,6 +1,17 @@
+const { article } = require('../database')
+
 const homeController = {
-    home: (req, res) => {
-        res.render('index')
+    home: async (req, res) => {
+        const articles = await article.findAll({
+            order: [
+                ['createdAt', 'ASC']
+            ],
+            limit: 6
+        }).then((result) => {
+            return result
+        })
+        
+        res.render('index', { articles })
     }
 }
 

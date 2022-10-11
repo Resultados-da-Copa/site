@@ -24,18 +24,14 @@
             </p>
         </div>
         <div id="more-news-section">
-            <div class="news-card">
-                <img class="more-news-image" src="/img/match-placeholder.jpg" alt="Capa da matéria">
-                <a class="more-news-link" href="">
-                    Contrary to popular belief, Lorem Ipsum is not simply rando
-                </a>
-            </div>
-            <div class="news-card">
-                <img class="more-news-image" src="/img/match-placeholder.jpg" alt="Capa da matéria">
-                <a class="more-news-link" href="">
-                    Contrary to popular belief, Lorem Ipsum is not simply rando
-                </a>
-            </div>
+            <% suggestedArticles.forEach((element) => {%>
+                <div class="news-card">
+                    <img class="more-news-image" src="/img/articleCovers/<%= element.dataValues.article_cover %> " alt="Capa da matéria">
+                    <a class="more-news-link" href="">
+                        <%= element.dataValues.article_headline %> 
+                    </a>
+                </div>
+            <%}) %> 
         </div>
     </div>
     <%- include('./partials/footer')%>
