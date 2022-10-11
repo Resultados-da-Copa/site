@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= articleData.headline%></title>
+
+    <%- include('./partials/head')%>
+    <link rel="stylesheet" href="/css/noticia.css">
+</head>
+<body>
+    <%- include('./partials/header')%>
+    <img id="news-cover" src="/img/articleCovers/<%= articleData.cover %> " alt="capa da matéria">
+    <h2 id="article-title"><%= articleData.headline%></h2>
+    <div id="news">
+        <div id="news-body">
+            <% articleData.paragraphs.forEach((element) => { %>
+                <p class="news-paragraph"><%= element %> </p>
+            <% }); %>
+
+            <p>
+                <% suggestedArticles[0] %> 
+            </p>
+        </div>
+        <div id="more-news-section">
+            <div class="news-card">
+                <img class="more-news-image" src="/img/match-placeholder.jpg" alt="Capa da matéria">
+                <a class="more-news-link" href="">
+                    Contrary to popular belief, Lorem Ipsum is not simply rando
+                </a>
+            </div>
+            <div class="news-card">
+                <img class="more-news-image" src="/img/match-placeholder.jpg" alt="Capa da matéria">
+                <a class="more-news-link" href="">
+                    Contrary to popular belief, Lorem Ipsum is not simply rando
+                </a>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer')%>
+</body>
+</html>

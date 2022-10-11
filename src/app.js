@@ -11,6 +11,7 @@ const estatisticasRouter = require('./routes/estatisticas.routes')
 const partidaRouter = require('./routes/partida.routes')
 const methodOverride = require('method-override');
 const logoutRouter = require('./routes/logout.routes');
+const noticiaRouter = require('./routes/noticia.routes');
 // const team = require('./database/models/team');
 const { coach } = require('./database');
 const { championship } = require('./database');
@@ -48,6 +49,7 @@ app.use('/', loginRouter)
 app.use('/', cadastroRouter)
 app.use('/', partidaRouter)
 app.use('/', logoutRouter)
+app.use('/', noticiaRouter)
 
 
 app.use(methodOverride('_method'))
