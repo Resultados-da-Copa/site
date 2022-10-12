@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const match = sequelize.define(
-        'match',
+    const matches = sequelize.define(
+        'matches',
         {
             id:{
                 type: DataTypes.UUID,
@@ -20,10 +20,6 @@ module.exports = (sequelize, DataTypes) => {
             visitors_teamID:{
                 type: DataTypes.UUIDV4,
             },
-            name:{
-                type: DataTypes.STRING(100),
-                allowNull: false
-            },
             matchDate:{type: DataTypes.DATE,
                 allowNull: false
             },
@@ -37,6 +33,14 @@ module.exports = (sequelize, DataTypes) => {
             },
             stopped_match: {
                 type: DataTypes.BOOLEAN,
+                defaultValue: false,
+            },
+            match_date: {
+                type: DataTypes.DATE,
+                defaultValue: false,
+            },
+            stadium: {
+                type: DataTypes.STRING(),
                 defaultValue: false,
             },
             createdAt:{
@@ -71,5 +75,5 @@ module.exports = (sequelize, DataTypes) => {
         });
     }); */
 
-    return match;
+    return matches;
 }

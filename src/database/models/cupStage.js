@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 primaryKey: true
             },
-            championshipID:{
+            cup_id:{
                 type: DataTypes.UUIDV4,
             },
             name:{

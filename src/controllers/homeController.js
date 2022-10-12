@@ -4,7 +4,7 @@ const homeController = {
     home: async (req, res) => {
         const articles = await article.findAll({
             order: [
-                ['createdAt', 'ASC']
+                ['createdAt', 'DESC']
             ],
             limit: 6
         }).then((result) => {

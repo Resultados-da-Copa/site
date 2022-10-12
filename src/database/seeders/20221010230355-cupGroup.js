@@ -11,7 +11,7 @@ module.exports = {
 
       id: uuid(),
       cup_stage_id: '0b89d8a0-ff80-4f41-8ba2-b6be61ad3325',
-      name: 'A',
+      name: 'a',
       started_cup_stage : true,
       finished_cup_stage : false,
       createdAt : new Date()

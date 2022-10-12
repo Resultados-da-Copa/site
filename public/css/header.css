@@ -22,6 +22,8 @@ nav.header {
   height: 10vh;
   padding-left: 6.73%;
   padding-right: 6.73%;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .nav-list {
@@ -35,8 +37,8 @@ nav.header {
 }
 
 .logo img {
-  max-width: 78rem;
-  max-height: 98rem;
+  max-width: 70rem;
+  max-height: 70rem;
 }
 
 ul.nav-list {
@@ -100,9 +102,9 @@ ul.nav-list {
   }
 
   .logo img {
-    max-width: 58rem;
-    max-height: 58rem;
-  }
+    max-width: 50rem;
+    max-height: 50rem;
+}
   
   .mobile-menu {
     display: block;
