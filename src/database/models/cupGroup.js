@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const cupGroup = sequelize.define(
+    const cup_group = sequelize.define(
         'cup_group',
         {
             id: {
@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 primaryKey: true
             },
-            cup_stageID: {
+            cup_stage_id: {
                 type: DataTypes.UUIDV4,
             },
             name: {
@@ -30,6 +30,8 @@ module.exports = (sequelize, DataTypes) => {
         {
             tableName: "cup_group",
             timestamps: true,
+            createdAt: "createdAt",
+            updatedAt: false,
         }
     );
 
@@ -41,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
 
     }); */
 
-    return cupGroup;
+    return cup_group;
 }
 
 

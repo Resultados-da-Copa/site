@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const cupStage = sequelize.define(
+    const cup_stage = sequelize.define(
         'cup_stage',
         {
             id:{
@@ -32,9 +32,10 @@ module.exports = (sequelize, DataTypes) => {
             },
         },
         {
-            tableName: "cup_stages",
+            tableName: "cup_stage",
             timestamps: true,
             createdAt: "createdAt",
+            updatedAt: false
         }
     ); 
     /* cupStage.associate((models) => {
@@ -44,5 +45,5 @@ module.exports = (sequelize, DataTypes) => {
     });
     }); */
 
-    return cupStage;
+    return cup_stage;
 }

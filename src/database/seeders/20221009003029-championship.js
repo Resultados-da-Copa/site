@@ -1,6 +1,5 @@
 'use strict';
 
-const { BOOLEAN } = require("sequelize");
 const { v4: uuid } = require("uuid");
 
 module.exports = {

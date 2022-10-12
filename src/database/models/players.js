@@ -1,33 +1,33 @@
 module.exports = (sequelize, DataTypes) => {
-    const player = sequelize.define(
+    const players = sequelize.define(
         'players',
         {
-            id:{
+            id: {
                 type: DataTypes.UUID,
                 defaultValue: DataTypes.UUIDV4,
                 allowNull: false,
                 primaryKey: true
             },
-            team_id:{
+            team_id: {
                 type: DataTypes.UUIDV4,
             },
-            name:{
+            name: {
                 type: DataTypes.STRING(100),
                 allowNull: false
             },
-            photograph:{
+            photograph: {
                 type: DataTypes.STRING(500),
                 allowNull: false
             },
-            birth_date:{
+            birth_date: {
                 type: DataTypes.DATE,
                 defaultValue: false,
             },
-            nationality:{
+            nationality: {
                 type: DataTypes.STRING(500),
                 allowNull: false
             },
-            weight:{
+            weight: {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
@@ -43,11 +43,17 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(100),
                 allowNull: false,
             },
+            createdAt:{
+                type: DataTypes.DATE,
+            },
         },
         {
-            tableName: "player",
+            tableName: "players",
+            timestamps: true,
+            createdAt: "createdAt",
+            updatedAt: false
         }
-    ); 
+    );
 
     /* player.belongsTo.associate((models) => {
     player.belongsTo(team, {
@@ -56,6 +62,6 @@ module.exports = (sequelize, DataTypes) => {
         });
     }); */
 
-    return player;
+    return players;
 }
 

@@ -8,15 +8,14 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 primaryKey: true
             },
-            playerID:{
+            player_id:{
                 type: DataTypes.UUIDV4,
             },
-            matchID:{
+            match_id:{
                 type: DataTypes.UUIDV4,
             },
-            name:{
-                type: DataTypes.STRING(100),
-                allowNull: false
+            team_id:{
+                type: DataTypes.UUIDV4,
             },
             first_half: {
                 type: DataTypes.BOOLEAN,
@@ -58,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
             tableName: "stats",
             timestamps: true,
             createdAt: "createdAt",
+            updatedAt: false
         }
     ); 
     

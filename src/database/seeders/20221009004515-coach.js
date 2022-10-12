@@ -1,22 +1,16 @@
 'use strict';
 
-const { team } = require('../../database')
+const { team } = require('../../database');
 const { v4: uuid } = require('uuid');
 
 module.exports = {
 
   async up(queryInterface) {
     const teamID = [
-      'alemanha', 'frança', 'brasil',
-      'inglaterra', 'holanda', 'qatar',
-      'portugal', 'arabia', 'suica',
-      'espanha'
+      'brasil', 'qatar'
     ]
     const name = [
-      'Hansi Flick', 'Didier Deschamps', 'Tite',
-      'Gareth Southgate', 'Louis van Gall', 'Felix Sanchez',
-      'Fernando Santos', 'Herve Renard', 'Murat Yakin',
-      'Luis Enrique'
+      'Tite', 'Murat Yakin'
     ]
 
     for (let i = 0; i < name.length; i++) {

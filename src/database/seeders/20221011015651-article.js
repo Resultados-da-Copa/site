@@ -3,12 +3,22 @@ const { v4: uuid } = require("uuid");
 'use strict';
 
 module.exports = {
-  async up (queryInterface) {
-    await queryInterface.bulkInsert('article', [{
-      id: uuid(),
-      article_cover: 'placeholder.jpg',
-      article_headline: 'Coréia do Norte avassala Coréia do Sul',
-      article_paragraphs: `Lorem Ipsum is simply dummy text of the printing and 
+  async up(queryInterface) {
+    const titles = [
+      'Final já tem 98% dos ingressos vendidos',
+      'Coréia do Norte avassala Coréia do Sul',
+      'Honduras elimina Senegal',
+      'Seleção americana perde novamente',
+      'Brasil vence Suiça em jogo entediante',
+      'Qatar enfrenta Arábia Saudita valendo 100 mil barris de petróleo'
+    ]
+
+    for (let i = 0; i < titles.length; i++) {
+      await queryInterface.bulkInsert('article', [{
+        id: uuid(),
+        article_cover: 'placeholder.jpg',
+        article_headline: titles[i],
+        article_paragraphs: `Lorem Ipsum is simply dummy text of the printing and 
                             typesetting industry. Lorem Ipsum has been the industry's 
                             standard dummy text ever since the 1500s, when an unknown 
                             printer took a galley of type and scrambled it to make a 
@@ -40,9 +50,10 @@ module.exports = {
                             on the theory of ethics, very popular during the Renaissance. The first 
                             line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line 
                             in section 1.10.32.`,
-      createdAt: new Date()
-     }]);
-     
+        createdAt: new Date()
+      }])
+    };
+
   },
 
   down: async (queryInterface) => {

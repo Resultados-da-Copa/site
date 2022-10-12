@@ -1,18 +1,20 @@
 'use strict';
 
 const { v4: uuid } = require("uuid");
+const bcrypt = require('bcryptjs');
 
 module.exports = {
+
   async up (queryInterface) {
     
     await queryInterface.bulkInsert('users', [{
 
       id: uuid(),
-      name: 'Joao Pedro',
-      email: 'blabla',
-      password:'1234',
+      name: 'teste',
+      email: 'teste@teste.com',
+      password: bcrypt.hashSync('teste'),
       birth_date: "1993-10-23",
-      photograph: 'https://github.com/crisleyhguimaraes.png',
+      photograph: 'avatar.png',
   }]);
 },
 
