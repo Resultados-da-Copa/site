@@ -12,7 +12,7 @@ module.exports = {
       started_championship : true,
       finished_championship : false,
       stopped_championship : false,
-      createdAt : new Date
+      createdAt : new Date()
     }]);
   },
 

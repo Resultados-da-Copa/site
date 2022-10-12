@@ -21,7 +21,7 @@ module.exports = {
     const photograph = [
       'public/img/player/padrao.png']
     const birth_date = ["1958-10-01"]
-    const nationality = ['qatar']
+    const nationality = ['brasil']
     const weight = [
       70, 78, 82, 87,84, 77, 
       78, 75, 90, 56, 73, 71,
