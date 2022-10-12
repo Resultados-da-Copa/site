@@ -20,7 +20,7 @@ module.exports = {
                 match_id: {
                     type: Sequelize.DataTypes.UUID,
                     references: {
-                        model: "match",
+                        model: "matches",
                         key: "id",
                     }
                 },

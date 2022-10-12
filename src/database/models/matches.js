@@ -8,20 +8,17 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 primaryKey: true
             },
-            cupStageID:{
+            cup_stage_id:{
                 type: DataTypes.UUIDV4,
             },
-            cup_groupID:{
+            cup_group_id:{
                 type: DataTypes.UUIDV4,
             },
-            home_teamID:{
+            home_team_id:{
                 type: DataTypes.UUIDV4,
             },
-            visitors_teamID:{
+            visitors_team_id:{
                 type: DataTypes.UUIDV4,
-            },
-            matchDate:{type: DataTypes.DATE,
-                allowNull: false
             },
             started_match: {
                 type: DataTypes.BOOLEAN,
@@ -40,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
                 defaultValue: false,
             },
             stadium: {
-                type: DataTypes.STRING(),
+                type: DataTypes.STRING(100),
                 defaultValue: false,
             },
             createdAt:{
@@ -48,9 +45,10 @@ module.exports = (sequelize, DataTypes) => {
             },
         },
         {
-            tableName: "match",
+            tableName: "matches",
             timestamps: true,
             createdAt: "createdAt",
+            updatedAt: false
         }
     ); 
 

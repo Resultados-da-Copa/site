@@ -50,6 +50,10 @@ module.exports = {
           type: Sequelize.DataTypes.STRING(100),
           allowNull: false,
         },
+        createdAt:{
+          type: Sequelize.DataTypes.DATE,
+          allowNull: false,
+      },
       }
     );
 

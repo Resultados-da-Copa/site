@@ -20,13 +20,16 @@ module.exports = {
                 match_id: {
                     type: Sequelize.DataTypes.UUID,
                     references: {
-                        model: "match",
+                        model: "matches",
                         key: "id",
                     }
                 },
-                name: {
-                    type: Sequelize.DataTypes.STRING(100),
-                    allowNull: false
+                team_id: {
+                    type: Sequelize.DataTypes.UUID,
+                    references: {
+                        model: "team",
+                        key: "id",
+                    }
                 },
                 first_half: {
                     type: Sequelize.DataTypes.BOOLEAN,

@@ -26,8 +26,6 @@ const noticiaController = {
             suggestedArticles = result
         })
 
-        console.log(suggestedArticles)
-
         res.render('noticia', { articleData, suggestedArticles })
     }
 }

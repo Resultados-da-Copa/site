@@ -76,7 +76,8 @@ module.exports = {
         weight: weight[i],
         number: number[i],
         height: height[i],
-        foot: foot[i]
+        foot: foot[i],
+        createdAt: new Date()
       }]);
     }
   },

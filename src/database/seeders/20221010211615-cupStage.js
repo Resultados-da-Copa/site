@@ -2,27 +2,35 @@
 
 const { BOOLEAN } = require("sequelize");
 const { v4: uuid } = require("uuid");
+const { championship } = require("../../database")
 
 module.exports = {
   async up(queryInterface) {
-    
 
 
-    await queryInterface.bulkInsert('cupStage', [{
+
+    await queryInterface.bulkInsert('cup_stage', [{
 
       id: uuid(),
-      championshipID: '13870273-05e2-490a-b31b-295c58c46668',
+      cup_id: await championship.findOne({
+        where: {
+          name: 'copa do mundo'
+        }
+      }).then(result => {
+        return result.dataValues.id
+      }),
       name: 'Group Stage',
-      startedCupStage : true,
-      finishedCupStage : false,
-      createdAt : new Date
+      initial_stage: true,
+      finish_stage: false,
+      stopped_stage: false,
+      createdAt: new Date()
     }]);
   },
 
 
   down: async (queryInterface) => {
-    await queryInterface.bulkDelete('cupStage', null, {});
+    await queryInterface.bulkDelete('cup_stage', null, {});
   }
 };
-// group stage 
+// group stage
 // knockout stage
