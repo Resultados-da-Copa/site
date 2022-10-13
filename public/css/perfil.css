@@ -103,47 +103,53 @@ input{
 
 }
 
-/* =============1366p LAYOUT============= */
 
-@media (min-width: 1366px) {
+@media (min-width: 1366px){
+    #desktop-flex{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+    #dateFieldset{
+        width: 836px;
+    }
+    #nameFieldset{
+        width: 375px;
+        margin-left: 95rem;
+        margin-right:45rem ;
+    }
+    fieldset{
+        width: 375rem;
+    }
+    #userImage{
+        width: 232rem;
+        height: 232rem;
+    }
+    #imageFieldset{
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .container{
+        width: 233rem;
+        height: 74rem;
+        margin-left:324rem;
+    }
+    .container-2{
+        margin-left: 190rem;
+        
+    }
+    #save-btn{
+        margin-left: 324rem;
+        width: 375rem;
+        height: 40rem;
+    }
+    #logout-btn{
+        margin-left: 120rem;
+    }
+    #save-exit{
+        display: flex;
+        margin-bottom: 113rem;
 
-	h1{
-		margin-top: 106rem;
-	}
+    }
 
-	#userImage{
-		width: 232rem;
-		height: 232rem;
-	}
-
-	#nameFieldset{
-		display: flex;
-
-	}
-
-	#passwordFieldset{
-		width: 58.56%;
-		display: flex;
-		justify-content: space-between;
-		margin-left: auto;
-
-	}
-
-	#dateFieldset{
-		width: 58.56%;
-		justify-content: space-between;
-		margin-left: auto;
-	}
-
-	#btnFieldset{
-		display: flex;
-		justify-content: space-between;
-		width: 58.56%;
-		margin-left: auto;
-	}
-
-	.btn{
-		width: 27.45%;
-
-	}
 }
