@@ -3,181 +3,157 @@
 
 <head>
     <%- include('./partials/head')%>
-    <link rel="stylesheet" href="/css/partida.css">
+        <link rel="stylesheet" href="/css/partida.css">
 </head>
 
 <body>
 
     <%- include('./partials/header')%>
 
-    <h1>FASE DE GRUPOS</h1>
+        <h1>
+            <%= cupStage.toUpperCase() %>
+        </h1>
 
-    <section>
-        <p class="section-p">08/12/2022 - Jadan Arena</p>
-        <div id="resultado-div">
-            <p id="time-mandante-sigla" class="sigla">WWW</p>
-            <img id="bandeira-time-mandante" class="flag" src="/img/flag-placeholder.png" alt="bandeira da Suécia">
-            <p id="resultado-time-mandante" class="resultado">00</p>
-            <p id="divisor-resultado">x</p>
-            <p id="resultado-time-visitante" class="resultado">00</p>
-            <img id="bandeira-time-visitante" class="flag" src="/img/flag-placeholder.png" alt="bandeira da Suécia">
-            <p id="time-visitante-sigla" class="sigla">WWW</p>
-        </div>
-        <p class="section-p">Grupo A</p>
-    </section>
-    <div id="grupo-de-tabelas">
-        <div class="tamanho-da-tabela">
-            <h2 class="h2-tabela">Titulares</h2>
+        <section>
+            <p class="section-p">
+                <%= matchData.dataValues.match_date.toLocaleDateString("pt-BR") %>
+                 - 
+                <%= matchData.dataValues.stadium.toUpperCase() %>
+            </p>
+            <div id="resultado-div">
+                <p id="time-mandante-sigla" class="sigla">
+                    <%= home.dataValues.abbreviation.toUpperCase() %>
+                </p>
+                <img id="bandeira-time-mandante" class="flag" src="/img/<%= home.dataValues.flag %> "
+                    alt="bandeira da Suécia">
+                <p id="resultado-time-mandante" class="resultado">00</p>
+                <p id="divisor-resultado">x</p>
+                <p id="resultado-time-visitante" class="resultado">00</p>
+                <img id="bandeira-time-visitante" class="flag" src="/img/<%= visitors.dataValues.flag %>"
+                    alt="bandeira da Suécia">
+                <p id="time-visitante-sigla" class="sigla">
+                    <%= visitors.dataValues.abbreviation.toUpperCase() %>
+                </p>
+            </div>
+            <p class="section-p">Grupo <%= cupGroup.toUpperCase() %>
+            </p>
+        </section>
+        <div id="grupo-de-tabelas">
+            <div class="tamanho-da-tabela">
+                <h2 class="h2-tabela">Titulares</h2>
 
-            <table class="tabela" id="titulares">
-                <tr>
-                    <th class="texto-a-esquerda">SELEÇÃO A</th>
-                    <th class="texto-a-direita">SELEÇÃO B</th>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 1</td>
-                    <td class="texto-a-direita">Jogador 1</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 2</td>
-                    <td class="texto-a-direita">Jogador 2</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 3</td>
-                    <td class="texto-a-direita">Jogador 3</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 4</td>
-                    <td class="texto-a-direita">Jogador 4</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 5</td>
-                    <td class="texto-a-direita">Jogador 5</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 6</td>
-                    <td class="texto-a-direita">Jogador 6</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 7</td>
-                    <td class="texto-a-direita">Jogador 7</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 8</td>
-                    <td class="texto-a-direita">Jogador 8</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 9</td>
-                    <td class="texto-a-direita">Jogador 9</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 10</td>
-                    <td class="texto-a-direita">Jogador 10</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 11</td>
-                    <td class="texto-a-direita">Jogador 11</td>
-                </tr>
-                <tr>
-                    <th class="texto-a-esquerda">TÉCNICO <p>Nome do técnico</p>
-                    </th>
-                    <th class="texto-a-direita">TÉCNICO <p>Nome do técnico</p>
-                    </th>
-                </tr>
-            </table>
-        </div>
-
-        <div class="tamanho-da-tabela">
-            <h2 class="h2-tabela">Reservas</h2>
-
-            <table class="tabela" id="reservas">
-                <tr>
-                    <th class="texto-a-esquerda">SELEÇÃO A</th>
-                    <th class="texto-a-direita">SELEÇÃO B</th>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 1</td>
-                    <td class="texto-a-direita">Jogador 1</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 2</td>
-                    <td class="texto-a-direita">Jogador 2</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 3</td>
-                    <td class="texto-a-direita">Jogador 3</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 4</td>
-                    <td class="texto-a-direita">Jogador 4</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 5</td>
-                    <td class="texto-a-direita">Jogador 5</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 6</td>
-                    <td class="texto-a-direita">Jogador 6</td>
-                </tr>
-                <tr>
-                    <td class="texto-a-esquerda">Jogador 7</td>
-                    <td class="texto-a-direita">Jogador 7</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="tamanho-da-tabela">
-            <h2 class="h2-tabela">Estatísticas</h2>
-            <div class="tabela">
-                <table id="cabecalho-tabela">
+                <table class="tabela" id="titulares">
                     <tr>
-                        <th class="texto-a-esquerda">SELEÇÃO A</th>
-                        <th class="texto-a-direita">SELEÇÃO B</th>
+                        <th class="texto-a-esquerda">
+                            <%= home.dataValues.name.toUpperCase() %>
+                        </th>
+                        <th class="texto-a-direita">
+                            <%= visitors.dataValues.name.toUpperCase() %>
+                        </th>
                     </tr>
-                </table>
-                <table class="tabela-estatisticas">
-                    
-                    <tr>
-                        <td class="texto-a-esquerda">0</td>
-                        <td class="texto-centralizado">Faltas</td>
-                        <td class="texto-a-direita">0</td>
-                    </tr>
-                    <tr>
-                        <td class="texto-a-esquerda">0</td>
-                        <td class="texto-centralizado">Impedimentos</td>
-                        <td class="texto-a-direita">0</td>
-                    </tr>
-                    <tr>
-                        <td class="texto-a-esquerda">0</td>
-                        <td class="texto-centralizado">Escanteios</td>
-                        <td class="texto-a-direita">0</td>
-                    </tr>
-                    <tr>
-                        <td class="texto-a-esquerda">0</td>
-                        <td class="texto-centralizado">Chutes</td>
-                        <td class="texto-a-direita">0</td>
-                    </tr>
-                    <tr>
-                        <td class="texto-a-esquerda">0</td>
-                        <td class="texto-centralizado">Cartões Amarelos</td>
-                        <td class="texto-a-direita">0</td>
-                    </tr>
-                    <tr>
-                        <td class="texto-a-esquerda">0</td>
-                        <td class="texto-centralizado">Cartões Vermelhos</td>
-                        <td class="texto-a-direita">0</td>
-                    </tr>
-                    <tr>
-                        <td class="texto-a-esquerda">0%</td>
-                        <td class="texto-centralizado">Posse de bola</td>
-                        <td class="texto-a-direita">0%</td>
-                    </tr>
+                    <% for(let i=0; i < 11; i++){ %>
+                        <tr>
+                            <td class="texto-a-esquerda">
+                                <%=homePlayers[i].dataValues.name%>
+                            </td>
+                            <td class="texto-a-direita">
+                                <%=visitorsPlayers[i].dataValues.name%>
+                            </td>
+                        </tr>
+                    <% } %>
+                            <tr>
+                                <th class="texto-a-esquerda">TÉCNICO <p><%= homeCoach %> </p>
+                                </th>
+                                <th class="texto-a-direita">TÉCNICO <p><%= visitorsCoach %> </p>
+                                </th>
+                            </tr>
                 </table>
             </div>
-        </div>
-    </div>
 
-    <%- include('./partials/footer') %>
+            <div class="tamanho-da-tabela">
+                <h2 class="h2-tabela">Reservas</h2>
+
+                <table class="tabela" id="reservas">
+                    <% for(let i = 11; i <= 17; i++){
+                        
+                    } %> 
+                    <tr>
+                        <th class="texto-a-esquerda">
+                            <%= home.dataValues.name.toUpperCase() %>
+                        </th>
+                        <th class="texto-a-direita">
+                            <%= visitors.dataValues.name.toUpperCase() %>
+                        </th>
+                    </tr>
+                    <% for(let i = 11; i <= 17; i++){ %>
+                        <tr>
+                            <td class="texto-a-esquerda">
+                                <%=homePlayers[i].dataValues.name%>
+                            </td>
+                            <td class="texto-a-direita">
+                                <%=visitorsPlayers[i].dataValues.name%>
+                            </td>
+                        </tr>
+                    <% } %>
+                </table>
+            </div>
+
+            <div class="tamanho-da-tabela">
+                <h2 class="h2-tabela">Estatísticas</h2>
+                <div class="tabela">
+                    <table id="cabecalho-tabela">
+                        <tr>
+                            <th class="texto-a-esquerda">
+                                <%= home.dataValues.name.toUpperCase() %>
+                            </th>
+                            <th class="texto-a-direita">
+                                <%= visitors.dataValues.name.toUpperCase() %>
+                            </th>
+                        </tr>
+                    </table>
+                    <table class="tabela-estatisticas">
+
+                        <tr>
+                            <td class="texto-a-esquerda">3</td>
+                            <td class="texto-centralizado">Faltas</td>
+                            <td class="texto-a-direita">2</td>
+                        </tr>
+                        <tr>
+                            <td class="texto-a-esquerda">2</td>
+                            <td class="texto-centralizado">Impedimentos</td>
+                            <td class="texto-a-direita">1</td>
+                        </tr>
+                        <tr>
+                            <td class="texto-a-esquerda">3</td>
+                            <td class="texto-centralizado">Escanteios</td>
+                            <td class="texto-a-direita">5</td>
+                        </tr>
+                        <tr>
+                            <td class="texto-a-esquerda">2</td>
+                            <td class="texto-centralizado">Chutes</td>
+                            <td class="texto-a-direita">6</td>
+                        </tr>
+                        <tr>
+                            <td class="texto-a-esquerda">1</td>
+                            <td class="texto-centralizado">Cartões Amarelos</td>
+                            <td class="texto-a-direita">1</td>
+                        </tr>
+                        <tr>
+                            <td class="texto-a-esquerda">0</td>
+                            <td class="texto-centralizado">Cartões Vermelhos</td>
+                            <td class="texto-a-direita">0</td>
+                        </tr>
+                        <tr>
+                            <td class="texto-a-esquerda">36%</td>
+                            <td class="texto-centralizado">Posse de bola</td>
+                            <td class="texto-a-direita">64%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <%- include('./partials/footer') %>
 
 </body>
 
