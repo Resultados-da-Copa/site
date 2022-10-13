@@ -52,8 +52,7 @@ module.exports = {
                 defaultValue: false,
             },
             match_date: {
-                type: Sequelize.DataTypes.DATE,
-                defaultValue: false,
+                type: Sequelize.DataTypes.DATE
             },
             stadium: {
                 type: Sequelize.DataTypes.STRING(100),
