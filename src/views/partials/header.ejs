@@ -9,9 +9,14 @@
         <li><a class="header-link" href="/resultados">Resultados</a></li>
       </ul>
         <ul class="nav-list">
-          <li><a class="header-link" href="/login">Login</a></li>
-          <li><a class="header-link" href="/cadastro">Cadastro</a></li>
-        </ul> 
+          <% if(logged){ %>
+            <li><a class="header-link" href="/perfil">Perfil</a></li>
+            <li><a class="header-link" href="/logout">Sair</a></li>
+            <% } else { %>
+              <li><a class="header-link" href="/login">Login</a></li>
+              <li><a class="header-link" href="/cadastro">Cadastro</a></li>
+          <% } %> 
+        </ul>
     </div>
     <div class="mobile-menu">
       <div class="line1"></div>
