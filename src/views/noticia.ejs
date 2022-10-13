@@ -27,7 +27,7 @@
             <% suggestedArticles.forEach((element) => {%>
                 <div class="news-card">
                     <img class="more-news-image" src="/img/articleCovers/<%= element.dataValues.article_cover %> " alt="Capa da matéria">
-                    <a class="more-news-link" href="">
+                    <a class="more-news-link" href="/noticia/<%= element.dataValues.id %>">
                         <%= element.dataValues.article_headline %> 
                     </a>
                 </div>
