@@ -1,6 +1,8 @@
 const resultadosController = {
-    resultados: (req, res)=>{
-        res.render('resultados')
+    resultados: (req, res) => {
+        const logged = req.session.isAuthorized
+
+        res.render('resultados', { logged })
     }
 }
 

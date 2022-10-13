@@ -26,7 +26,9 @@ const noticiaController = {
             suggestedArticles = result
         })
 
-        res.render('noticia', { articleData, suggestedArticles })
+        const logged = req.session.isAuthorized
+
+        res.render('noticia', { articleData, suggestedArticles, logged })
     }
 }
 
