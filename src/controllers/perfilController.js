@@ -20,7 +20,10 @@ const perfilController = {
             userData.birth_date = result.dataValues.birth_date
             userData.photograph = result.dataValues.photograph
         })
-        res.render('perfil', {userData})
+
+        const logged = req.session.isAuthorized
+
+        res.render('perfil', {userData, logged})
     },
 
     updateProfile: (req, res) => {

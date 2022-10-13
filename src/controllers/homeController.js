@@ -39,8 +39,9 @@ const homeController = {
             }
             return result
         })
-
-        res.render('index', { articles, match, home, visitors})
+        
+        const logged = req.session.isAuthorized
+        res.render('index', { articles, match, home, visitors, logged})
     }
 }
 

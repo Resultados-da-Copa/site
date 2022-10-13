@@ -6,17 +6,20 @@ const bcrypt = require('bcryptjs')
 const cadastroController = {
     renderpage: (req, res) => {
         if (!req.session.isAuthorized) {
-            res.status(200).render('cadastro')
+
+            const logged = req.session.isAuthorized
+
+            res.status(200).render('cadastro', { logged })
         }
 
         res.status(200).redirect('/perfil')
     },
 
     cadastro: async (req, res) => {
-        const {nome, email, senha} = req.body
+        const { nome, email, senha } = req.body
         let userTeam
 
-        if(!nome || !email || !senha){
+        if (!nome || !email || !senha) {
             return res.status(401).redirect('/cadastro')
         }
 
@@ -35,7 +38,7 @@ const cadastroController = {
         }).then((result) => {
             if (result) {
                 return res.status(200).redirect('/login')
-            }else{
+            } else {
                 const passwordHash = bcrypt.hashSync(senha)
 
                 users.create({

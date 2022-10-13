@@ -1,6 +1,8 @@
 const estatisticasController = {
-    estatisticas: (req, res)=>{
-        res.render('estatisticas')
+    estatisticas: (req, res) => {
+        const logged = req.session.isAuthorized
+
+        res.render('estatisticas', { logged })
     }
 }
 

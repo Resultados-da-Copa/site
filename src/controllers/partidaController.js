@@ -79,6 +79,7 @@ const partidaController = {
             return result.dataValues.name
         })
 
+        const logged = req.session.isAuthorized
 
         res.render('partida',
             {
@@ -90,7 +91,8 @@ const partidaController = {
                 homePlayers,
                 visitorsPlayers,
                 homeCoach,
-                visitorsCoach
+                visitorsCoach,
+                logged
             })
     }
 }

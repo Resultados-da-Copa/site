@@ -4,8 +4,10 @@ const {users} = require('../database')
 const loginController = {
     renderpage: (req, res) => {
         if (!req.session.isAuthorized) {
-            return res.render('login')
+            const logged = req.session.isAuthorized
+            return res.render('login', {logged})
         }
+
         res.status(200).redirect('/perfil')
     },
 
