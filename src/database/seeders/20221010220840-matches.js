@@ -1,6 +1,6 @@
 'use strict';
 
-const { cup_group, team } = require('../../database')
+const { cup_group, team, cup_stage } = require('../../database')
 const { v4: uuid } = require("uuid");
 
 module.exports = {
@@ -11,6 +11,13 @@ module.exports = {
       cup_group_id: await cup_group.findOne({
         where: {
           name: 'a'
+        }
+      }).then(result => {
+        return result.dataValues.id
+      }),
+      cup_stage_id: await cup_stage.findOne({
+        where: {
+          name: 'Group Stage'
         }
       }).then(result => {
         return result.dataValues.id

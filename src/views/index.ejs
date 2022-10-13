@@ -21,7 +21,7 @@
                 <a href="">
                     <div id="main-news-background"></div>
                     <h1>
-                        <%= articles[0].dataValues.article_headline %>
+                        <%= articles[0].dataValues.article_headline.toUpperCase() %>
                     </h1>
                 </a>
             </div>
@@ -47,41 +47,14 @@
             <div id="matches-of-the-day">
                 <h2>Partidas do dia</h2>
                 <div id="matches-card">
-                    <a href="/partida/id">
-                        <span class="soccer-selection">Alemanha </span>
-                        <span> x </span>
-                        <span class="soccer-selection">Bélgica</span>
-                    </a>
-                    <div class="line"></div>
-                    <a href="/partida">
-                        <span class="soccer-selection">Brasil </span>
-                        <span> x </span>
-                        <span class="soccer-selection">Argentina</span>
-                    </a>
-                    <div class="line"></div>
-                    <a href="/partida">
-                        <span class="soccer-selection">França </span>
-                        <span> x </span>
-                        <span class="soccer-selection">Japão</span>
-                    </a>
-                    <div class="line"></div>
-                    <a href="/partida">
-                        <span class="soccer-selection">Canadá </span>
-                        <span> x </span>
-                        <span class="soccer-selection">Inglaterra</span>
-                    </a>
-                    <div class="line"></div>
-                    <a href="/partida">
-                        <span class="soccer-selection">Canadá </span>
-                        <span> x </span>
-                        <span class="soccer-selection">Inglaterra</span>
-                    </a>
-                    <div class="line"></div>
-                    <a href="/partida">
-                        <span class="soccer-selection">Canadá </span>
-                        <span> x </span>
-                        <span class="soccer-selection">Inglaterra</span>
-                    </a>
+                    <% home.forEach((element, index) => { %>
+                        <a href="/partida/<%= match[index].dataValues.id %>">
+                            <span class="soccer-selection"><%= home[index].name.toUpperCase() %></span>
+                            <span> x </span>
+                            <span class="soccer-selection"><%= visitors[index].name.toUpperCase() %></span>
+                        </a>
+                        <div class="line"></div>
+                    <% }) %> 
                 </div>
             </div>
 
@@ -89,33 +62,19 @@
             <div id="main-clashes">
                 <h2>Principais confrontos</h2>
                 <div id="clashes-card">
-                    <span class="match">
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
-                        0 x 0
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
-                    </span>
-                    <span class="match">
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
-                        0 x 0
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
-                    </span>
-                    <span class="match">
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
-                        0 x 0
-                        <div class="match-flags">
-                            <img src="/img/flag-placeholder.png" alt="country flag">
-                        </div>
-                    </span>
+                    <% home.forEach((element, index) => { %>
+                        <% if(index < 3){ %>
+                            <span class="match">
+                                <div class="match-flags">
+                                    <img src="/img/<%= home[index].flag %>" alt="country flag">
+                                </div>
+                                0 x 0
+                                <div class="match-flags">
+                                    <img src="/img/<%= visitors[index].flag %>" alt="country flag">
+                                </div>
+                            </span>
+                        <% } %>
+                    <% }) %> 
                 </div>
             </div>
 

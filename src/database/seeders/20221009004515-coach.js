@@ -23,7 +23,8 @@ module.exports = {
           }
         }).then((result) => {
           return result.dataValues.id
-        })
+        }),
+        createdAt: new Date()
       }]);
     }
   },
