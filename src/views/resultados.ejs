@@ -1,292 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('./partials/head')%>
-    <link rel="stylesheet" href="./css/resultados.css">
     <link rel="stylesheet" href="./css/estatisticas.css">
+    <%- include('./partials/head')%>
     <title>Resultados da Copa</title>
 </head>
 <body>
     <%- include('./partials/header')%>
 
-    <main>
+    <div id="previous-and-next">
+        <button class="button-arrow -right"></button>
+        <div id="phase">Fase de grupos</div>
+        <button class="button-arrow -left"></button>
+    </div>
 
-        <section id="competicao">
-            <img src="./img/world-cup-2022-logo-0-1536x1536.png" alt="Logotipo oficial da copa do mundo do qatar 2022">
-            <h1>WORLD CUP QATAR 2022</h1>
-        </section>
-
-        <section id="fase">
-            <a href="faseDeGrupos.html" class="direita"><img src="./img/pngegg.png" alt="seta que direciona a página da fase de grupos"></a>
-            <h2>OITAVAS DE FINAL</h2>
-            <a href="eliminatoria.html"><img src="./img/pngegg.png" alt="seta que direciona a fase eliminatoria da competição"></a>
-        </section>
-
-        <section>
-            <header class="eliminatorias">
-                <h2>TABELA</h2>
-            </header>
-            <div class="confronto-1">
-            <div class="partida"> 
-                <div class="info-jogos">
-                    <span class="estadio">xxxxxxxxxxxxx</span>
-                    <span class="data-jogo">00/00/0000</span>
-                    <span class="horario">00h00m</span>
-                </div>
-
-             <div class="placar">
-                <div class="mandante">
-                    <span class="primeiro-do-grupo">1º A</span>
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                </div>
-
-                <div class="placar-box">
-                    <span class="valor-mandante"></span>
-                    <span class="versus">x</span>
-                    <span class="valor-visitante"></span>
-                </div>
-
-                <div class="visitante">
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                    <span class="segundo-do-grupo">2º B</span>
-                </div>
-             </div>
-            </div>
-        </div>
-
-        <div class="confronto-2">
-            <div class="partida"> 
-                <div class="info-jogos">
-                    <span class="estadio">xxxxxxxxxxxxx</span>
-                    <span class="data-jogo">00/00/0000</span>
-                    <span class="horario">00h00m</span>
-                </div>
-
-             <div class="placar">
-                <div class="mandante">
-                    <span class="primeiro-do-grupo">1º B</span>
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                </div>
-
-                <div class="placar-box">
-                    <span class="valor-mandante"></span>
-                    <span class="versus">x</span>
-                    <span class="valor-visitante"></span>
-                </div>
-
-                <div class="visitante">
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                    <span class="segundo-do-grupo">2º A</span>
-                </div>
-             </div>
-            </div>
-        </div>
-
-        <div class="confronto-3">
-            <div class="partida"> 
-                <div class="info-jogos">
-                    <span class="estadio">xxxxxxxxxxxxx</span>
-                    <span class="data-jogo">00/00/0000</span>
-                    <span class="horario">00h00m</span>
-                </div>
-
-             <div class="placar">
-                <div class="mandante">
-                    <span class="primeiro-do-grupo">1º C</span>
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                </div>
-
-                <div class="placar-box">
-                    <span class="valor-mandante"></span>
-                    <span class="versus">x</span>
-                    <span class="valor-visitante"></span>
-                </div>
-
-                <div class="visitante">
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                    <span class="segundo-do-grupo">2º D</span>
-                </div>
-             </div>
-            </div>
-        </div>
-
-        <div class="confronto-4">
-            <div class="partida"> 
-                <div class="info-jogos">
-                    <span class="estadio">xxxxxxxxxxxxx</span>
-                    <span class="data-jogo">00/00/0000</span>
-                    <span class="horario">00h00m</span>
-                </div>
-
-             <div class="placar">
-                <div class="mandante">
-                    <span class="primeiro-do-grupo">1º D</span>
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                </div>
-
-                <div class="placar-box">
-                    <span class="valor-mandante"></span>
-                    <span class="versus">x</span>
-                    <span class="valor-visitante"></span>
-                </div>
-
-                <div class="visitante">
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                    <span class="segundo-do-grupo">2º C</span>
-                </div>
-             </div>
-            </div>
-        </div>
-
-        <div class="confronto-5">
-            <div class="partida"> 
-                <div class="info-jogos">
-                    <span class="estadio">xxxxxxxxxxxxx</span>
-                    <span class="data-jogo">00/00/0000</span>
-                    <span class="horario">00h00m</span>
-                </div>
-
-             <div class="placar">
-                <div class="mandante">
-                    <span class="primeiro-do-grupo">1º E</span>
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                </div>
-
-                <div class="placar-box">
-                    <span class="valor-mandante"></span>
-                    <span class="versus">x</span>
-                    <span class="valor-visitante"></span>
-                </div>
-
-                <div class="visitante">
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                    <span class="segundo-do-grupo">2º F</span>
-                </div>
-             </div>
-            </div>
-        </div>
-
-        <div class="confronto-6">
-            <div class="partida"> 
-                <div class="info-jogos">
-                    <span class="estadio">xxxxxxxxxxxxx</span>
-                    <span class="data-jogo">00/00/0000</span>
-                    <span class="horario">00h00m</span>
-                </div>
-
-             <div class="placar">
-                <div class="mandante">
-                    <span class="primeiro-do-grupo">1º F</span>
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                </div>
-
-                <div class="placar-box">
-                    <span class="valor-mandante"></span>
-                    <span class="versus">x</span>
-                    <span class="valor-visitante"></span>
-                </div>
-
-                <div class="visitante">
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                    <span class="segundo-do-grupo">2º E</span>
-                </div>
-             </div>
-            </div>
-        </div>
-
-        <div class="confronto-7">
-            <div class="partida"> 
-                <div class="info-jogos">
-                    <span class="estadio">xxxxxxxxxxxxx</span>
-                    <span class="data-jogo">00/00/0000</span>
-                    <span class="horario">00h00m</span>
-                </div>
-
-             <div class="placar">
-                <div class="mandante">
-                    <span class="primeiro-do-grupo">1º G</span>
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                </div>
-
-                <div class="placar-box">
-                    <span class="valor-mandante"></span>
-                    <span class="versus">x</span>
-                    <span class="valor-visitante"></span>
-                </div>
-
-                <div class="visitante">
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                    <span class="segundo-do-grupo">2º H</span>
-                </div>
-             </div>
-            </div>
-        </div>
-
-        <div class="confronto-8">
-            <div class="partida"> 
-                <div class="info-jogos">
-                    <span class="estadio">xxxxxxxxxxxxx</span>
-                    <span class="data-jogo">00/00/0000</span>
-                    <span class="horario">00h00m</span>
-                </div>
-
-             <div class="placar">
-                <div class="mandante">
-                    <span class="primeiro-do-grupo">1º H</span>
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                </div>
-
-                <div class="placar-box">
-                    <span class="valor-mandante"></span>
-                    <span class="versus">x</span>
-                    <span class="valor-visitante"></span>
-                </div>
-
-                <div class="visitante">
-                    <img class="escudo" src="https://s.glbimg.com/es/sde/f/organizacoes/escudo_default_65x65.png" alt="">
-                    <span class="segundo-do-grupo">2º G</span>
-                </div>
-             </div>
-            </div>
-        </div>
-        </section>
-
-        <section id="artilheiros">
-
-            <h2>PRINCIAIS ARTILHEIROS</h2>
-        <nav class="nomes-gols">
-            <ul class="nome-jogador">
-                <p>Nome</p>
-                <li>Lionel Messi</li>
-                <li>Cristiano Ronaldo</li>
-                <li>Mbappe</li>
-                <li>Neymar Jr</li>
-                <li>Lewandovski</li>
-                <li>Cavani</li>
-                <li>Mané</li>
-                <li>Luis Suarez</li>
-                <li>Son</li>
-            </ul>
-        
-            <ul class="quantidade-gols">
-                <p>Gols</p>
-                <li>0</li>
-                <li>0</li>
-                <li>0</li>
-                <li>0</li>
-                <li>0</li>
-                <li>0</li>
-                <li>0</li>
-                <li>0</li>
-                <li>0</li>
-            </ul>
-        </nav>
-        </section>
-
-    </main>
+        <table class="table-classification">
+            <div class="title-table">Grupo A</div>
+            <tr class="bold-tr">
+                <td class="td-margin-bottom-top">Classificação</td>
+                <td class="td-margin-bottom-top">P</td>
+                <td class="td-margin-bottom-top">PJ</td>
+                <td class="td-margin-bottom-top">V</td>
+                <td class="td-margin-bottom-top">E</td>
+                <td class="td-margin-bottom-top">D</td>
+                <td class="td-margin-bottom-top">GP</td>
+                <td class="td-margin-bottom-top">GC</td>
+                <td class="td-margin-bottom-top">SG</td>
+            </tr>
+            <tr>
+                <td class="bold-tr">1° <img class="flag" src="data:image/png;base64,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" alt="bandeira do Equador" > Equador</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+            </tr>
+            <tr>
+                <td class="bold-tr">2° <img class="flag" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALkAAAB7CAMAAAAfU9HRAAAAD1BMVEX///+uHCghRoulAAAAIn0IJDCgAAAAe0lEQVR4nO3OSRGAAAwAsXL414wHHgudSRRkjq3m68Br5j3znnnPvGfeM++Z98x75j3znnnPvGfeM++Z98x75j3znnlvrq0GAAAAAAAAgL+5t5pzK/Oeec+8Z94z75n3zHvmPfOeec+8Z94z75n3zHvmPfOeec+8t3f+AGj6W8jboEVTAAAAAElFTkSuQmCC" alt="bandeira da Holanda"> Holanda</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+            </tr>
+            <tr>
+                <td class="bold-tr">3° <img class="flag" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAABOCAMAAABSb6lpAAAAh1BMVEWLFTj///+MGTru7u6EACaFACmGACyJCzR6AACCACGIADHw5ujh4eF/ABfgzND8+fqYRVahX2mBABzBl6CYSVj07O748vR8AAyNIT6panaxeoXo2t3Tub2SNUurdHvcxsrKqq6QKkWNLECVTlOfVmSIIjbKpa26jJSzgYnCnaK7kpaJKjmTPkxSt/JUAAACX0lEQVRoge2bYXKjMAyFSQoUymJIASeACYQmJKR7//MtnrI7s38jzejFk3eDb2RJlp7t/Xp7VEnRpR9bFHlvm8eVqWMQv3sIooEsqorcD6UpPAaQJSx97QfSHBwgNizDyQkQNefSHHSQpG/G0JdPeBJIlky7y2coT+HRQNqvKP2QBvgrWkTMOQog4kHPkeQ+7iGiQq9aSxt5B+juLOU3KcqtEyCbbDo4ALK0w8iX5qCCVOYYfkIULgpIMpcXiJuvFQWkGspA/tq7ini01BHjYDEku54wOiJH+bVhkebgGqyuLvQRe5uvHQBR13wfy2cJDSQxdbx3YLAaI4BQrKKAZNVw9kHaCDlH2uYSQESFnuzalHuACxfPYHXdih8wpoZoOmkShqPVzueL/IaOCJKpWxlD1GDSPDLVHkg7JILMOUK9+hHxaLUNwk7Liu5YTSXE3M7hWKkaYHTn6SPanKQPGMtgpYpOvALTHStTjwHAFZgEYpv6IcboJBQQ9RWlEBBWL8dqlS5OGD4ih2N1ROjuL8fqP+nJhScc6t49v2NlN3QYTx9I88g9d8WxOofy195V5MEqBumI5GTPps4hxyp9+qq1ShcOGD3WsSpccKz6W5768llCdKyGOgVZ0b0cKyttdoH8+vpHZMfq9g2QIB6TY5UCpAnPYHU/iEeFpyEmpnt+EDccK62a3IeowbSngHUI0g5pIHooYfZz5MHqOmLs5xieApodwvcRlvK7hEX+hPH0kU3vwMuHRXo+iScKA0jbICQJ2VboQXZbNJBq/g2xC/IsyOOfjvva9z3pv8b/9AdSDDUejOqKMwAAAABJRU5ErkJggg==" alt="bandeira do Qatar"> Qatar</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+            </tr>
+            <tr>
+                <td class="bold-tr">4° <img class="flag" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACFCAMAAAApQEceAAAAb1BMVEUAhT/jGyP970L/90IAgD90qED/+0Tqci3iACH/8kIAfj+7zEEAgz8AfD//9EIAej8Adj/A0UHr6EG0xkFwpEBnpEA1iz+Ar0DG1EFAkD/a30EAcz+XukAmhz9UnD/R3EKkvkFHl0CjwkCLtED07ULZPQiOAAACUUlEQVR4nO3Z25KjIBQFUEcxPSjiLdpixzYa//8bB5P0RUWmuvJySG+eUnJ8WMVGDhXPe3SwMPAfHIeXv38eHQ87AAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQABxAVIUzwHhZcmfA3I8PgmEsaeA8DhNY7vEDUhQMVbZS9yAFLXn1fbvlhMQWeoaEUvnIf4r0zWv7q9IoYReEWXNlgsQ3iRzUdTYvlsuQII5WXO2bEVOQNJbVeo4hPfZrSrrLdmiCOHLcU/WNVurKeKQpowXQ32UqeXzsiEOaeu36Pv4qls8fqtb4hAuT5743yvCO0nq0dI9SaMi+xuRapYdC02IL4sqsb2QVMWq8yIK0YfH2LHd8m48rOvJQnzZDzuLkry320aYLkQfJyEz7HnBQm44GAlD9KLE9SZerDbfS0hDfNm+r9ZEmGJFH6I3yrq037knEofw8+o8ic47jSNxiBzW0RqcXBFeZOvSbOfCSxsSnDadSjK6uNk/kyX0uP/ayRZpCO+7+3yd5x9HSme+J5KGyPNtGeaeRB8pt45FnN07EKfjvAqCjfPNg8vx2rGw4+QcpL3Oqfw+GeTqGq/WVEsZwksdpjScPvcEn8JUB8345xVlyEEJ1pWLmaDsmFCbywhxyJQlw7pFlO2QZKZNQhgix/QybVLEp0tqOhMJQ/wqN34Cgrxya0WmnZuHjpchW4QhPxuAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCC/APIP38iGvH/qx1oAAAAASUVORK5CYII=" alt="bandeira do Senegal"> Senegal</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+                <td class="td-margin-bottom">0</td>
+            </tr>
+        </table>
+ 
+    
 
     <%- include('./partials/footer')%>
 
 </body>
 </html>
-   
+
+  

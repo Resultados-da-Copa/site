@@ -1,144 +1,123 @@
-main {
-    padding: 20px;
+.table-classification {
+    margin: auto;
+    table-layout: fixed;
+    width: 75%;
+    margin-top: 5rem;
+    margin-bottom: 18rem;
 }
 
-section#tabelas th img {
-    width: 30px;
+.title-table {
+    margin-top: 18rem;
+    text-align: center;
+    font-size: 30rem;
+    font-weight: bold;
 }
 
-#tabelas {
+td {
+    height: 40rem;
+    font-size: 15rem;
+}
+
+.bold-tr {
+    font-weight: bold;
+    border-collapse: collapse;
+    border-bottom: solid 2px #CACACA;
+}
+
+.td-margin-bottom {
+    border-bottom: solid 2px #CACACA;
+}
+
+.td-margin-bottom-top {
+    border-bottom: solid 2px #CACACA;
+    border-top: solid 2px #CACACA;
+}
+
+.flag {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+
+.button-arrow {
+    width: 18rem;
+    height: 18rem;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.button-arrow::before {
+    content: '';
+    display: block;
+    box-sizing: border-box;
+    width: 5rem;
+    height: 5rem;
+    border: 6rem solid transparent;
+    border-left: 7px solid #0B4075;
+}
+
+.button-arrow.-right::before {
+    transform: rotate(180deg) translate(10px);
+}
+
+.button-arrow.-right {
+    margin-left: 500rem;
+}
+
+.button-arrow.-left {
+    margin-right: 500rem;
+}
+
+#phase {
+    font-size: 30rem;
+    font-weight: bold;
+}
+
+#previous-and-next {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
     display: flex;
-    flex-direction: column;
-    padding-left: 9px;
-    margin-left: 102px;
-    margin-right: 94px;  
-   
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-table {
-    margin-left: -320px;
-}
 
-h3 {
-    padding-top: 20px;
-    font-size: 30px;
-}
+@media (max-width: 999px) {
+    .table-classification {
+        table-layout: auto;
+        width: 80%;
+    }
 
-tbody {
-    text-align: center;
-    background-color: rgb(232, 232, 232);
-}
+    .title-table {
+        margin-top: 15rem;
+        text-align: center;
+        font-size: 25rem;
+        font-weight: bold;
+    }
 
-th.PAIS {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    width: 300px;
-    margin-left: 5px;
-    font-weight: 450;
-    padding-top: 3px;
+    td {
+        height: 30rem;
+        width: 40rem;
+        font-size: 8.5rem;
+    }
+
+    .flag {
+        width: 8.5rem;
+        height: 8.5rem;
+        border-radius: 50%;
+    }
+
+    #phase {
+        font-size: 15rem;
+        font-weight: bold;
+    }
+
+    .button-arrow.-right {
+        margin-left: 20rem;
+    }
     
-}
-
-th.infos {
-    width: 50px;
-    text-align: center;
-    
-}
-
-th.classificacao {
-    text-align: justify;
-    
-}
-
-thead {
-    color: grey;
-    font-size: small;
-}
-
-.GRUPOS {
-    display: flex;
-    justify-content:space-between;
-    text-align: justify;
-    padding-right: 2%;
-    
-
-}
-
-ul.jogos-rodada {
-    background-color: rgb(232, 232, 232);
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    
-}
-
-.jogos-rodada li {
-    list-style: none;
-    text-align: center;
-    font-weight: 400;
-}
-
-.jogos-rodada img {
-    width: 30px;
-    margin-right: 4px;
-    margin-left: 4px;
-}
-
-.rodada {
-    text-align: center;
-}
-
-h5.data {
-    text-align: center;
-}
-
-p.estadio {
-    font-size: 10px;
-    font-weight: 400;
-}
-#artilheiros h2 {
-    padding-top: 20px;
-   
-
-}
-
-.nomes-gols {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 5%;
-    padding-left: 0.5%;
-    
-}
-
-.nome-jogador li {
-    text-align: justify;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 300;
-
-    list-style: none;
-}
-
-.quantidade-gols li {
-    text-align: justify;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 300;
-    text-align: center;
-
-    list-style: none;
-}
-
-ul.posicao {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding-top: 12px;
-    width: 10px;
-}
-
-li.classificados {
-    color: #882934;
+    .button-arrow.-left {
+        margin-right: 20rem;
+    }
 }
