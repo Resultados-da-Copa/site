@@ -11,7 +11,7 @@ module.exports = {
       'bra', 'qat'
     ]
     const flag = [
-      'public/img/flag/brazil.png', 'public/img/flag/qatar.png'
+      'flags/brazil.png', 'flags/qatar.png'
     ]
 
     for (let i = 0; i < name.length; i++) {

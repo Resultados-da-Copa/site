@@ -16,6 +16,9 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(100),
                 allowNull: false
             },
+            createdAt: {
+                type: DataTypes.DATE
+            }
         },
         {
             tableName: "coach",
