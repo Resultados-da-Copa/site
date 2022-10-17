@@ -7,28 +7,26 @@ const perfilController = {
             return res.status(401).redirect('/login')
         }
         let userData = {}
-        await users.findOne({
+        const user = await users.findOne({
             where: {
                 id: req.session.idUser
             }
-        }).then(async (result) => {
+        })
 
-            userData.nome = result.dataValues.name
-            userData.email = result.dataValues.email
-            userData.birth_date = result.dataValues.birth_date
-            userData.photograph = result.dataValues.photograph
-            userData.team = await team.findOne({
-                where: {
-                    id: result.dataValues.team_id
-                }
-            }).then(res => {
-                return res.dataValues.name
-            })
+        userData.nome = user.name
+        userData.email = user.email
+        userData.birth_date = user.birth_date
+        userData.photograph = user.photograph
+        userData.team = await team.findOne({
+            where: {
+                id: user.team_id
+            }
+        }).then(res => {
+            return res.dataValues.name
         })
 
         const logged = req.session.isAuthorized
 
-        console.log(userData)
         res.render('perfil', { userData, logged })
     },
 
@@ -53,9 +51,9 @@ const perfilController = {
         }
 
         if (name) { updateUser.name = name }
-        if (email !== '') { updateUser.email = email }
-        if (password !== '') { updateUser.password = passwordHash }
-        if (date !== '') { updateUser.birth_date = date }
+        if (email) { updateUser.email = email }
+        if (password) { updateUser.password = passwordHash }
+        if (date) { updateUser.birth_date = date }
         if (user_team) { updateUser.team_id = user_team }
         if (imageprofile) { updateUser.photograph = req.file.filename }
 

@@ -2,7 +2,6 @@ const { article, matches, team } = require('../database')
 
 const homeController = {
     home: async (req, res) => {
-        let match = {}
         let home = []
         let visitors = []
 
@@ -11,37 +10,34 @@ const homeController = {
                 ['createdAt', 'DESC']
             ],
             limit: 6
-        }).then((result) => {
-            return result
         })
 
-        match = await matches.findAll({
+        const match = await matches.findAll({
             order: [
                 ['createdAt', 'DESC']
             ],
             limit: 6
-        }).then(async result => {
-            for(let i = 0; i < result.length; i++){
-                home[i] = await team.findOne({
-                    where: {
-                        id: result[i].dataValues.home_team_id
-                    }
-                }).then(result => {
-                    return result
-                })
-                visitors[i] = await team.findOne({
-                    where: {
-                        id: result[i].dataValues.visitors_team_id
-                    }
-                }).then(result => {
-                    return result
-                })
-            }
-            return result
         })
-        
+
+        for (let i = 0; i < match.length; i++) {
+            home[i] = await team.findOne({
+                where: {
+                    id: match[i].home_team_id
+                }
+            }).then(result => {
+                return result
+            })
+            visitors[i] = await team.findOne({
+                where: {
+                    id: match[i].visitors_team_id
+                }
+            }).then(result => {
+                return result
+            })
+        }
+
         const logged = req.session.isAuthorized
-        res.render('index', { articles, match, home, visitors, logged})
+        res.render('index', { articles, match, home, visitors, logged })
     }
 }
 
