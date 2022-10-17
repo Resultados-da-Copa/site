@@ -58,6 +58,30 @@ module.exports = {
                 type: Sequelize.DataTypes.STRING(100),
                 defaultValue: false,
             },
+            tie: {
+                type: Sequelize.DataTypes.BOOLEAN,
+                defaultValue: false
+            },
+            winner: {
+                type: Sequelize.DataTypes.UUID,
+                references: {
+                    model: "team",
+                    key: "id",
+                },
+                allowNull: true
+            },
+            loser: {
+                type: Sequelize.DataTypes.UUID,
+                references: {
+                    model: "team",
+                    key: "id",
+                },
+                allowNull: true
+            },
+            round: {
+                type: Sequelize.DataTypes.STRING,
+                allowNull: false
+            },
             createdAt: {
                 type: Sequelize.DataTypes.DATE
             },
