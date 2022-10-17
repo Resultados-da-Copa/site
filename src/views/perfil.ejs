@@ -10,7 +10,6 @@
 
 <body>
 	<%- include('./partials/header')%>
-
 		<h1>Perfil</h1>
 		<form action="/perfil" method="POST" enctype="multipart/form-data">
 			<fieldset id="desktop">
@@ -19,7 +18,7 @@
 
 					<fieldset id="nameFieldset">
 						<label class="label">Nome completo</label>
-						<input type="text" name="name" value=<%=userData.nome%> autofocus>
+						<input type="text" name="name" value="<%=userData.nome%>" autofocus>
 
 						<label class="label">Nome de usuário</label>
 						<input disabled type="text" name="username" value=<%=userData.nome %>>
