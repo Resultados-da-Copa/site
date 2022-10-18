@@ -40,7 +40,11 @@ module.exports = {
       end_match: false,
       stopped_match: true,
       match_date: new Date(),
-      stadium: 'jedah arena'
+      stadium: 'jedah arena',
+      tie: true,
+      winner: null,
+      loser: null,
+      round: 1
     }]);
 
   },

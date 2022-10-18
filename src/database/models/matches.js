@@ -40,6 +40,22 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(100),
                 defaultValue: false,
             },
+            tie: {
+                type: DataTypes.BOOLEAN,
+                defaultValue: false
+            },
+            winner: {
+                type: DataTypes.UUIDV4,
+                allowNull: true
+            },
+            loser: {
+                type: DataTypes.UUIDV4,
+                allowNull: true
+            },
+            round: {
+                type: DataTypes.STRING,
+                allowNull: false
+            },
             createdAt:{
                 type: DataTypes.DATE
             },

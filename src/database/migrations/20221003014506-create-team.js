@@ -24,6 +24,13 @@ module.exports = {
           type: Sequelize.DataTypes.STRING(500),
           allowNull: false
         },
+        group: {
+          type: Sequelize.DataTypes.UUID,
+          references: {
+            model: "cup_group",
+            key: "id",
+          }
+      },
         createdAt: {
           type: Sequelize.DataTypes.DATE,
         },

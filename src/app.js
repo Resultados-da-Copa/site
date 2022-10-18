@@ -54,6 +54,12 @@ app.use('/', noticiaRouter)
 
 app.use(methodOverride('_method'))
 
+app.all('*', (req, res) => {
+    const logged = req.session.isAuthorized
+
+    res.status(404).render('404', { logged })
+})
+
 app.listen(2022, () => {
     console.log('Server rodando')
 })

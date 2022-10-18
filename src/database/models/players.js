@@ -15,17 +15,13 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(100),
                 allowNull: false
             },
-            photograph: {
+            picture: {
                 type: DataTypes.STRING(500),
                 allowNull: false
             },
             birth_date: {
                 type: DataTypes.DATE,
                 defaultValue: false,
-            },
-            nationality: {
-                type: DataTypes.STRING(500),
-                allowNull: false
             },
             weight: {
                 type: DataTypes.INTEGER,
@@ -42,6 +38,10 @@ module.exports = (sequelize, DataTypes) => {
             foot: {
                 type: DataTypes.STRING(100),
                 allowNull: false,
+            },
+            position: {
+                type: DataTypes.STRING(100),
+                allowNull: false
             },
             createdAt:{
                 type: DataTypes.DATE,

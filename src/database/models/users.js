@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(100),
                 allowNull: false
             },
+            username: {
+                type: DataTypes.STRING(100),
+                allowNull: false
+            },
             email: {
                 type: DataTypes.STRING(100),
                 allowNull: false
@@ -27,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.DATE,
                 defaultValue: false,
             },
-            photograph: {
+            picture: {
                 type: DataTypes.STRING(500),
                 allowNull: false
             },

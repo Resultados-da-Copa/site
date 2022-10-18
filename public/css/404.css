@@ -1,0 +1,29 @@
+section {
+    margin: 50rem 10.41%;
+    text-align: center;
+}
+
+img{
+    margin-top: -100rem;
+}
+
+h2 {
+    margin-top: -40rem;
+    margin-bottom: 25rem;
+}
+
+p{
+    margin-bottom: 25rem;
+}
+
+#link{
+    font-size: 15rem;
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 1366px){
+
+    img {
+        width: 60%;
+    }
+}

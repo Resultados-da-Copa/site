@@ -10,7 +10,6 @@
 
 <body>
 	<%- include('./partials/header')%>
-
 		<h1>Perfil</h1>
 		<form action="/perfil" method="POST" enctype="multipart/form-data">
 			<fieldset id="desktop">
@@ -19,7 +18,7 @@
 
 					<fieldset id="nameFieldset">
 						<label class="label">Nome completo</label>
-						<input type="text" name="name" value=<%=userData.nome%> autofocus>
+						<input type="text" name="name" value="<%=userData.nome%>" autofocus>
 
 						<label class="label">Nome de usuário</label>
 						<input disabled type="text" name="username" value=<%=userData.nome %>>
@@ -38,8 +37,8 @@
 			<fieldset id="dateFieldset">
 				<div class="container">
 					<label class="label">Seleção favorita</label>
-					<select name="selecao-favorita" id="selecao-favorita">
-						<option class="selecao" value="" selected disabled>Selecionar</option>
+					<select name="user_team" id="selecao-favorita">
+						<option class="selecao" value="<%=userData.team%>" selected disabled><%=userData.team%></option>
 						<option class="selecao" value="Brasil">Brasil</option>
 						<option class="selecao" value="Qatar">Qatar</option>
 					</select>
