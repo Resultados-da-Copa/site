@@ -1,7 +1,7 @@
 'use strict';
 
 const { v4: uuid } = require("uuid");
-const { cup_stage } = require('../../database')
+const { cup_stage } = require('..')
 
 module.exports = {
   async up(queryInterface) {

@@ -23,6 +23,10 @@ module.exports = {
           type: Sequelize.DataTypes.STRING(100),
           allowNull: false
         },
+        username: {
+          type: Sequelize.DataTypes.STRING(100),
+          allowNull: false
+        },
         email: {
           type: Sequelize.DataTypes.STRING(100),
           allowNull: false
@@ -34,7 +38,7 @@ module.exports = {
         birth_date: {
           type: Sequelize.DataTypes.DATE,
         },
-        photograph: {
+        picture: {
           type: Sequelize.DataTypes.STRING(500),
           allowNull: false
         },

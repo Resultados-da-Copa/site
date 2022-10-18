@@ -2,7 +2,7 @@
 
 const { BOOLEAN } = require("sequelize");
 const { v4: uuid } = require("uuid");
-const { championship } = require("../../database")
+const { championship } = require("..")
 
 module.exports = {
   async up(queryInterface) {

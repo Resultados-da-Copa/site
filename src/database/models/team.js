@@ -23,6 +23,10 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(500),
                 allowNull: false
             },
+            group: {
+                type: DataTypes.CHAR,
+                allowNull: false
+            },
             createdAt: {
                 type: DataTypes.DATE,
             },
