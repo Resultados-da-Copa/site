@@ -5,11 +5,11 @@ const { v4: uuid } = require("uuid");
 module.exports = {
   async up(queryInterface) {
     const titles = [
-      'Final já tem 98% dos ingressos vendidos',
-      'Coréia do Norte avassala Coréia do Sul',
-      'Honduras elimina Senegal',
-      'Seleção americana perde novamente',
-      'Brasil vence Suiça em jogo entediante',
+      'Final já tem 98% dos ingressos vendidos mesmo antes do final da fase grupos',
+      'Coréia do Norte avassala Coréia do Sul e abala situação na fronteira',
+      'Honduras elimina Senegal na fase de grupos',
+      'Seleção americana perde novamente para seleção japonesa',
+      'Brasil vence Suiça em jogo entediante com destaque para o chocolate',
       'Qatar enfrenta Arábia Saudita valendo 100 mil barris de petróleo'
     ]
 
