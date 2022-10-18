@@ -143,25 +143,25 @@
                 <div>
                     <h3>Contador de gols</h3>
                     <div class="statistic-data">
-                        <p>38</p>
+                        <p><%= stats.goals %> </p>
                     </div>
                 </div>
                 <div>
                     <h3>Artilheiro</h3>
                     <div class="statistic-data">
-                        <p>Mbappé</p>
+                        <p><%= stats.gunner.name %></p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Contador de assistências</h3>
+                    <div class="statistic-data">
+                        <p><%= stats.assistances %> </p>
                     </div>
                 </div>
                 <div>
                     <h3>Líder de assistências</h3>
                     <div class="statistic-data">
-                        <p>Harry Kane</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>Pênaltis</h3>
-                    <div class="statistic-data">
-                        <p>5</p>
+                        <p><%= stats.assistancesLeader.name %> </p>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-const { article, matches, team } = require('../database')
+const { article, matches, team, goals, players, assistances } = require('../database')
 
 const homeController = {
     home: async (req, res) => {
@@ -36,8 +36,63 @@ const homeController = {
             })
         }
 
+        let stats = await getStats()
+
         const logged = req.session.isAuthorized
-        res.render('index', { articles, match, home, visitors, logged })
+        res.render('index', { articles, match, home, visitors, logged, stats })
+    }
+}
+
+async function getStats(){  
+    let statsData = {}
+
+    const goal = await goals.count({
+        col: 'id'
+    })
+
+    const assistance = await assistances.count({
+        col: 'id'
+    })
+
+    statsData.goals = goal
+    statsData.assistances = assistance
+    statsData.gunner = await getGoals()
+    statsData.assistancesLeader = await getAssistances()
+
+    return statsData
+}
+
+async function getGoals(){
+    const findPlayer = await goals.findAll({
+        group: 'id_player',
+        order: [["id_player", "DESC"]]
+    })
+
+    const playerData = await players.findOne({
+        where: {
+            id: findPlayer[0].id_player
+        }
+    })
+
+    return result = {
+        name: playerData.name,
+    }
+}
+
+async function getAssistances(){
+    const findPlayer = await assistances.findAll({
+        group: 'id_player',
+        order: [["id_player", "DESC"]]
+    })
+
+    const playerData = await players.findOne({
+        where: {
+            id: findPlayer[0].id_player
+        }
+    })
+
+    return result = {
+        name: playerData.name,
     }
 }
 
