@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
             id_match: {
                 type: DataTypes.UUIDV4
             },
+            id_team: {
+                type: DataTypes.UUIDV4
+            },
             minute: {
                 type: DataTypes.INTEGER
             },

@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
             id_home_team: {
                 type: DataTypes.UUIDV4
             },
-            id_viditor_team: {
+            id_visitor_team: {
                 type: DataTypes.UUIDV4
             },
             createdAt:{
