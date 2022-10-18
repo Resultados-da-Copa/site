@@ -1,6 +1,7 @@
 const { users } = require('../database')
 const { team } = require('../database')
 const bcrypt = require('bcryptjs')
+const { v4: uuid } = require('uuid')
 
 
 const cadastroController = {
@@ -40,12 +41,14 @@ const cadastroController = {
         const passwordHash = bcrypt.hashSync(senha)
 
         await users.create({
+            id: uuid(),
             team_id: userTeam.id,
             name: nome,
+            username: nome,
             email,
             password: passwordHash,
             birth_date: '2004-01-01',
-            photograph: 'avatar.png'
+            picture: 'avatar.png'
         })
 
         req.session.isAuthorized = true
