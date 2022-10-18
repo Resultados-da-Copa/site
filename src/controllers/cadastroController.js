@@ -9,7 +9,7 @@ const cadastroController = {
 
             const logged = req.session.isAuthorized
 
-            res.status(200).render('cadastro', { logged })
+            return res.status(200).render('cadastro', { logged })
         }
 
         res.status(200).redirect('/perfil')
