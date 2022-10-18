@@ -13,15 +13,15 @@
     <form id="cadastro-form" action="/cadastro" method="post">
         <div class="textfield">
             <label class="textfield-label" for="name">Nome completo:</label>
-            <input class="textfield-input" type="name" name="nome" id="nome" placeholder="Nome completo">
+            <input class="textfield-input" type="name" name="nome" id="nome" placeholder="Nome completo" required>
         </div>
         <div>
             <label class="textfield-label" for="e-mail">E-mail:</label>
-            <input  class="textfield-input" type="e-mail" name="email" id="email" placeholder="E-mail">
+            <input  class="textfield-input" type="email" name="email" id="email" placeholder="E-mail" required>
         </div>
         <div class="textfield">
             <label class="textfield-label" for="senha">Senha:</label>
-            <input class="textfield-input" type="password" name="senha" placeholder="Senha">
+            <input class="textfield-input" type="password" name="senha" placeholder="Senha" required minlength="8">
         </div>
 
         <button type="submit" class="btn-cadastro">CADASTRAR</button>
