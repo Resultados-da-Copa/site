@@ -1,19 +1,12 @@
-
-
 h1{
 	text-align: center;
 	margin-top: 23rem;
-
-
 }
  
 form {
 	margin-left: 10.41%;
 	margin-right: 10.41%;
 	margin-top: 80rem;
-
-
-
 }
 
 fieldset{
@@ -23,42 +16,40 @@ fieldset{
 #imageFieldset{
 	display: flex;
 	justify-content: space-between;
+}
 
-
-
+#imageFieldset input {
+    width: 115rem;
 }
 
 #userImage{
 	width: 115rem;
 	height: 115rem;
 	border-radius: 50%;
-
+    margin-right: 15rem;
 }
 
 #nameFieldset{
 	width: 61.31%;
-
 }
 
 .label{
-	font-size: 15rem;
+	font-size: 12rem;
 	font-weight: 400;
 	display: block;
 	margin-bottom: 5rem;
-
 }
 
 input{
-	width: 100%;
 	margin-bottom: 20rem;
-	font-size: 15rem;
+	font-size: 12rem;
 	padding: 8rem 12rem;
 	color: #333333;
 	border: 1px solid #CACACA;
 }
 
 #selecao-favorita{
-    font-size: 15rem;
+    font-size: 12rem;
     padding: 8rem 12rem;
 }
 
@@ -71,19 +62,16 @@ input{
 #dateFieldset{
 	display: flex;
 	justify-content: space-between;
-
 }
 
 .container{
 	width: 48.15%;
     display: flex;
     flex-direction: column;
-
 }
 
 #imgFieldset{
 	display: none;
-
 }
 
 .btn{
@@ -92,14 +80,13 @@ input{
 
 #save-btn{
 	width: 100%;
-	font-size: 15rem;
+	font-size: 12rem;
 	font-weight: 700;
 	color: #FFFFFF;
 	background: #0B4075;
 	border: none;
 	padding: 8rem 12rem;
 	cursor: pointer;
-
 }
 
 #logout-btn{
@@ -113,9 +100,11 @@ input{
 
 #logout-btn a{
 	font-weight: 400;
-
 }
 
+#save-exit{
+    margin-bottom: 20rem;
+}
 
 @media (min-width: 1366px){
     #desktop-flex{
@@ -137,10 +126,26 @@ input{
     #userImage{
         width: 232rem;
         height: 232rem;
+        margin-right: 0;
     }
     #imageFieldset{
         align-items: center;
         margin-bottom: 0;
+    }
+    #imageFieldset input {
+        width: 100%;
+    }
+    input{
+        font-size: 15rem;
+    }
+    #selecao-favorita{
+        font-size: 15rem;
+    }
+    #save-btn{
+        font-size: 15rem;
+    }
+    .label{
+        font-size: 15rem;
     }
     .container{
         width: 233rem;
